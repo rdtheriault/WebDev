@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+      body { 
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text" id="h1">Zack Tovey- Welcome to my page!<h1>
+      <a href="https://www.khanacademy.org/" target="_blank"><strong>Khan Acadamy</strong></a>
+      <br>
+      <a href="https://classroom.google.com/c/MTk1MDYwMDU2NFpa" target="_blank"><strong>Classroom</strong></a>
+      <br>
+      <a href="http://powerschool.hermiston.k12.or.us/public/" target="_blank"><strong>Powerschool</strong></a>
+      <br>
+      <a href="https://scratch.mit.edu/" target="_blank"><strong>scratch</strong></a>
+    <h2 class="text" id="h2"><strong>Here are some of my projects.</strong><h2>
+      <a id="1" href="quizprog.html" style="color:black;">QuizProg</a>     
+      <br>
+      <a id="2" href="guess.html" style="color:orange;">Guessing Game</a>
+      <br>
+      <a id="3" href="quiz2.html" style="color:yellow;">Quiz</a>
+      <br>
+      <a id="4" href="practice.html" style="color:green;">Practice</a>
+      <br>
+      <a id="5" href="programming.html" style="color:blue;">Programming</a>
+      <br>
+      <a id"=6" href="loops.html" style="color:indigo;">Loops</a>
+      <br>
+      <a id"=7" href="quiz4.html" style="color:violet;">Quiz 4</a>
+      <br>
+      <a id"=8" href="jquery.html" style="color:black;">jQuery</a>
+      <br>
+      <a id"=9" href="newyear.html" style="color:lightgray;">New Year</a>
+      <br>
+      <a id="10" href="project4.html" style="color:lime;">Project 4</a>
+      <br>
+      <a id="11" href="scramble.html" style="color:maroon;">scramble</a>
+      <br>
+      <a id="12" href="empty.html" style="color:white:">empty project</a>
+      <br>
+      <a id="13" href="proc.html" style="color:orange:">html</a>
+      <br>
+      <a id="14" href="proc.pde" style="color:red">pde</a>
+      <br>
+      <a id="15" href="game.html" style="color:orange">game.html</a>
+      <br> 
+      <a id="16" href="game.pde" style="color:yellow">game.pde</a>
+      <br> 
+      <a id="17" href="gametest.pde" style="color:lime">gametest.pde</a>
+      <br>
+      
+      <button onclick="color()" id="btn">Click</button>
+      <button onclick="reset()" id="btn1" style="display:none;">Reset</button>
+  <script src="../jquery.js"></script>
+  <script>
+    var x = 0;
+    function color() {
+      document.body.style.backgroundColor = "navy";
+      document.getElementById("btn1").style.display = "block";
+      document.getElementById("btn").style.display = "none";
+      $(".text").css("color", "white");
+      $("#h1").html("you thought....");
+      $("#h2").html("hit reset for more.");
+      
+      
+    }
+    function reset() {
+      document.body.style.backgroundColor = "gray";
+      document.getElementById("btn1").style.display = "none";
+      document.getElementById("btn").style.display = "block";
+      $(".text").css("color", "black");
+      $("#h1").html("Zack Tovey- Welcome to my page!");
+      $("#h2").html("Here are some of my projects.");
+    }
+  </script>
+  </body>
+</html>  
