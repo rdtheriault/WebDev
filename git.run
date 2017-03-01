@@ -9,4 +9,4 @@ git commit -m "Automatic Backup @ $curtime"
 # Push the local snapshot to a remote destination
 git push origin master
 
-#test new cron
+#test new cron try 2
