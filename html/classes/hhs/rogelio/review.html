@@ -1,40 +1,55 @@
 <html>
 <head>
+  
+  
+  
 	<style>
-    #heading_one{color:purple}
-    #heading_one{background-color:black}
-      #paragraph_one{color:blue}
-      #banana{Background-color:blue}
+  	#outer{
+	background-color:blue; display:flex;
+    }
+	.inner{
+      color:white; width:50%; padding:10px; border:solid black; margin:10px;
+    }
+	#left{
+      background-color:orange;
+    }
+	#right{
+      background-color:pink;
+    }
+      
+      
+      
 	</style>
 </head>
 <body>
-	<h1 id=heading_one>This is my website</h1>
-	<h1 id=paragraph_one>Paragraph 1</h1>
-	<a href="">(Paragraph 2)</a>
-	<ul>
-	<li>list item</li>  
-	</ul>
-<table>
-	<tr>
-      <td>item1</td>
-      <td>item2</td>
-      <td>item3</td>
-  </tr>
-    <tr>
-      <td>item4</td>
-      <td>item5</td>
-      <td>item6</td>
-  </tr>
-  <tr>
-      <td>item7</td>
-      <td>item8</td>
-      <td>item9</td>
-  </tr>
-     <div class=main>
-       <div  class=inner>banana</div>
+  <h1>main</h1>
 
-</table>  
-  
+
+
+
+
+
+<div id=outer>
+
+		<div id="left" class="inner">
+			<h2>topic 1</h2>
+				<p>paragraph 1 sentence<br>sentence2</p>
+				<p>paragraph 2 sentence<br>sentence2</p>
+			</div>
+
+
+
+		<div id="right" class="inner">
+	<h2>topic 2</h2>
+		<p>paragraph 1 sentence<br>sentence2</p>
+		<p>paragraph 2 sentence<br>sentence2</p>
+		</div>
+</div>
+<img src="http://images.cdn3.stockunlimited.net/clipart/typography-of-the-word-banana_1237965.jpg">
+
+
+
+
 </body>
   
   
