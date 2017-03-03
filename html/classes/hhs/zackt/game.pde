@@ -4,6 +4,7 @@ void setup() {
   background(0, 212, 244);
   fill(0, 188, 31);
   rect(-1, 300, 501, 100);
+  text("what", 0, 230);
 
 }
 var scene = 1;
@@ -32,6 +33,9 @@ void draw() {
   else if (scene == 2) {
   jumped();
   object1();
+  object2();
+  } else if (scene == 3) {
+    scene3();
   }
 }
 funtion jumped() {
@@ -59,7 +63,7 @@ funtion jumped() {
   fill(0, 188, 31);
   rect(-1, 300, 501, 100);
       image(b, xPos, yPos+jump, 75, 75);
-      text(jump, 10, 10);
+      //text(jump, 10, 10);
     }
   }
 }
@@ -70,12 +74,57 @@ function object1() {
   ellipse(o1xPos, o1yPos, 25, 25);
   o1xPos -= 10;
   
+  //text(yPos+jump, 0, 50);
+  //text(xPos, 0, 35);
+  //text(o1xPos, 25, 35);
+  //text(o1yPos, 25, 50);
+  if (o1xPos >= xPos && o1xPos <= (xPos+75) && o1yPos >= yPos +jump && o1yPos <= (yPos+jump+75) && scene != 3) {
+    println("the ball hit me");
+    //text("the ball hit me", 10, 10);
+    scene = 3;
+  }
+	if (o1xPos == 0) {
+		o1xPos = 750;
+  	}
 }
+var o2xPos = 750;
+var o2yPos = 175;
+function object2() {
+  fill(0, 250, 0);
+  ellipse(o2xPos, o2yPos, 25, 25);
+  o2xPos -= 10;
+  
+  //text(yPos+jump, 0, 50);
+  //text(xPos, 0, 35);
+  //text(o2xPos, 25, 35);
+  //text(o2yPos, 25, 50);
+  if (o2xPos >= xPos && o2xPos <= (xPos+75) && o2yPos >= yPos +jump && o2yPos <= (yPos+jump+75) && scene != 3) {
+    println("the ball hit me");
+    //text("the ball hit me", 10, 10);
+    scene = 3;
+  }
+  if (o2xPos == 0) {
+	o2xPos = 750;
+  }
+}
+
 void mousePressed() {
   if (mouseX >= 100 && mouseX <= 250 && mouseY >= 100 && mouseY <= 150 && scene != 2) {
-    println("useless. told you");
     scene = 2;
   } else {
   
   }
+}
+
+void scene3() {
+  background(250, 0, 0);
+  fill(168, 168, 168);
+  rect(-1, 300, 501, 100);
+  fill(0, 150, 150);
+  rect(100, 100, 150, 50, 5);
+  fill(0,0,0);
+  textSize(19);
+  text("try again", 110, 133);
+  o1xPos = 500;
+  o2xPos = 750;
 }

@@ -22,34 +22,29 @@
 	</style>
 </head>
 <body>
-  <h1>main</h1>
+<script>
+noStroke();
+
+var x = 200;
+var y = 350;
+var ballWidth = 300;
+var ballHeight = 200;
+
+draw = function() {
+    background(255, 206, 71);
+
+    fill(191, 0, 255);
+    ellipse(x, y, ballWidth, ballHeight);
+
+    x += 1;
+    y -= 2;
+    ballWidth *= 99/100;
+    ballHeight /= 99/100;
+};
 
 
 
-
-
-
-<div id=outer>
-
-		<div id="left" class="inner">
-			<h2>topic 1</h2>
-				<p>paragraph 1 sentence<br>sentence2</p>
-				<p>paragraph 2 sentence<br>sentence2</p>
-			</div>
-
-
-
-		<div id="right" class="inner">
-	<h2>topic 2</h2>
-		<p>paragraph 1 sentence<br>sentence2</p>
-		<p>paragraph 2 sentence<br>sentence2</p>
-		</div>
-</div>
-<img src="http://images.cdn3.stockunlimited.net/clipart/typography-of-the-word-banana_1237965.jpg">
-
-
-
-
+</script>
 </body>
   
   
