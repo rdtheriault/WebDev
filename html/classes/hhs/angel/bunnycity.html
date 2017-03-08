@@ -1,0 +1,66 @@
+<html>
+  <head>
+<style>
+  #canvas {
+    background-image: url("images.png");
+    width:400px;
+    height:200px;
+    background-size:cover;
+    position:relative;
+  }
+   #cbleft{
+   position:absolute;
+    bottom:0px;
+    right:0px;
+  } 
+  #cbright{
+   position:absolute;
+    bottom:0px;
+    left:90px;
+  } 
+  #player {
+   position:absolute;
+    bottom:0px;
+    left:0px;
+  }
+  .scores{
+   width:20px;
+    
+  }
+  #score{
+   display:flex; 
+  }
+  
+</style>
+
+  </head>
+  <body>
+    <div id="canvas" >
+    <div id="player" >
+      <img src="lucy.jpg" width="80px">
+      </div> 
+      <div id="cbright">
+        <img src="cbright.jpg"
+                  width="40px">
+                            
+      </div>
+        <div id="cbleft">
+        <img src="cbleft.jpg"
+                  width="40px">
+                            
+      </div>
+    </div>
+    <div id="score"> 
+      <div id="health" class="scores"> <img src="download.jpg" width="20px"><br><span id="healthscore"> 5</span></div>
+      <div id="security"class="scores"> <img src="security.gif" width="20px"><br><span id="securityscore"> 5</span> </div> 
+       <div id="happiness"class="scores"> <img src="happy.png" width="20px"><br><span id="happinessscore"> 5</span></div>
+         <div id="money"class="scores"> <img src="money.jpg" width="20px"><br><span id="moneyscore">5 </span></div>
+      
+      
+         </div>
+    
+    
+  </body>
+  
+  
+</html>
