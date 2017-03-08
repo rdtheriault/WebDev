@@ -55,9 +55,144 @@
       <div id="security"class="scores"> <img src="security.gif" width="20px"><br><span id="securityscore"> 5</span> </div> 
        <div id="happiness"class="scores"> <img src="happy.png" width="20px"><br><span id="happinessscore"> 5</span></div>
          <div id="money"class="scores"> <img src="money.jpg" width="20px"><br><span id="moneyscore">5 </span></div>
+
       
       
          </div>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+    
+    <script>
+      var totalQs = 50;
+      var ques = 0;
+      var health = 5;
+      var happiness = 5;
+      var security = 5;
+      var money = 5;
+      var questions = ["Do we build a wall",
+                         "Do we improve security",
+                         "Theres a protest will you stop it",
+                         "Can we build a mega mall",
+                         "Do we allow immigrants",
+                         "Accept my donation",
+                         "Do we cancel school",
+                         "can we not go to work",
+                         "Can math be illegal",
+                         "do we build a bigger soccer stadium?",
+                         "Should we Train the Police harder?",
+                         "Is Diversity allowed in Merica?",
+                         "Can we skip Immunizations?",
+                         "Can I have $1,000,000?",
+                         "Can we have more Freedom?",
+                         "Do we have to eat our Veggies?",
+                         "Policemen are getting scared!Can we have bigger weapons?",
+                         "Can we have a Raise?",
+                         "Should we build a Football Stadium?",
+                         "Can we rob a bank?",
+                         "I am going to teach people how to Hack.Can i please?"];
+  document.getElementById("yes").addEventListener("click",function() {answer("yes"); });
+       document.getElementById("no").addEventListener("click",function() {answer("no"); });
+      function start() {
+        ques=Math.floor(Math.random() *totalQs-1 ) +0;
+      }
+      function answer(anw) {
+        if (ques===0) { //build a wall
+          if (anw == "yes"){happiness-=1;money-=1;security+=1;}
+          if (anw == "no") {happiness+=1;security-=1;}
+        }
+        else if (ques === 1){ //improve security
+          if (anw == "yes"){security+=2;money-=1;happines-=1;health+=1;}
+          if (anw == "no"){security-1;money+=1;health-=1;}
+        }
+         else if (ques === 2){//protest
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+         else if (ques === 3){//mega mall
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+         else if (ques === 4){//immigrants
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 5){//accept my donation
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 6){//do we cancel school
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 7){//can we not go to school
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 8){ // can math be illegal
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 9){ //build a bigger soccer stadium
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 10){ // train police harder
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 11){ // diversity allowed 
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 12){ //skip immunization
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 13){ //1,000,000
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 14){ //more freedom
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 15){ //eat veggies
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 16){ // police scared better weapons
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 17){ // raise
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 18){ // football stadium
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques === 19){//rob a bank
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+          else if (ques ===20){//how to hack
+          if (anw == "yes"){}
+          if (anw == "no"){}
+        }
+        document.getElementById("healthscore").innerHTML=health;
+        document.getElementById("securityscore").innerHTML=security;
+        document.getElementById("happinessscore").innerHTML=happiness;
+        document.getElementById("moenyscore").innerHTML=money;
+        
+      }
+        
+                
+        
+                           
+                         
+      
+    </script>
     
     
   </body>

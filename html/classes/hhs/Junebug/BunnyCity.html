@@ -13,15 +13,35 @@
     <h1>Ready For Politics Stuff?</h1>
     <Script>
       
-      function onClickstart() {
-      get question()
-      }
-      function getQuestion() {
-        var Random#
-      }
-      function answer() {
+      var totalQs = 50;
+      var ques = Math.floor(Math.random() * totalQs-1) + 0;
+      var health = 5;
+      var happiness = 5;
+      var security = 5;
+      var money = 5;
+      var questions = ["Can we skip Immunizations?",
+                       "Can I have $1,000,000?",
+                       "Can we have more Freedom?",
+                       "Do we have to eat our Veggies?",
+                       "Policemen are getting scared!Can we have bigger weapons?",
+                       "Can we have a Raise?",
+                       "Should we build a Football Stadium?",
+                       "Can we rob a bank?",
+                       "I am going to teach people how to Hack.Can i please?",
+                       "",
+                  
+                       
+      ]
+      function start() {
+        ques = Math.floor(Math.random() * totalQs-1) + 0;
         
-      }
+        
+        function answer(anw, ques) {
+          
+          if(ques === 0) {
+            if(anw == "yes"){health++;security--;}
+            if(anw == "no") {}
+          }
       </Script>
     
     
