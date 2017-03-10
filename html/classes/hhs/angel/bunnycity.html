@@ -35,6 +35,10 @@
 
   </head>
   <body>
+    <div id="gamestart">
+    <h1>Welcome to Merica!Ready to Play?</h1>
+    <button id="start">Let's Play</button>
+    </div>
     <div id="canvas" >
     <div id="player" >
       <img src="lucy.jpg" width="80px">
@@ -59,11 +63,24 @@
       
       
          </div>
+    <div id="buttons">
     <button id="yes">Yes</button>
     <button id="no">No</button>
-    
+    </div>
+
     <script>
-      var totalQs = 50;
+      
+       var player = document.getElementById("canvas");
+      var score = document.getElementById("score");
+      var gaemstart = document.getElementById("gamestart");
+      var buttons = document.getElementById("buttons");
+      buttons.style.display = "none";
+      player.style.display = "none";
+      score.style.display = "none";
+      document.getElementById("start").addEventListener("click", start);
+      var move = 90;
+      var movetwo = 0;
+      var totalQs = 20;
       var ques = 0;
       var health = 5;
       var happiness = 5;
@@ -93,7 +110,12 @@
   document.getElementById("yes").addEventListener("click",function() {answer("yes"); });
        document.getElementById("no").addEventListener("click",function() {answer("no"); });
       function start() {
-        ques=Math.floor(Math.random() *totalQs-1 ) +0;
+        ques = Math.floor(Math.random() * totalQs-1) + 0;
+        gamestart.style.display = "none";
+        player.style.display = "block";
+        buttons.style.display = "block";
+        score.style.display = "flex";
+        moveIn();
       }
       function answer(anw) {
         if (ques===0) { //build a wall
@@ -101,94 +123,128 @@
           if (anw == "no") {happiness+=1;security-=1;}
         }
         else if (ques === 1){ //improve security
-          if (anw == "yes"){security+=2;money-=1;happines-=1;health+=1;}
+          if (anw == "yes"){security+=2;money-=1;happiness-=1;health+=1;}
           if (anw == "no"){security-1;money+=1;health-=1;}
         }
          else if (ques === 2){//protest
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security+=1;happines-=2}
+          if (anw == "no"){securtiy-=2;}
         }
          else if (ques === 3){//mega mall
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money-=2;happiness+=2}
+          if (anw == "no"){money+=2;happiness-=1}
         }
          else if (ques === 4){//immigrants
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security-=1;happiness+=2}
+          if (anw == "no"){security+=1;happiness-=2}
         }
           else if (ques === 5){//accept my donation
-          if (anw == "yes"){}
+          if (anw == "yes"){money+=2;}
           if (anw == "no"){}
         }
           else if (ques === 6){//do we cancel school
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money+=2;happiness-=2}
+          if (anw == "no"){money-=1;happiness+=1}
         }
-          else if (ques === 7){//can we not go to school
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          else if (ques === 7){//can we not go to work
+          if (anw == "yes"){security-=1;happiness+=2;money+=2;health-=2}
+          if (anw == "no"){security+=1;money-=1;happiness-=1}
         }
           else if (ques === 8){ // can math be illegal
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money+=1;happiness+=2}
+          if (anw == "no"){money-=1;happiness-=1}
         }
           else if (ques === 9){ //build a bigger soccer stadium
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money-=2;happiness+=2;health+=1}
+          if (anw == "no"){money+=1;happiness-=2}
         }
           else if (ques === 10){ // train police harder
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security+=1;money-=1;happiness-=1}
+          if (anw == "no"){security-=1;money+=1;happiness+=1}
         }
           else if (ques === 11){ // diversity allowed 
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){happiness+=2;health-=1}
+          if (anw == "no"){happiness-=1}
         }
           else if (ques === 12){ //skip immunization
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security-=1;happiness+=1;health-=1}
+          if (anw == "no"){happiness-=1;health+=1}
         }
           else if (ques === 13){ //1,000,000
-          if (anw == "yes"){}
+          if (anw == "yes"){security-=1;money-=1;happiness+=1}
           if (anw == "no"){}
         }
           else if (ques === 14){ //more freedom
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security-=1;happiness+=1}
+          if (anw == "no"){happiness-=1}
         }
           else if (ques === 15){ //eat veggies
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){happiness-=1;health+=1}
+          if (anw == "no"){happiness+=1;health-=1}
         }
           else if (ques === 16){ // police scared better weapons
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security+=1;money-=1;happiness-=1}
+          if (anw == "no"){security-=1}
         }
           else if (ques === 17){ // raise
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money-=1;happiness+=1}
+          if (anw == "no"){happiness-=1}
         }
           else if (ques === 18){ // football stadium
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){money-=1;happiness+=1}
+          if (anw == "no"){happiness-=1}
         }
           else if (ques === 19){//rob a bank
-          if (anw == "yes"){}
+          if (anw == "yes"){security-=1;money-=1;happiness-=1}
           if (anw == "no"){}
         }
           else if (ques ===20){//how to hack
-          if (anw == "yes"){}
-          if (anw == "no"){}
+          if (anw == "yes"){security-=1;money-=1;happiness+=1;health-=1}
+          if (anw == "no"){happiness-=1}
         }
         document.getElementById("healthscore").innerHTML=health;
         document.getElementById("securityscore").innerHTML=security;
         document.getElementById("happinessscore").innerHTML=happiness;
-        document.getElementById("moenyscore").innerHTML=money;
+        document.getElementById("moneyscore").innerHTML=money;
         
       }
-        
+         function moveIn() {
+               ques = Math.floor(Math.random() * totalQs-1) + 0;
+            //show btns
+            //move chqar, show char in
+            t();
+            //ask question
+          }
+          function moveOut() {
+               ques = Math.floor(Math.random() * totalQs-1) + 0;
+            //hide buttons
+            //move out,show charout
+            //
+            moveIn();
+          }
+        function s() {
+          //window.alert("heyo");
+          move += 10;
+          //$("#steven").css("left", move + "px");
+          document.getElementById("cbright").style.left = move+"px";
+          myTime = setTimeout("s()", 50);
+          if (move>190) {
+           	clearTimeout(myTime);
+            move=90;
+          }
+        }
                 
-        
+           function t() {
+          //window.alert("heyo");
+          movetwo += 10;
+          //$("#steven").css("left", move + "px");
+          document.getElementById("cbleft").style.right = movetwo+"px";
+          myTime = setTimeout("t()", 50);
+          if (movetwo>250) {
+           	clearTimeout(myTime);
+            movetwo=0;
+          }
+        }
                            
                          
       
