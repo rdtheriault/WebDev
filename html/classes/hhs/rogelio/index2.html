@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-  <script type="text/javascript">function changeBackground(color) {document.body.style.background = color;}</script>
-  <script src="http://www.sagefirellc.com/images/konami.js" type="text/javascript"></script>
-  <script src="http://www.sagefirellc.com/images/loop.js" type="text/javascript"></script>
-  <script src="http://www.sagefirellc.com/images/loop.js" type="text/javascript"></script>
-  <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script>
-  <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
-  <script type="text/javascript">
-// Popup window code
-function newPopup(url) {
-    popupWindow = window.open(
-    url,'popUpWindow','height=500,width=500,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
-}
-</script>
-  <title>Test Page</title>
-  
+     <title>Web - Processing.js Test</title>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="../processing.min.js"></script>
 <style>
+  body {
+  background-color:rbg29, 40, 115;
+  }    
+    
+    
 </style>
 </head>
 <body>
-
-  <script>
-var easter_egg = new Konami();
-easter_egg.code = function() { changeBackground('#6699FF');colorLoop(); }
-easter_egg.load();
-</script>   
-   
-    
+<div id="all"> 
+     <h1>It worked</h1>
+     <p>Rogelio's First Drawing with Processing Javascript</p>
+     <canvas data-processing-sources="proc.pde" width="1000"></canvas>
+       </div> 	
 
 </body>
 </html>

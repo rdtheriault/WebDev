@@ -4,3 +4,7 @@ void setup() {
   fill(0, 0, 0);
   rect(-1, 150, 502, 100);
 }
+void draw() {
+  fill(250, 0, 0);
+  ellipse(100, 100, 20, 20);
+}
