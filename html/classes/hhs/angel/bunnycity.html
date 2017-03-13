@@ -17,6 +17,7 @@
    position:absolute;
     bottom:0px;
     left:90px;
+    display:none;
   } 
   #player {
    position:absolute;
@@ -61,13 +62,13 @@
          <div id="money"class="scores"> <img src="money.jpg" width="20px"><br><span id="moneyscore">5 </span></div>
 
       
-      
+      <div id="question"> </div>
          </div>
     <div id="buttons">
     <button id="yes">Yes</button>
     <button id="no">No</button>
     </div>
-
+    <div id="endgame"> </div>
     <script>
       
        var player = document.getElementById("canvas");
@@ -80,7 +81,7 @@
       document.getElementById("start").addEventListener("click", start);
       var move = 90;
       var movetwo = 0;
-      var totalQs = 20;
+      var totalQs = 19;
       var ques = 0;
       var health = 5;
       var happiness = 5;
@@ -202,11 +203,62 @@
           if (anw == "yes"){security-=1;money-=1;happiness+=1;health-=1}
           if (anw == "no"){happiness-=1}
         }
-        document.getElementById("healthscore").innerHTML=health;
-        document.getElementById("securityscore").innerHTML=security;
-        document.getElementById("happinessscore").innerHTML=happiness;
-        document.getElementById("moneyscore").innerHTML=money;
         
+        if (happiness >10) {
+         document.getElementById("endgame").innerHTML = "Everyone got to happy and died of happiness";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+         else if (money >10) {
+         document.getElementById("endgame").innerHTML = "People left because of the rich government";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+        else  if (security >10) {
+         document.getElementById("endgame").innerHTML = "the police killed everyone";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+       else   if (health >10) {
+         document.getElementById("endgame").innerHTML= "people got too healthy that a new disease spreaded";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+       else   if (happiness <1) {
+         document.getElementById("endgame").innerHTML = "people got angry and left the city";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+       else   if (money <1) {
+         document.getElementById("endgame").innerHTML = "no money means no more toys for the kids. Kids start a war";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+       else   if (security <1) {
+         document.getElementById("endgame").innerHTML = "no security means a successfull purge happens";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+       else   if (health <1) {
+         document.getElementById("endgame").innerHTML = "everyone got sick and thus a plague was born";
+          player.style.display = "none";
+        buttons.style.display = "none";
+        score.style.display = "none";
+        }
+        else {
+          document.getElementById("healthscore").innerHTML=health;
+          document.getElementById("securityscore").innerHTML=security;
+          document.getElementById("happinessscore").innerHTML=happiness;
+          document.getElementById("moneyscore").innerHTML=money;
+          moveOut();
+        }
       }
          function moveIn() {
                ques = Math.floor(Math.random() * totalQs-1) + 0;
@@ -243,7 +295,9 @@
           if (movetwo>250) {
            	clearTimeout(myTime);
             movetwo=0;
-          }
+              //document.getElementById("cbleft").style.display="none"; 
+               document.getElementById("question").innerHTML=questions[ques];
+             }
         }
                            
                          
