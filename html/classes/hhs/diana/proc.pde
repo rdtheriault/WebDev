@@ -3,7 +3,7 @@ void setup(){
   frameRate(30);
   background(111,20,58)
   //button
-   fill(0, 234, 255);
+   fill(255, 146, 119);
 	rect(100, 100, 150, 50, 5);
 	fill(0, 0, 0);
 	textSize(19);
