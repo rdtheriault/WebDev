@@ -10,22 +10,28 @@
   
 <style>
   body {
-  background-color:blue
+  background-color:teal
   }    
   #title{
-  background-color:red; width:70%; height:100px; 
+  background-color:red; width:1000px; height:100px; text-align:center;
   }
   #middle{
-  display:flex; width:70%; height:500px; padding:10px; background-color:yellow; 
+  display:flex; width:980px; height:500px; padding:10px; background-color:blue; 
   }  
   #paragragh{
- background-color:orange; display:center; 
+ background-color:purple; display:center;
   }
   .subtitle{
-  background-color:orange;
+  background-color:purple
   }
   #all{
-  position:relative; left:15%;
+  position:relative; left:15%; 
+  }
+   #end{
+  background-color:red; width:1000px; height:210px; text-align:center;
+  }
+  #list{
+  height:150; width:150; background-color:white; overflow:auto; position:fixed; top:10px;
   }
 </style>
 </head>
@@ -34,35 +40,59 @@
 <div id="all">
 	
 	<div id="title">
-	 <h1>Leonado Da vinci</h1> 
+	 <h1 style="font-size:4em;">Leonado Da vinci</h1> 
 	</div>
 <div id="middle">
 	<div id="pic">  
-    	<img src="http://www.leonardodavinci.net/images/leonardo-da-vinci.jpg" height="500px">
+    	<a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci">
+        <img src="http://www.leonardodavinci.net/images/leonardo-da-vinci.jpg" height="500px"></a>
 	</div>
-	<div id=paragraphs style="background-color:orange;">
+	<div id=paragraphs style="background-color:purple;  color:yellow;">
       <div class="subtitle" style="width:446.42;">
-          <h2>Fill In 1</h2>
-        <p>We're no strangers to love
-        You know the rules and so do I
-        A full commitment's what I'm thinking of
-        You wouldn't get this from any other guy
+          <h2>Breif info</h2>
+        <p>Leonardo was born on 15 April 1452 in the Tuscan hill town of Vinci, 
+          in the lower valley of the Arno river in the territory of the Medici-ruled Republic of Florence.
+          Leonardo is widely considered one of the greatest painters of all time. Sometimes credited
+          with the inventions of the parachute, helicopter and tank
           </p>
       </div>
       <div class="subtitle" style="width:446.42;">
-        <h2>Fill In 2</h2>
-        <p>I just wanna tell you how I'm feeling
-        Gotta make you understand
-
-        Never gonna give you up
-        Never gonna let you down
-        Never gonna run around and desert you
-        Never gonna make you cry
-        Never gonna say goodbye
-        Never gonna tell a lie and hurt you
+        <h2>What he is know for</h2>
+        <p>Leonardo was, and is, renowned primarily as a painter. Among his works, the Mona Lisa is the most famous and most parodied portrait
+          and The Last Supper the most reproduced religious painting of all time. Leonardo is revered for his technological ingenuity.
+          He conceptualised flying machines, a type of armoured fighting vehicle, concentrated solar power, an adding machine
       </div>
+      
+      
+      
+      
 	</div>
-</div>    
+</div>
+ <div id="end">
+	<h1>Leonado Da vinci</h1>
+<div id="list" style="height:150px; width:150px;"><ol>   
+     <li>invention</li>
+      <li>painting</li>
+      <li>sculpting</li> 
+      <li>architecture</li>
+      <li>science</li>
+      <li>music</li>
+      <li>mathematics</li>
+      <li>engineering</li>
+      <li>literature</li>
+      <li>anatomy</li>
+      <li>geology</li>
+      <li>astronomy</li>
+      <li>botany</li>
+      <li>writing</li>
+      <li>history</li>
+      <li>cartography</li>
+      <li>palaeontology</li>
+      <li>ichnology</li>
+      <li>architecture</li>
+  </ol>
+</div>
+  </div>    
 </div>  
 </body>
 </html>

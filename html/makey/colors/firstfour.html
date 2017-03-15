@@ -9,17 +9,53 @@ and open the template in the editor.
         <title></title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-        <link href="../hsd.css" rel="stylesheet" type="text/css" />
       <style>
       	.square {
-      		width: 150;
-        	height: 150;
+      		width: 150px;
+        	height: 150px;
+        }
+        #up {
+          background-color: red;
+        }
+        #down {
+          background-color: orange;
+        }
+        #left {
+          background-color: green;
+        }
+        #right {
+          background-color: blue;
+        }
+        #master {
+          background-color: red;
+        }
+        #middle {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        }
+        #btn {
+          font-size: 40px;
+          font-family: sans;
         }
       </style>
         
         <script>
+          
+          
+          
+          
+          
+          
 $(document).ready(function(){
-
+ 
+  
+  var pick = 1;
+	var audio;
+  
+  
+  
+  
 //$('#up').attr('src', 'files/up.png');
 //$('#down').attr('src', 'files/down.png');
 //$('#right').attr('src', 'files/right.png');
@@ -29,25 +65,25 @@ $(document).ready(function(){
 
 	$(document).keydown(function(e){//up
 	    if (e.keyCode == 38 ) {
-	      checkColor("red"); 
+	      checkColor(1, '#up'); 
 	      }         
 	});
 	
 	$(document).keydown(function(e){//down
 	    if (e.keyCode == 40 ) {
-	      checkColor( "orange" );  
+	      checkColor(2, '#down');  
 	      }        
 	});
 
 	$(document).keydown(function(e){//right
 	    if (e.keyCode == 39 ) {
-	      checkColor( "blue" ); 
+	      checkColor(3, '#right'); 
 	      }         
 	});
 
 	$(document).keydown(function(e){//left
 	    if (e.keyCode == 37 ) {
-	      checkColor("green"); 
+	      checkColor(4, '#left'); 
 	      }         
 	});
 
@@ -62,88 +98,80 @@ $(document).ready(function(){
 
 
 	  $("#up").click(function(){
-		checkColor("red");
+		checkColor(1, '#up');
 	  });
 	
 	  $("#down").click(function(){
-		checkColor("orange");
+		checkColor(2, '#down');
 	  });
 	  
 	  $("#right").click(function(){
-		checkColor("blue");
+		checkColor(3, '#right');
 	  });
 	  
 	  $("#left").click(function(){
-		checkColor("green");
+		checkColor(4, '#left');
 	  });
 	  
 	  $("#master").click(function(){
-	  	  var star = $('#master').prop('name');
-		  if (star === "star"){
-			var rand = Math.floor((Math.random() * 4) + 1);    
+	  	  //var star = $('#master').prop('name');
+		  if (pick === pick){
+			pick = Math.floor((Math.random() * 4) + 1);    
 			reset();
-	 		changeMaster(rand);
+	 		changeMaster(pick);
 	 	  }
 	  });
   
-  	$("#next").click(function(){
-	      var rand = Math.floor((Math.random() * 4) + 1);    
+  	$("#btn").click(function(){
+	      pick = Math.floor((Math.random() * 4) + 1);    
 		reset();
- 		changeMaster(rand);
+ 		changeMaster(pick);
   	});
   
+  function changeMaster(pick) {
+   if (pick === 1) {
+   	$("#master").css("background-color", "red");
+   } else if (pick === 2) {
+     $("#master").css("background-color", "orange");
+   } else if (pick === 3) {
+     $("#master").css("background-color", "blue");
+   } else if (pick === 4) {
+     $("#master").css("background-color", "green");
+     audio = new Audio('green.mp3');
+     audio.play();
+   }
+   
+  }
+  
+  function reset() {
+    $("#up").css("background-color", "red");
+    $("#down").css("background-color", "orange");
+    $("#right").css("background-color", "blue");
+    $("#left").css("background-color", "green");
+  }
+    
   
   
-  function checkColor(current){
-  	var color = $('#master').prop('name');
-  	var trans = translate(current);
-  	var str = '#';
-  	var trans2 = str.concat(trans); 
-        if (current !== color) { $(trans2).attr('src', 'files/x.png');}
-        if (current === color) { $('#master').attr('src', 'files/star.png');$('#master').attr('name', 'star');}
+  function checkColor(current, id){
+		
+        if (current !== pick) { $(id).css("background-color", "gray");}
+        if (current === pick) { $(id).css("background-color", "yellow");}
         
   }
   
 
-  function reset(){
-	      $('#up').attr('src', 'files/red.png');
-		$('#down').attr('src', 'files/orange.png');
-		$('#right').attr('src', 'files/blue.png');
-		$('#left').attr('src', 'files/green.png');
-  }
+
   
     function translate(current){
-      	if (current === 'red') { var up = "up"; return up;}
-      	if (current === 'orange') {var down = "down" ; return down}
-      	if (current === 'blue') {var right = "right" ; return right}
-      	if (current === 'green') {var left = "left" ; return left}
+      	if (current === 1) { var up = "up"; return up;}
+      	if (current === 2) {var down = "down" ; return down}
+      	if (current === 3) {var right = "right" ; return right}
+      	if (current === 4) {var left = "left" ; return left}
    }
       
-  function reset2(current){
-      	if (current !== 'RL') { $("#rl1").hide();}
-        if (current !== 'RI') { $("#ri1").hide();}
-        if (current !== 'RF') { $("#rf1").hide();}
-	if (current !== 'W') { $("#w1").hide();}
-  }
+
   
-  function changeMaster(rand){
-		if (rand == 1){
-			$('#master').attr('src', 'files/red.png');
-			$('#master').attr('name', 'red');
-		}   
-		if (rand == 2){
-			$('#master').attr('src', 'files/orange.png'); 
-			$('#master').attr('name', 'orange');
-		} 
-		if (rand == 3){
-			$('#master').attr('src', 'files/blue.png'); 
-			$('#master').attr('name', 'blue');
-		} 
-		if (rand == 4){
-			$('#master').attr('src', 'files/green.png'); 
-			$('#master').attr('name', 'green');
-		}
-  }
+
   
 
 
@@ -152,14 +180,14 @@ $(document).ready(function(){
         
     </head>
     <body>
-                <div class="testBlock"><img id="next" src="files/next.png">
+                <div id="btn" class="testBlock"> Next
         </div>
         
         
       <table style="text-align:center;padding:10px">
 	<tr>
 		<td></td>
-		<td colspan="2" style="text-align:center;"><img id="master" name="red" src="files/red.png"></td>
+      <td colspan="2" style="text-align:center;"><div id="middle"><div id="master" name="red" class="square"></div></div></td>
 		<td></td>
 	</tr>
 	<tr>
