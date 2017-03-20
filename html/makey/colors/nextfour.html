@@ -14,21 +14,25 @@ and open the template in the editor.
       		width: 150px;
         	height: 150px;
           border-radius: 5px;
+          font-size: 50px;
+          font-style: bold;
+          text-align: center;
+          padding-top: 25px;
         }
         #up {
-          background-color: red;
+          background-color: yellow;
         }
         #down {
-          background-color: orange;
+          background-color: purple;
         }
         #left {
-          background-color: green;
+          background-color: brown;
         }
         #right {
-          background-color: blue;
+          background-color: black;
         }
         #master {
-          background-color: red;
+          background-color: yellow;
         }
         #middle {
           display: flex;
@@ -142,30 +146,39 @@ $(document).ready(function(){
   
   function changeMaster(pick) {
    if (pick === 1) {
-   	$("#master").css("background-color", "red");
-     audio = new Audio('red.mp3');
+     
+   	$("#master").css("background-color", "yellow");
+    //$("#master").html("Yellow");
+     audio = new Audio('yellow.mp3');
      audio.play();
    } else if (pick === 2) {
-     $("#master").css("background-color", "orange");
-     audio = new Audio('orange.mp3');
+     
+     $("#master").css("background-color", "purple");
+         //$("#master").html("Purple");
+     audio = new Audio('purple.mp3');
      audio.play();
    } else if (pick === 3) {
-     $("#master").css("background-color", "blue");
-     audio = new Audio('blue.mp3');
+     
+     $("#master").css("background-color", "black");
+         //$("#master").html("Black");
+
+     audio = new Audio('black.mp3');
      audio.play();
    } else if (pick === 4) {
-     $("#master").css("background-color", "green");
-     audio = new Audio('green.mp3');
+     
+     $("#master").css("background-color", "brown");
+         //$("#master").html("Brown");
+	 audio = new Audio('brown.mp3');
      audio.play();
    }
    
   }
   
   function reset() {
-    $("#up").css("background-color", "red");
-    $("#down").css("background-color", "orange");
-    $("#right").css("background-color", "blue");
-    $("#left").css("background-color", "green");
+    $("#up").css("background-color", "yellow");
+    $("#down").css("background-color", "purple");
+    $("#right").css("background-color", "black");
+    $("#left").css("background-color", "brown");
   }
     
   
@@ -173,7 +186,7 @@ $(document).ready(function(){
   function checkColor(current, id){
 		
         if (current !== pick) { $(id).css("background-color", "gray");}
-        if (current === pick) { $(id).css("background-color", "yellow");}
+        if (current === pick) { $(id).css("background-color", "orange");}
         
   }
   
@@ -224,5 +237,10 @@ $(document).ready(function(){
       </table>
     </body>
 </html>
+
+
+
+          
+
 
 
