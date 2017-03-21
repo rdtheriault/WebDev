@@ -23,7 +23,7 @@ and open the template in the editor.
           background-color: red;
         }
         #down {
-          background-color: orange;
+          background-color: #ff471a;
         }
         #left {
           background-color: green;
@@ -78,7 +78,6 @@ $(document).ready(function(){
 //$('#left').attr('src', 'files/left.png');
 //$('#master').attr('src', 'files/up.png');
 //$('#up').attr('src', 'files/x.png');
-
 	$(document).keydown(function(e){//up
 	    if (e.keyCode == 38 ) {
 	      checkColor(1, '#up'); 
@@ -90,19 +89,16 @@ $(document).ready(function(){
 	      checkColor(2, '#down');  
 	      }        
 	});
-
 	$(document).keydown(function(e){//right
 	    if (e.keyCode == 39 ) {
 	      checkColor(3, '#right'); 
 	      }         
 	});
-
 	$(document).keydown(function(e){//left
 	    if (e.keyCode == 37 ) {
 	      checkColor(4, '#left'); 
 	      }         
 	});
-
 	$(document).keydown(function(e){//space
 	    if (e.keyCode == 32 ) {
 	      var rand = Math.floor((Math.random() * 4) + 1);    
@@ -110,9 +106,6 @@ $(document).ready(function(){
 		changeMaster(rand);
 	    }
 	});
-
-
-
 	  $("#up").click(function(){
 		checkColor(1, '#up');
 	  });
@@ -158,13 +151,11 @@ $(document).ready(function(){
    } else if (pick === 3) {
      //$("#master").css("color", "blue");
          $("#master").html("Blue");
-
      audio = new Audio('blue.mp3');
      audio.play();
    } else if (pick === 4) {
      //$("#master").css("color", "green");
          $("#master").html("Green");
-
      audio = new Audio('green.mp3');
      audio.play();
    }
@@ -187,8 +178,6 @@ $(document).ready(function(){
         
   }
   
-
-
   
     function translate(current){
       	if (current === 1) { var up = "up"; return up;}
@@ -197,12 +186,8 @@ $(document).ready(function(){
       	if (current === 4) {var left = "left" ; return left}
    }
       
-
   
-
   
-
-
 });
 </script>
         
@@ -234,10 +219,3 @@ $(document).ready(function(){
       </table>
     </body>
 </html>
-
-
-
-          
-
-
-
