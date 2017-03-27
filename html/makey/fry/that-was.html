@@ -54,9 +54,9 @@ $(document).ready(function(){
 
 	$(document).keydown(function(e){//space
 	    if (e.keyCode == 32 ) {
-	      var rand = Math.floor((Math.random() * 4) + 1);    
+	      pick = Math.floor((Math.random() * 4) + 1);    
 		reset();
-		changeMaster(rand);
+		changeMaster(pick);
 	    }
 	});
 

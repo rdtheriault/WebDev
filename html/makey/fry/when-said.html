@@ -9,59 +9,9 @@ and open the template in the editor.
         <title></title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-      <style>
-      	.square {
-      		width: 150px;
-        	height: 150px;
-          border-radius: 5px;
-          font-size: 50px;
-          font-style: bold;
-          text-align: center;
-          padding-top: 25px;
-        }
-        #up {
-          background-color: yellow;
-        }
-        #down {
-          background-color: purple;
-        }
-        #left {
-          background-color: #663300;
-        }
-        #right {
-          background-color: black;
-        }
-        #master {
-          //color: yellow;
-        }
-        #middle {
-          display: flex;
-          width: 100%;
-          justify-content: center;
-        }
-        #btn {
-          font-size: 40px;
-          font-family: sans;
-        }
-        body {
-            display: table-cell;
-            vertical-align: middle;
-        }
-        html, body {
-           height: 100%;
-        }
-        html {
-            display: table;
-            margin: auto;
-        }
-      </style>
+		<link rel="stylesheet" href="style.css">
         
         <script>
-          
-          
-          
-          
-          
           
 $(document).ready(function(){
  
@@ -148,37 +98,36 @@ $(document).ready(function(){
    if (pick === 1) {
      
    	//$("#master").css("color", "yellow");
-    $("#master").html("Yellow");
-     audio = new Audio('yellow.mp3');
+    $("#master").html("when");
+     audio = new Audio('sounds/when.mp3');
      audio.play();
    } else if (pick === 2) {
      
    	//$("#master").css("color", "purple");
-         $("#master").html("Purple");
-     audio = new Audio('purple.mp3');
+         $("#master").html("your");
+     audio = new Audio('sounds/your.mp3');
      audio.play();
    } else if (pick === 3) {
      
      //$("#master").css("color", "black");
-         $("#master").html("Black");
-
-     audio = new Audio('black.mp3');
+         $("#master").html("can");
+	 audio = new Audio('sounds/can.mp3');
      audio.play();
    } else if (pick === 4) {
      
      //$("#master").css("color", "brown");
-         $("#master").html("Brown");
-	 audio = new Audio('brown.mp3');
+         $("#master").html("said");
+	 audio = new Audio('sounds/said.mp3');
      audio.play();
    }
    
   }
   
   function reset() {
-    $("#up").css("background-color", "yellow");
-    $("#down").css("background-color", "purple");
-    $("#right").css("background-color", "black");
-    $("#left").css("background-color", "#663300");
+    $("#up").css("background-color", "white");
+    $("#down").css("background-color", "white");
+    $("#right").css("background-color", "white");
+    $("#left").css("background-color", "#FFF");
   }
     
   
@@ -218,21 +167,21 @@ $(document).ready(function(){
       <table style="text-align:center;padding:10px">
 	<tr>
 		<td></td>
-      <td colspan="2" style="text-align:center;"><div id="middle"><div id="master" name="red" class="square">Yellow</div></div></td>
+      <td colspan="2" style="text-align:center;"><div id="middle"><div id="master" name="red" class="square">when</div></div></td>
 		<td></td>
 	</tr>
 	<tr>
 		
-		<td style="text-align:center;"><div id="up1" class="square"></div></td>
-		<td style="text-align:center;"><div id="down1" class="square"></div></td>
-		<td style="text-align:center;"><div id="right1" class="square"></div></td>
-		<td style="text-align:center;"><div id="left1" class="square"></div></td>
+		<td style="text-align:center;"><div id="up1" class="square2"></div></td>
+		<td style="text-align:center;"><div id="down1" class="square2"></div></td>
+		<td style="text-align:center;"><div id="right1" class="square2"></div></td>
+		<td style="text-align:center;"><div id="left1" class="square2"></div></td>
 	</tr>
 	<tr>
-      	<td style="text-align:center;"><div id="up" class="square"></div> </td>
-		<td style="text-align:center;"><div id="down" class="square"></div></td>
-		<td style="text-align:center;"><div id="right" class="square"></div></td>
-		<td style="text-align:center;"><div id="left" class="square"></div></td>
+      	<td style="text-align:center;"><div id="up" class="square">when</div> </td>
+		<td style="text-align:center;"><div id="down" class="square">your</div></td>
+		<td style="text-align:center;"><div id="right" class="square">can</div></td>
+		<td style="text-align:center;"><div id="left" class="square">said</div></td>
 	<tr>
       </table>
     </body>
