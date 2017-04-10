@@ -8,7 +8,7 @@
       <div id="right">
         Before
         <?php 
-            echo "<h1>Blog Posts</h1>";
+            echo "<h1>Tech Ideas</h1>";
             //phpinfo();
             $words = "More words";
             echo "<h2>".$words."</h2>";

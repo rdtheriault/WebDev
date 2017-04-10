@@ -7,11 +7,12 @@
   padding-bottom:300px;
   text-align:center;
   margin:0px;
+  border-radius:5px;
 }
 
 #main {
  display:flex; 
 }
 #right {
- padding:50px; 
+ padding:75px; 
 }
