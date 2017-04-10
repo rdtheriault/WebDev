@@ -13,7 +13,7 @@
 <div id="right">
 
 <?php
-	$word = "banana";
+	$word = "test";
 	echo "<h2>".$word."</h2>";
 ?>  
   

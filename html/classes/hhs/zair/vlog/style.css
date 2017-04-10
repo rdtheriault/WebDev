@@ -1,0 +1,24 @@
+#Sidebar {
+ width:20%;
+  height:100%;
+  background:red;
+  color:white;
+  padding-top:300px;
+  text-align:center;
+  
+}
+
+#main {
+ display:flex; 
+  
+}
+body {
+ background:blue; 
+ 
+}
+#news {
+ color:yellow;
+  padding:60px;
+  text-align:center;
+  width:100%;
+}

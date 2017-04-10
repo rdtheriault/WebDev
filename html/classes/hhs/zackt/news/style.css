@@ -1,0 +1,23 @@
+#sidebar {
+  padding-top: 300px;
+  background-color: white; 
+  width: 25%; 
+  height: 100%; 
+  color: lime;
+}
+body {
+	background-color: gray;
+    color: yellow;
+    text-align: center;
+}
+.uno {
+  	width: 35%;
+    border: 5px ridge white;
+    margin: 1px;
+}
+a {
+  color: red;
+}
+#main {
+  display: flex;
+}

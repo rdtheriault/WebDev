@@ -1,0 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css"href="style.css">
+</head>
+<body>
+<div id="main">
+<?php include "include.php"; ?>
+<div id="right">
+<img src="" style="width:900px"><br><br>
+<?php

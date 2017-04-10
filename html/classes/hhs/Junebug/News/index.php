@@ -10,8 +10,8 @@
 		//phpinfo();
 		$words = "Here are the Categories";
 		echo "<h2>".$words."</h2>";
-		echo "a href ="football.php">football</a>";
-		echo
+		echo "a href ="Football.php">Football</a>";
+		echo "a href ="Track&Field.php">Track&Field
 ?>
   </body>
 </html>

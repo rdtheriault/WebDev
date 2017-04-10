@@ -1,0 +1,13 @@
+#sidebar{
+width:250px;
+background:blue;
+height:100%;
+text-align:center;
+padding-top:300px;
+}
+#main{
+display:flex;
+}
+a{
+color:yellow; font-weight:bold;
+}

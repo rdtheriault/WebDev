@@ -1,22 +1,21 @@
 <html> 
   <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div id="main"> 
     <?php 
-		include "include.php";
-	?>
-    Before
-    <?php
-		echo "<h1>Welcome to my blog!</h1>";
-		//echo "<h1>Hello World</h1>";
-		//phpinfo();
-		//$words = "More words";
-		//echo "<h2>".$words."</h2>";
-		$words = "";
-		
-		
-		
-	?>    
-    After
+		include "include.php"; ?>
+      <div id="right">
+        <img src="../../hhs_blog/hhs.png" style="width:900px"><br><br>
+        <?php 
+            echo "<h1>Hello World Blog</h1>";
+            //phpinfo();
+            $words = "More words";
+            echo "<h2>".$words."</h2>";
+        ?>
+        After
+      </div>
+    </div>
   </body>
 </html>

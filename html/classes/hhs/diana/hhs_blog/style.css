@@ -1,0 +1,13 @@
+#sidebar {
+ width:25%;
+  height:100%;
+  background-color:#ff82cf;
+  
+  padding-top:300px;
+  text-align:center;
+  
+}
+
+#main {
+ display:flex; 
+}
