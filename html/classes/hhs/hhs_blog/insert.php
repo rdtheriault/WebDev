@@ -8,7 +8,7 @@
       <?php include "include.php"; ?>
       
       <div id="right">
-        Before<br><br>
+        <img src="hhs.png" style="width:900px"><br><br>
         <?php
             $handle = fopen("cat.txt", "r");
             if ($handle) {
