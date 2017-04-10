@@ -23,6 +23,13 @@
             } 
         ?> 
         <br>After<br>
+        <form action="/insert.php" method="post">
+          First name:<br>
+          <input type="text" name="firstname" value="Mickey"><br>
+          Last name:<br>
+          <input type="text" name="lastname" value="Mouse"><br><br>
+          <input type="submit" value="Add Post">
+        </form>
       </div>
     </div>
  
