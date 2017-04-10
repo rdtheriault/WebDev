@@ -22,12 +22,12 @@
                 // error opening the file.
             } 
         ?> 
-        <br>After<br>
+        <br><br>
         <form action="/insert.php" method="post">
-          First name:<br>
-          <input type="text" name="firstname" value="Mickey"><br>
-          Last name:<br>
-          <input type="text" name="lastname" value="Mouse"><br><br>
+          Title:<br>
+          <input type="text" name="title" value=""><br>
+          Post:<br>
+          <textarea name="post" style="width:250px;height:150px;"></textarea><br><br>
           <input type="submit" value="Add Post">
         </form>
       </div>
@@ -42,19 +42,25 @@
 
 
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-          $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."-".$title."')";
+          $error = 1;
+          
+          
+          
+          if ($error == 0) {
+            $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."-".$title."')";
 
-          $q3 = mysqli_query($dbc,$s3);
-          if($q3)
-          {
-              echo '<br>Your work sample has been archived'.$counter; 
-              $counter = $counter + 1;
-              $_SESSION['counter'] = $counter;
-          }
-          else
-          {
-              echo '<p>'.mysqli_error($dbc).'</p>';
-              echo 'Archive Query issue';
+            $q3 = mysqli_query($dbc,$s3);
+            if($q3)
+            {
+                echo '<br>Your work sample has been archived'.$counter; 
+                $counter = $counter + 1;
+                $_SESSION['counter'] = $counter;
+            }
+            else
+            {
+                echo '<p>'.mysqli_error($dbc).'</p>';
+                echo 'Archive Query issue';
+            }
           }
         }
 		else {
