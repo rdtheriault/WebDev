@@ -20,6 +20,7 @@
                 fclose($handle);
             } else {
                 // error opening the file.
+              echo "Holey smokes Batman, you have an error..!";
             } 
         ?> 
         <br><br>
