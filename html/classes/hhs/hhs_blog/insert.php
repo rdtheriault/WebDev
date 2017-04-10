@@ -8,9 +8,9 @@
       <?php include "include.php"; ?>
       
       <div id="right">
-        Before
+        Before<br><br>
         <?php
-            $handle = fopen("inputfile.txt", "r");
+            $handle = fopen("cat.txt", "r");
             if ($handle) {
                 while (($line = fgets($handle)) !== false) {
                     // process the line read.
@@ -22,7 +22,7 @@
                 // error opening the file.
             } 
         ?> 
-        After
+        <br>After<br>
       </div>
     </div>
  
