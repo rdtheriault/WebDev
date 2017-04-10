@@ -1,8 +1,36 @@
 <html>
   <head>
-  
+    <link rel="stylesheet" type="text/css"href="style.css">
   </head>
   <body>
+    <div id="main">
+      
+      <?php include "include.php"; ?>
+      
+      <div id="right">
+        Before
+        <?php
+            $handle = fopen("inputfile.txt", "r");
+            if ($handle) {
+                while (($line = fgets($handle)) !== false) {
+                    // process the line read.
+                  echo $line."<br>";
+                }
+
+                fclose($handle);
+            } else {
+                // error opening the file.
+            } 
+        ?> 
+        After
+      </div>
+    </div>
+ 
+    
+    
+    
+    
+    
     <?php
 
 
