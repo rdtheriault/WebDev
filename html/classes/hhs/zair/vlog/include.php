@@ -1,4 +1,4 @@
 <div id="Sidebar" >
-  Link1<br>
+  <a href ="upload.php"> uploads</a><br>
   Link2<br>
 </div>

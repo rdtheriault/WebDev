@@ -24,7 +24,7 @@
             } 
         ?> 
         <br><br>
-        <form action="/insert.php" method="post">
+        <form action="insert.php" method="post">
           Title:<br>
           <input type="text" name="title" value=""><br>
           Post:<br>
