@@ -20,27 +20,50 @@
 			echo "<img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br>";
 			echo "<button id='btn1'>CLICK</button>";
 		?>
+
+        <br>
+       	<form action="update.php" method="post">
+        Title:
+          <input type="text" name="title" value""><br>
+          Post:<br>
+          <textarea name="post" style="width:250px;height:300px;"></textarea><br><br>
+          
+          
+          <select id="cat" name="cat">
+                          
 		<?php 
 			$handle = fopen("category.txt", "r");    
 			if ($handle) {
               while (($line = fgets($handle)) !== false) {
-                echo "<br>".$line."<br>";
+                echo "<option value='".$line."'>".$line."</option>";
               } 
               fclose($handle);
         	} else {
               echo "Oops! You messed up, ya doofus!";
             }
         ?>
-        <br>
-       	<form action="update.php" method="post">
-        Title:
-          <input type="text" name="title" value""><post><br>
-          Post:<br>
-          <textarea name="post" style="width:250px;height:300px;"></textarea><br><br>
+            
+            
+          </select>
+          
+          
           <input type="submit" value="Add Post">
         </form>
+              <?php 
+
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+              //$error = 1;
+              
+              echo $_POST["title"]."<br>";
+              echo $_POST["post"]."<br>";
+              echo $_POST["cat"]."<br>";
+              
+            }
+      ?>
+          
           
        </div>
     </div>
+
   </body>
 </html>

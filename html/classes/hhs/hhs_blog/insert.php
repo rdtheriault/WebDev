@@ -9,12 +9,21 @@
       
       <div id="right">
         <img src="hhs.png" style="width:900px"><br><br>
-        <?php
+        
+        <br><br>
+        <form action="insert.php" method="post">
+          Title:<br>
+          <input type="text" name="title" value=""><br>
+          Post:<br>
+          <textarea name="post" style="width:250px;height:150px;"></textarea><br><br>
+          <select id="cat" name="cat">
+            
+          <?php
             $handle = fopen("cat.txt", "r");
             if ($handle) {
                 while (($line = fgets($handle)) !== false) {
                     // process the line read.
-                  echo $line."<br>";
+                  echo "<option value='".$line."'>".$line."</option>";
                 }
 
                 fclose($handle);
@@ -23,12 +32,8 @@
               echo "Holey smokes Batman, you have an error..!";
             } 
         ?> 
-        <br><br>
-        <form action="insert.php" method="post">
-          Title:<br>
-          <input type="text" name="title" value=""><br>
-          Post:<br>
-          <textarea name="post" style="width:250px;height:150px;"></textarea><br><br>
+          
+          </select>
           <input type="submit" value="Add Post">
         </form>
       </div>
@@ -44,6 +49,12 @@
 
 		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
           $error = 1;
+         
+          echo $_POST["title"]."<br>";
+          echo $_POST["post"]."<br>";
+          echo $_POST["cat"]."<br>";
+          
+          
           
           
           

@@ -8,19 +8,7 @@
     <?php include "include.php"; ?>
     Before
     <div id="News" >  
-      <?php  
-      $handle = fopen("text.txt","r");
-		if($handle) {
-          while  (($line = fgets($handle)) !==false) {
-            echo $line."<br>";
-            
-          }
-                  fclose($handle);
-        }
-		else {
-         "you have an error somewhere"; 
-        }
-      ?>
+    
     <?php		
 		//phpinfo();
 		
@@ -41,6 +29,22 @@
           <input type="text" name="title" value""><br>
           post:<br>
         <textarea name="post" style="width:250px:height:150"></textarea>
+        <select id="cat" name="cat">
+          <?php  
+      $handle = fopen("text.txt","r");
+		if($handle) {
+          while  (($line = fgets($handle)) !==false) {
+            echo"<option value='". $line."'>".$line."<br>";
+            
+          }
+                  fclose($handle);
+        }
+		else {
+         "you have an error somewhere"; 
+        }
+      ?>
+        </select>
+        
           <input type="submit" value="Add Post">
         </form>
       
@@ -51,7 +55,20 @@
     After
    </div>
     
-    
+    <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+         $error = 1;
+          echo $_POST["title"]."<br>";
+          echo $_POST["post"]."<br>";
+          echo $_POST["cat"]."<br>";
+            
+            
+          
+        }
+        
+        
+        
+        ?>
     
   </body>
 </html>

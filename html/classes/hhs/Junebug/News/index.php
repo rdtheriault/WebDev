@@ -1,18 +1,43 @@
 <html>
   <head>
-    <title></title>
-    <style>
-    </style>
+    <link rel="stylesheet" type="text/css"href="style.css">     
   </head>
   <body>
-    <?php
-	echo "<h1>Hello World</h1>";
-		//phpinfo();
-		$words = "Here are the Categories";
-		echo "<h2>".$words."</h2>";
-		echo "a href ='Football.php'>Football</a>";
-		echo "a href ='Track&Field.php'>Track&Field</a>";
-?>
+    <div id="main">
+      
+    <div id="Sidebar" >
+  <a href ="update.php">Update</a><br>
+  link<br>
+</div>    
+    <div id="News" >  
+      
+<br>
+<br><br>    <h1><span id='title'>Welcome Athletes!</span></h1> 
+      <div id="img">
+     <div> <img src="http://media.ussportscamps.com/assets/programs/Contact-Football-072015-3838.jpg" width="500px"/></div>
+     
+        <div> <img src="http://www.eastoregonian.com/storyimage/EO/20161008/ARTICLE/161009799/EP/1/6/EP-161009799.jpg&MaxW=600"  width="468px"/></div>
+      
+        
+      </div>
+      
+      <form action="update.php" method="post">
+          Title:<br>
+          <input type="text" name="title" value""><br>
+          post:<br>
+        <textarea name="post" style="width:250px:height:150"></textarea>
+          <input type="submit" value="Add Post">
+        </form>
+      
+      
+      
+      
+    </div>              
+    After
+   </div>
+    
+    
+    
   </body>
 </html>
   
