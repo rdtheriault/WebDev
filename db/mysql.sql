@@ -380,7 +380,7 @@ CREATE TABLE `innodb_index_stats` (
 
 LOCK TABLES `innodb_index_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT INTO `innodb_index_stats` VALUES ('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-03-27 14:52:51','n_diff_pfx01',0,1,'DB_ROW_ID'),('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-03-27 14:52:51','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-03-27 14:52:51','size',1,NULL,'Number of pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_diff_pfx01',0,1,'id'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_diff_pfx01',2,1,'variable'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','size',1,NULL,'Number of pages in the index');
+INSERT INTO `innodb_index_stats` VALUES ('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-04-12 19:10:09','n_diff_pfx01',0,1,'DB_ROW_ID'),('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-04-12 19:10:09','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_blog','GEN_CLUST_INDEX','2017-04-12 19:10:09','size',1,NULL,'Number of pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_diff_pfx01',0,1,'id'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_diff_pfx01',2,1,'variable'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -408,7 +408,7 @@ CREATE TABLE `innodb_table_stats` (
 
 LOCK TABLES `innodb_table_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT INTO `innodb_table_stats` VALUES ('hhs_main','hhs_blog','2017-03-27 14:52:51',0,1,0),('hhs_main','hhs_user','2017-03-27 14:54:12',0,1,0),('mysql','gtid_executed','2016-11-18 18:17:26',0,1,0),('sys','sys_config','2016-11-18 18:17:27',2,1,0);
+INSERT INTO `innodb_table_stats` VALUES ('hhs_main','hhs_blog','2017-04-12 19:10:09',0,1,0),('hhs_main','hhs_user','2017-03-27 14:54:12',0,1,0),('mysql','gtid_executed','2016-11-18 18:17:26',0,1,0),('sys','sys_config','2016-11-18 18:17:27',2,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1008,4 +1008,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-12  0:00:01
+-- Dump completed on 2017-04-13  0:00:01
