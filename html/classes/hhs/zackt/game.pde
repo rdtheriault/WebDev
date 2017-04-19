@@ -76,7 +76,7 @@ funtion jumped() {
     if (jump < 0) {
       
       jump += 10;
-      background(0, 212, 244);
+      background(100, 212, 244);
   fill(0, 188, 31);
   rect(-1, 300, 501, 100);
       image(b, xPos, yPos+jump, 75, 75);

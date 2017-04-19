@@ -11,7 +11,7 @@
     		<div id="right">
     
     	<?php
-			echo "<h1>Welcome to the news</h1>";
+			echo "<h1>Hermiston High School</h1>";
 			$words = "Here are the categories:";
 			echo "<h2>".$words."</h2> <br>";
 			echo "<h3> Football <br>";
