@@ -1,13 +1,43 @@
 <html>
   <head>
-  <title>Anne Marie</title>
-  </head>
+  <title>Dean Winchester</title>
+  
+  /*
+        *multi-line comment
+        */
+  p{ line-hieght: 1em; }
+h1, h2, h3, h4{
+  color: purple;
+  font-weight: normal;
+  line-hieght: 1.1em;
+  margin: 0 0 .5em 0;
+}
+    
+    
+    
+     <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
   <body> 
-    <h1><strong>Anne Marie</strong></h1>
-      <h2>Basic Info</h2>
-     
-        <h3> Anne Marie was born on march 5th 2001. She is currently 16 years of age. 
-        She has two cats and rides a horse named dandy, the cats names are oliver an O.J. 
-        they are both orange and white 
+    
+    
+    <div id="page">
+      <div id="logo">
+        <h1><a href="/" id="logo link">Dean Winchester</a></h1>
+          
+          </div>
+        <div id="nav">
+          <ul>
+          	
+          	<li><a href="#/home.html">Home</a></li>
+            <li><a href="#/about.html">About</a></li>
+              
+              </ul>
+            </div>
+            <div id="content">
+              <h2>Home</h2>
+            <p>
+              
+              
+        
         
       
