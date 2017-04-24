@@ -47,32 +47,59 @@
     <?php
 
 
-		if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-          $error = 1;
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          include "../connect.php";
+          $error = 0;
          
-          echo $_POST["title"]."<br>";
-          echo $_POST["post"]."<br>";
-          echo $_POST["cat"]."<br>";
+          //echo $_POST["title"]."<br>";
+          //echo $_POST["post"]."<br>";
+          //echo $_POST["cat"]."<br>";
           
+		if(!isset($_POST["post"]) OR !isset($_POST["title"])){
+          echo "<br>Your posts are not set<br>"; 
+          $error = 1;
+        }
           
+        if($_POST["post"] == ""){
+          echo "<br>Your post is emptyt<br>"; 
+          $error = 1;
+        }
+        else{
+         	$info =  $dbc->real_escape_string($_POST["post"]);
+        }
           
-          
-          
-          if ($error == 0) {
-            $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."-".$title."')";
+        if($_POST["title"] == ""){
+          echo "<br>Your title is emptyt<br>"; 
+          $error = 1;
+        }
+        else {
+          	$title = $dbc->real_escape_string($_POST["title"]);
+        }
+        if($_POST["cat"] == ""){
+          echo "<br>Your category is emptyt<br>"; 
+          $error = 1;
+        }
+        else {
+          $category = $dbc->real_escape_string($_POST["cat"]);
+        }
+          if($error == 0) {
+            
+            //for testing
+            $name = "admin";
+            
+            $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."','".$title."')";
 
             $q3 = mysqli_query($dbc,$s3);
             if($q3)
             {
-                echo '<br>Your work sample has been archived'.$counter; 
-                $counter = $counter + 1;
-                $_SESSION['counter'] = $counter;
+                echo '<br>Your post has been posted!';
             }
             else
             {
                 echo '<p>'.mysqli_error($dbc).'</p>';
                 echo 'Archive Query issue';
             }
+            mysqli_close($dbc);
           }
         }
 		else {

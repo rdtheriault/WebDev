@@ -36,35 +36,14 @@ function newPopup(url) {
         filter: FlipH;
         -ms-filter: "FlipH";
 }
-	#first{
+	.blue{
 background-color:blue;
     }
-	#second{
+	.yellow{
 background-color:yellow;
-    }
-	#third{
-background-color:blue;
-    }
-	#fourth{
-background-color:yellow;
-    }  
-	#fifth{
-background-color:blue;
-    }
-	#sixth{
-background-color:yellow;
-    }
-	#seventh{	
-background-color:blue;
-    }
-  	#eighth{
-background-color:yellow;
-    }
-  #ninth{	
-background-color:blue;
     }
   .size{
-width:60px; height:60px;
+width:40px; height:40px;
   }
   #banana{
    width:50%; position:fixed; right:25%; top:0%; text-align:left; background-color:yellow; border:rgb(0, 102, 255) ridge 20px;
@@ -73,65 +52,64 @@ width:60px; height:60px;
 </head>
 <body>
 
-<div id="banana">
-<h2 style="font-size:2em; text-align:center; color:blue;">Table of content</h2>
-<div id=first>  
-	<a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/index2.html">
-    <img class="size" src ="http://i2.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Test Page</a>
-</div>
-  
-<div id="second">  
-    <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/review.html">
-    <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Review</a>
-</div>
-  
-<div id="third">
-    <a class="orange_letters" href="https://www.khanacademy.org/">
-    <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Khan Academy</a>
-</div>
-  
-<div id="fourth">
-    <a class="blue_letters" href="https://classroom.google.com/h">
-    <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Classroom</a>
-</div>
-  
-<div id="fifth">	
-	<a class="orange_letters" href="https://web.hermiston.k12.or.us:10000/">
-    <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Webmin</a>
-</div>
-  
-<div id="sixth">  
-  <a class="blue_letters" href="https://drive.google.com/drive/my-drive">
-    <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Drive</a>
-</div>
-  
-<div id="seventh">  
-   <a class="orange_letters" href="https://powerschool.hermiston.k12.or.us/public/">
-   <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">PowerSchool</a>
-</div>
+  <div id="banana" >
+    <h2 style="font-size:2em; text-align:center; color:blue;">Table of content</h2>
+    <div id=first class="blue">  
+        <a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/index2.html">
+        <img class="size" src ="http://i2.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Test Page</a>
+    </div>
 
-<div id="eighth">  
-  <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/project.html">
-    <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Project</a>
-</div>
-  
-<div id="ninth">  
-   <a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/index.php">
-   <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Blog</a>
-</div>  
-  
-  
-    <script>
-var easter_egg = new Konami();
-easter_egg.code = function() { changeBackground('#6699FF');colorLoop(); }
-easter_egg.load();
-</script>   
-   
-    
-   
-    
-</div>
+    <div id="second" class="yellow">  
+        <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/review.html">
+        <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Review</a>
+    </div>
 
+    <div id="third" class="blue">
+        <a class="orange_letters" href="https://www.khanacademy.org/">
+        <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Khan Academy</a>
+    </div>
 
+    <div id="fourth" class="yellow">
+        <a class="blue_letters" href="https://classroom.google.com/h">
+        <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Classroom</a>
+    </div>
+
+    <div id="fifth" class="blue">	
+        <a class="orange_letters" href="https://web.hermiston.k12.or.us:10000/">
+        <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Webmin</a>
+    </div>
+
+    <div id="sixth" class="yellow">  
+      <a class="blue_letters" href="https://drive.google.com/drive/my-drive">
+        <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Drive</a>
+    </div>
+
+    <div id="seventh" class="blue">  
+       <a class="orange_letters" href="https://powerschool.hermiston.k12.or.us/public/">
+       <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">PowerSchool</a>
+    </div>
+
+    <div id="eighth" class="yellow">  
+      <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/project.html">
+        <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Project</a>
+    </div>
+
+    <div id="ninth" class="blue">  
+       <a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/index.php">
+       <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Blog</a>
+    </div>  
+
+    <div id="tenth" class="yellow">  
+      <a class="blue_letters" href="https://docs.google.com/document/u/0/?tgif=c">
+        <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Docs</a>
+    </div>
+
+        <script>
+    var easter_egg = new Konami();
+    easter_egg.code = function() { changeBackground('#6699FF');colorLoop(); }
+    easter_egg.load();
+    </script>   
+
+  </div>
 </body>
 </html>
