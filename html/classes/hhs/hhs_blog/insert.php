@@ -61,7 +61,7 @@
         }
           
         if($_POST["post"] == ""){
-          echo "<br>Your post is emptyt<br>"; 
+          echo "<br>Your post is empty<br>"; 
           $error = 1;
         }
         else{
@@ -97,10 +97,12 @@
             else
             {
                 echo '<p>'.mysqli_error($dbc).'</p>';
-                echo 'Archive Query issue';
+                echo 'Query issue';
             }
-            mysqli_close($dbc);
+            
           }
+          mysqli_close($dbc);
+          
         }
 		else {
           

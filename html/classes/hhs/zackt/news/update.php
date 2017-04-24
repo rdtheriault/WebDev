@@ -52,12 +52,52 @@
               <?php 
 
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-              //$error = 1;
+              include "../../connect.php";
+              $error = 0;
               
-              echo $_POST["title"]."<br>";
-              echo $_POST["post"]."<br>";
-              echo $_POST["cat"]."<br>";
               
+              //echo $_POST["title"]."<br>";
+              //echo $_POST["post"]."<br>";
+              //echo $_POST["cat"]."<br>";
+              
+              if (!isset($_POST["post"]) OR !isset($_POST["title"])) {
+                echo "<h1> POST NOT SET</h1>";
+                $error = 1;
+              }
+              
+              if ($_POST["post"] == "") {
+                echo "post is empty";
+                $error = 1;
+              } else {
+				$info = $dbc->real_escape_string($_POST["post"]);
+              }
+              if ($_POST["title"] == "") {
+                echo "title is empty";
+                $error = 1;
+              } else {
+				$title = $dbc->real_escape_string($_POST["title"]);
+              }
+              if ($_POST["cat"] == "") {
+                echo "category is empty";
+                $error = 1;
+              } else {
+				$category = $dbc->real_escape_string($_POST["cat"]);
+              }
+              
+              if ($error == 0) {
+                $name = "zackt";
+                $s3 = "insert into hhs_blog (user, category, info, title) Values ('".$name."', '".$category."', '".$info."', '".$title."')";
+            	$q3 = mysqli_query($dbc,$s3);
+                if (q3) {
+                  echo '<h1>POSTED</h1>';
+                } else {
+                  echo '<p>'.mysqli_error($dbc).'</p>';
+                  echo 'Query Issue';
+                  
+                }
+                mysqli_close($dbc);
+              }
+            
             }
       ?>
           

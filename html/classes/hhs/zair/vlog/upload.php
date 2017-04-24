@@ -56,15 +56,62 @@
    </div>
     
     <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-         $error = 1;
-          echo $_POST["title"]."<br>";
-          echo $_POST["post"]."<br>";
-          echo $_POST["cat"]."<br>";
+       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          include"../../connect.php";
+         $error = 0;
+         // echo $_POST["title"]."<br>";
+          //echo $_POST["post"]."<br>";
+          //echo $_POST["cat"]."<br>";
             
             
           
+         }
+		if (!isset($_POST["post"])OR !isset($_POST["title"])){
+          echo "<br> Your screwed<br>";
+          $error = 1;
+          
+          if($POST["post"] == ""){
+            echo "<br>blank<br>";
+            $error = 1;
+          }
+            else {
+              $info = $dbc->real_escape_string($_POST["post"]);
+            }
+             if($POST["title"] == ""){
+            echo "<br>blank<br>";
+            $error = 1;
+          }
+            else {
+              $title = $dbc->real_escape_string($_POST["title"]);
+            }
+            if($POST["cat"] == ""){
+            echo "<br>blank<br>";
+            $error = 1;
+          }
+            else {
+              $category = $dbc->real_escape_string($_POST["cat"]);
+            }
+          if error == 0) {
+            $name = "zair2210";
+             $s3 = "Insert into hhs_blog (user,category,info,title) values ('".$name."','".$category."','".$info."','".$title."')";
+            
+            
+            $q3 = mysqli_query($dbc,$s3);
+            
+            if($q3)
+            {
+              echo '<br>Your post has been posted thank you for posting your post one the post tab!';
+            }
+            else
+            {
+              echo '<p>'.mysql_error($dbc).'</p>':
+              echo '<Query issue';
+            }
+          }
+            mysql_close($dbc);
+          
         }
+          
         
         
         
