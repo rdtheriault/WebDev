@@ -17,9 +17,9 @@
 		echo "<h1>".$news."</h1>";
 	?> 
       <div id="img">
-     <div> <img src="https://pbs.twimg.com/profile_images/1405261581/soccernews_logo_new_400x400.png" width="500px" height="300px"/></div>
+     <div> <img src="https://i.ytimg.com/vi/RM_5tJncHww/maxresdefault.jpg" width="500px"/></div>
      
-        <div> <img src="https://pbs.twimg.com/profile_images/1405261581/soccernews_logo_new_400x400.png" width="500px" height="300px"/></div>
+        <div> <img src="http://statics.memedeportes.com/mmds/2017/04/MMD_997518_gif_espectacular_chilena_de_aviles_hurtado_en_la_liga_mx_thumb.jpg?cb=6135020"  width="468px"/></div>
       
         
       </div>
@@ -56,62 +56,60 @@
    </div>
     
     <?php
-       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           include"../../connect.php";
-         $error = 0;
-         // echo $_POST["title"]."<br>";
+          $error = 0;
+          // echo $_POST["title"]."<br>";
           //echo $_POST["post"]."<br>";
           //echo $_POST["cat"]."<br>";
             
             
           
-         }
-		if (!isset($_POST["post"])OR !isset($_POST["title"])){
-          echo "<br> Your screwed<br>";
-          $error = 1;
-          
-          if($POST["post"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
+        
+          if (!isset($_POST["post"])OR !isset($_POST["title"])){
+             echo "<br> Your screwed<br>";
+             $error = 1;
           }
-            else {
+
+          if($_POST["post"] == ""){
+              echo "<br>blank<br>";
+              $error = 1;
+          }
+          else {
               $info = $dbc->real_escape_string($_POST["post"]);
-            }
-             if($POST["title"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
           }
-            else {
+          if($_POST["title"] == ""){
+              echo "<br>blank<br>";
+              $error = 1;
+          }
+          else {
               $title = $dbc->real_escape_string($_POST["title"]);
-            }
-            if($POST["cat"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
           }
-            else {
-              $category = $dbc->real_escape_string($_POST["cat"]);
-            }
-          if error == 0) {
-            $name = "zair2210";
-             $s3 = "Insert into hhs_blog (user,category,info,title) values ('".$name."','".$category."','".$info."','".$title."')";
-            
-            
-            $q3 = mysqli_query($dbc,$s3);
-            
-            if($q3)
-            {
+
+          if($_POST["cat"] == ""){
+              echo "<br>blank<br>";
+              $error = 1;
+          }
+          else {
+                $category = $dbc->real_escape_string($_POST["cat"]);
+          }
+          
+          if ($error == 0) {
+            $name = "zairG";
+            $s3 = "Insert into hhs_blog (user,category,info,title) values ('".$name."','".$category."','".$info."','".$title."')";
+            $q3 = mysqli_query($dbc,$s3);        
+            if($q3)  {
               echo '<br>Your post has been posted thank you for posting your post one the post tab!';
             }
-            else
-            {
-              echo '<p>'.mysql_error($dbc).'</p>':
+            else {
+              echo '<p>'.mysql_error($dbc).'</p>';
               echo '<Query issue';
             }
           }
-            mysql_close($dbc);
+            mysqli_close($dbc); //mysqli
           
         }
-          
+              
         
         
         

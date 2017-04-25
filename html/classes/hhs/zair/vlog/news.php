@@ -11,7 +11,7 @@
     	Before
     <div id="News" >      
     <?php		
-		$owner = "angelv";
+		$owner = "zairG";
 			echo "<h1>Blog Post<h1>";
 			include "../../connect.php";
 		$s = "Select * from hhs_blog WHERE user ='".$owner."'" and category = 'news';

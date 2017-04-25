@@ -11,15 +11,23 @@
     		<div id="right">
     
     	<?php
-			echo "<h1>World of Football</h1>";
-			$words = "Here are the categories:";
-			echo "<h2>".$words."</h2> <br>";
-			echo "<h3>Football <br>";
-        	echo "Hermiston high school</h3> <br>";
-			echo "<img class='uno' src='http://www4.pictures.zimbio.com/gi/Jacquizz+Rodgers+Oregon+v+Oregon+State+0PaUXemKDtYl.jpg'>";
-			echo "<img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br>";
-			echo "<button id='btn1'>CLICK</button>";
+			echo "<h1>World of Football</h1><br>";
+			$owner = "zackt";
+			echo "<h2>Blog Posts</h2>";
+			include "../../connect.php";
+			$s = "select * from hhs_blog WHERE user like '". $owner. "' and category like 'Football'";
+	        $q = mysqli_query($dbc, $s);
+			if($q) {
+              while($row = mysqli_fetch_array($q, MYSQLI_ASSOC)){
+                echo '<h2>'.$row['title'].'</h2><div>'.$row['info'].'</div>';
+              }
+            } 
+			else {
+              echo '<p>'. mysqli_error($dbc).'</p>';
+              echo 'query issue';
+            }
 		?>
+              
     		</div>
     </div>
     

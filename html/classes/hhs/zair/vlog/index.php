@@ -9,16 +9,19 @@
     <div id="main">
     <?php include "include.php"; ?>
     Before
-    <div id="News" >
-      <img src="https://pbs.twimg.com/profile_images/1405261581/soccernews_logo_new_400x400.png" width="500px" height="300px"/>
-    <?php
-		
+    <div id="News" >      
+    <?php		
 		//phpinfo();
 		
-		$news = "<span id='title'>Welcome to Zair's soccer News</span>";
+		$news = "<span id='title'>Welcome to Zair's Soccer News</span>";
          
 		echo "<h1>".$news."</h1>";
-	?>             
+	?> 
+      <div id="img">
+     <div> <img src="https://i.ytimg.com/vi/RM_5tJncHww/maxresdefault.jpg" width="500px"/></div>
+     
+        <div> <img src="http://statics.memedeportes.com/mmds/2017/04/MMD_997518_gif_espectacular_chilena_de_aviles_hurtado_en_la_liga_mx_thumb.jpg?cb=6135020"  width="468px"/></div>
+      </div>
     </div>              
     After
    </div>

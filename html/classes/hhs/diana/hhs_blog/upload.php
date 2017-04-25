@@ -58,7 +58,7 @@ else{
 <?php
 if($_SERVER['REQUEST_METHOD']=='POST'){
  $error=0;
-  include "../connect,php";
+  include "../../connect.php";
   //echo $_POST["title"]."<br>";
   //echo $_POST["post"]."<br>";
   //echo $_POST["txt"]."<br>";
@@ -66,25 +66,25 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
    $error=1;  
   }
   if($_POST["post"]==""){
-   echo "<br>Your post is empty<br>" 
+   echo "<br>Your post is empty<br>"; 
     $error=1;  
   }
   else{
-   $info= $dbc->real_escape_string($_POST["post"])   
+   $info= $dbc->real_escape_string($_POST["post"]);   
   }
     if($_POST["title"]==""){
-   echo "<br>Your title is empty<br>" 
+   echo "<br>Your title is empty<br>";
     $error=1;  
   }
   else{
-   $title= $dbc->real_escape_string($_POST["title"])   
+   $title= $dbc->real_escape_string($_POST["title"]);  
   }
     if($_POST["txt"]==""){
-   echo "<br>Your txt is empty<br>" 
+   echo "<br>Your txt is empty<br>"; 
     $error=1; 
   }
   else{
-   $category= $dbc->real_escape_string($_POST["txt"]) 
+   $category= $dbc->real_escape_string($_POST["txt"]); 
     
   }
           if($error == 0) {
@@ -92,26 +92,26 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $name = "dianag";
             
             $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."','".$title."')";
-            $q3= mysqli_query($dcb,$s3);
+            $q3= mysqli_query($dbc,$s3);
             if($q3){
             echo '<br>Your post has been posted.<br>';    
               
             }
             else{
-             echo '<p>'.mysqli_error($dcb).'</p>';
+             echo '<p>'.mysqli_error($dbc).'</p>';
                echo 'Query issue';
                             
             }
     
     
   }
-  mysqli_close($dcb);
-  
+  mysqli_close($dbc);
+}
   else{
     
     
   }
-}
+
 
 
 

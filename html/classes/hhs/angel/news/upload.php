@@ -58,41 +58,41 @@
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           include"../../connect.php";
-         $error = 0;
-         // echo $_POST["title"]."<br>";
+          $error = 0;
+          // echo $_POST["title"]."<br>";
           //echo $_POST["post"]."<br>";
           //echo $_POST["cat"]."<br>";
             
             
           
         
-		if (!isset($_POST["post"])OR !isset($_POST["title"])){
-          echo "<br> Your screwed<br>";
-          $error = 1;
-        }
-          
+          if (!isset($_POST["post"])OR !isset($_POST["title"])){
+             echo "<br> Your screwed<br>";
+             $error = 1;
+          }
+
           if($_POST["post"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
-          }
-            else {
-              $info = $dbc->real_escape_string($_POST["post"]);
-            }
-             if($_POST["title"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
-          }
-            else {
-              $title = $dbc->real_escape_string($_POST["title"]);
-            }
-          
-          if($_POST["cat"] == ""){
-            echo "<br>blank<br>";
-            $error = 1;
+              echo "<br>blank<br>";
+              $error = 1;
           }
           else {
-              $category = $dbc->real_escape_string($_POST["cat"]);
-            }
+              $info = $dbc->real_escape_string($_POST["post"]);
+          }
+          if($_POST["title"] == ""){
+              echo "<br>blank<br>";
+              $error = 1;
+          }
+          else {
+              $title = $dbc->real_escape_string($_POST["title"]);
+          }
+
+          if($_POST["cat"] == ""){
+              echo "<br>blank<br>";
+              $error = 1;
+          }
+          else {
+                $category = $dbc->real_escape_string($_POST["cat"]);
+          }
           
           if ($error == 0) {
             $name = "angelv";
@@ -106,7 +106,7 @@
               echo '<Query issue';
             }
           }
-            mysql_close($dbc);
+            mysqli_close($dbc); //mysqli
           
         }
               

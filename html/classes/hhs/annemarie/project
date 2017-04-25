@@ -4,12 +4,24 @@
    <style>
   .div1
   {
-    border: 1px solid black;
+    border: 5px solid black;
     height:150px;
     width:180px;
     background:url(
     background-repeat: no-repeat;
-  </style>
+ 
+      div {
+    -webkit-column-count: 2;
+    -moz-column-count: 2; 
+    column-count: 2;
+}
+      
+ div {
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+}     
+      </style>
   
   
     <link rel="stylesheet" href="style.css" type="text/css" />
