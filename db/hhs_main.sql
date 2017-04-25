@@ -23,13 +23,14 @@ DROP TABLE IF EXISTS `hhs_blog`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hhs_blog` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` text,
   `category` text,
   `info` text,
   `title` text,
-  `approved` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `approved` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +39,7 @@ CREATE TABLE `hhs_blog` (
 
 LOCK TABLES `hhs_blog` WRITE;
 /*!40000 ALTER TABLE `hhs_blog` DISABLE KEYS */;
+INSERT INTO `hhs_blog` VALUES (3,'zackt','Hermiston High School','Good Day Fellow Students!','Day 1',0),(4,'zackt','Football\r\n','Struggle Bus. No joke.','Jabril Peppers',0);
 /*!40000 ALTER TABLE `hhs_blog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-24  0:00:02
+-- Dump completed on 2017-04-25  0:00:02
