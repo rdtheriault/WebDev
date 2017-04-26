@@ -9,17 +9,26 @@
     <div id="main">
     	<?php include "include.php" ?>
     		<div id="right">
-    
+    		<img class="image" src="http://static.hudl.com/users/prod/544464_91ba0cf47a4f41668ef8e9acae017a01.jpg">
     	<?php
-			echo "<h1>Hermiston High School</h1>";
-			$words = "Here are the categories:";
-			echo "<h2>".$words."</h2> <br>";
-			echo "<h3> Football <br>";
-        	echo "Hermiston high school</h3> <br>";
-			echo "<img class='uno' src='http://www4.pictures.zimbio.com/gi/Jacquizz+Rodgers+Oregon+v+Oregon+State+0PaUXemKDtYl.jpg'>";
-			echo "<img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br>";
-			echo "<button id='btn1'>CLICK</button>";
+			echo "<h1 class='purp'>Hermiston High School</h1><br>";
+			$owner = "zackt";
+			echo "<h2>Blog Posts</h2>";
+			include "../../connect.php";
+			$s = "select * from hhs_blog WHERE user like '". $owner. "' and category like '%Hermiston High School%'";
+	        $q = mysqli_query($dbc, $s);
+			if($q) {
+              while($row = mysqli_fetch_array($q, MYSQLI_ASSOC)){
+                
+                echo '<h2 class="title">'.$row['title'].'</h2><div class="post">'.$row['info'].'</div>';
+              }
+            } 
+			else {
+              echo '<p>'. mysqli_error($dbc).'</p>';
+              echo 'query issue';
+            }
 		?>
+              
     		</div>
     </div>
     

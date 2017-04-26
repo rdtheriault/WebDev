@@ -13,7 +13,7 @@
             echo "<h1>Blog Posts</h1>";
             
 			include "../connect.php";
-			$s = "Select * From hhs_blog WHERE user = 'zackt' and category = 'Football'"; // Where owner = '".$owner."'";
+			$s = "Select * From hhs_blog WHERE user like 'zackt' and category like '%Football%'"; // Where owner = '".$owner."'";
 		$q = mysqli_query($dbc,$s);
 		if($q)
 		{   

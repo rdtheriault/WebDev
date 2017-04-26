@@ -61,7 +61,7 @@
               //echo $_POST["cat"]."<br>";
               
               if (!isset($_POST["post"]) OR !isset($_POST["title"])) {
-                echo "<h1> POST NOT SET</h1>";
+                echo "<h1> POST NOT SENT</h1>";
                 $error = 1;
               }
               

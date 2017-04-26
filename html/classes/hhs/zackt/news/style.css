@@ -1,5 +1,5 @@
 #sidebar {
-  padding-top: 300px;
+  padding-top: 270px;
   background-color: white; 
   width: 25%; 
   height: 100%; 
@@ -20,4 +20,23 @@ a {
 }
 #main {
   display: flex;
+}
+.title {
+  color: blue;
+}
+#right {
+	text-align: center;
+  width: 75%;
+  border: 10px ridge white;
+}
+.post {
+  text-align: center;
+}
+.purp {
+  color: purple;
+}
+.image {
+  width: 200px;
+  height: 150px;
+  border: 2px double purple;
 }

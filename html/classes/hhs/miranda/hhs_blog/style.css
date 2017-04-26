@@ -10,3 +10,9 @@
 #main {
 display:flex;
 }
+.design {
+  color: blue;
+}
+.zox {
+  border: 1px solid pink;
+}

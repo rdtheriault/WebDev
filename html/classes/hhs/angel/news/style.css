@@ -25,3 +25,10 @@ body {
 #img {
  display:flex; 
 }
+.class{
+color:yellow;  
+  
+}
+.div1 {
+ border:2px solid blue; 
+}

@@ -1,43 +1,47 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css"href="style.css">     
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
   </head>
+  
   <body>
     <div id="main">
-      
-    <div id="Sidebar" >
-  <a href ="update.php">Update</a><br>
-  Link<br>
-</div>    
-    <div id="News" >  
-      
-<br>
-<br><br>    <h1><span id='title'>Welcome Athletes!</span></h1> 
-      <div id="img">
-     <div> <img src="http://media.ussportscamps.com/assets/programs/Contact-Football-072015-3838.jpg" width="500px"/></div>
-     
-        <div> <img src="http://www.eastoregonian.com/storyimage/EO/20161008/ARTICLE/161009799/EP/1/6/EP-161009799.jpg&MaxW=600"  width="468px"/></div>
-      
-        
-      </div>
-      
-      <form action="update.php" method="post">
-          Title:<br>
+    	<div id="sidebar">
+  <a href="index.php">Home</a><br>
+  <br>
+  <a href="football.php">Football</a><br>
+  <br>
+  <a href="hhs.php">Hermiston High School</a><br>
+  <br>
+  <a href="update.php"><strong>Create Post</strong></a><br>
+  <br>
+</div>    		<div id="right">
+    
+    	<h1>Welcome to the news</h1><h2>Here are the categories:</h2> <br><h3>Football <br>Hermiston high school</h3> <br><img class='uno' src = 'http://www.eastoregonian.com/storyimage/EO/20161008/ARTICLE/161009799/EP/1/6/EP-161009799.jpg&MaxW=600'><img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br><button id='btn1'>CLICK</button>
+        <br>
+       	<form action="update.php" method="post">
+        Title:
           <input type="text" name="title" value""><br>
-          post:<br>
-        <textarea name="post" style="width:250px:height:150"></textarea>
+          Post:<br>
+          <textarea name="post" style="width:250px;height:300px;"></textarea><br><br>
+          
+          
+          <select id="cat" name="cat">
+                          
+		<option value='Football
+'>Football
+</option><option value='Hermiston High School'>Hermiston High School</option>            
+            
+          </select>
+          
+          
           <input type="submit" value="Add Post">
         </form>
-      
-      
-      
-      
-   		if ($_SERVER('REQUEST_METHOD'] == 'POST') {
-     	echo $_POST["title"]."<br>";
-		echo $_POST["post"]."<br>";
-      	echo $_POST["cat"]."<br>";
-    
-    
+                        
+          
+       </div>
+    </div>
+
   </body>
 </html>
-  
