@@ -15,7 +15,7 @@
             }
 			$owner = $_SESSION['owner123'];
 			//id user category info title approved
-            echo "<h1>Blog Posts</h1>";
+            echo "<h1>Blog Posts</h1><br>";
             
 			include "../connect.php";
 			$s = "Select * From hhs_blog";// WHERE user like 'zackt' and category like '%Football%'"; // Where owner = '".$owner."'";
