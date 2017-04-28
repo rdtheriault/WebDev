@@ -13,14 +13,15 @@
             $words = "More words";
             echo "<h2>".$words."</h2>";
 
-			session_start();
-			if(!isset($_SESSION['owner123'])){
-              	header( "Location: login.php" ); 
-              	exit();
-            }
-
         ?>
-        After
+        <form action="login.php" method="post">
+        	User Name: <input name="name"><br>
+          	Password: <input name="pw" type="password"><br>
+          	<input type="submit" value="Login">
+        </form>
+        <?php
+        	if($_SERVER['REQUEST_METHOD'] == 'POST'){ include("../blogLogin.php"); }
+        ?>
       </div>
     </div>
   </body>
