@@ -1,8 +1,8 @@
 #Sidebar {
  width:20%;
   height:100%;
-  background:green;
-  color:white;
+  background:gold;
+  color:black;
   padding-top:300px;
   text-align:center;
   
@@ -14,10 +14,10 @@
 }
 body {
  background:navy; 
- color:red;
+ color:white;
 }
 #news {
- color:green;
+ color:white;
   padding:60px;
   text-align:center;
   width:100%;
@@ -26,9 +26,9 @@ body {
  display:flex; 
 }
 .class{
-color:gold;  
+color:yellow;  
   
 }
 .div1 {
- border:2px solid red; 
+ border:2px solid blue; 
 }
