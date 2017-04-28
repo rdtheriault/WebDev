@@ -22,12 +22,22 @@
 		?>
               <?php 
               session_start();
-				if(!isset($_SESSION["owner123"])) {
-                  header("Location: login.php");
-                  exit();
-                }
+				//if(!isset($_SESSION["owner123"])) {
+                  //header("Location: login.php");
+                  //exit();
+                //}
               
               ?>
+              <form action="login.php" method="post">
+                Username: <input name="name"> <br>
+                Password: <input name="pw" type="password"><br>
+                <input type="submit" value="Login">
+              </form>
+              <?php 
+				if($_SERVER['REQUEST_METHOD'] == 'post') {
+                  include("../../blogLogin.php");
+                }
+			  ?>
     		</div>
     </div>
     

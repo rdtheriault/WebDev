@@ -9,13 +9,18 @@
     <div id="main">
     <?php
     include "include.php"
-
+session_start();
+	if(!isset($_SESSION['owner123'])){
+    header("Location: login.php");
+      exit();
+      
+    }
    ?>
       <div id="right"> 
         <img src="http://hhs.hermiston.k12.or.us/wp-content/uploads/hhs/sites/7/2015/05/HHS-Banner.png" style="width:900px"><br><br>
     Before
   <?php
-$owner = "dianag";
+	$owner =$_SESSION['owner123'];
 			//id user category info title approved
             echo "<h1>Blog Posts</h1>";
             

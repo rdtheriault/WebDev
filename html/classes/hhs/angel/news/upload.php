@@ -5,7 +5,16 @@
   <body>
     <div id="main">
       
-    <?php include "include.php"; ?>
+    <?php include "include.php"; 
+      
+      session_start();
+      if(!isset($_SESSION['angel345'])) {
+        header("Location: login.php");
+        exit();
+      }
+
+?>
+      
     Before
     <div id="News" >  
     
@@ -49,7 +58,7 @@
         </form>
       
       
-      
+     '
       
     </div>              
     After
@@ -95,7 +104,7 @@
           }
           
           if ($error == 0) {
-            $name = "angelv";
+            $name = $_SESSION['angel345'];
             $s3 = "Insert into hhs_blog (user,category,info,title) values ('".$name."','".$category."','".$info."','".$title."')";
             $q3 = mysqli_query($dbc,$s3);        
             if($q3)  {

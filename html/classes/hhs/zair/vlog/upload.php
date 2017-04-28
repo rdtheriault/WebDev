@@ -5,14 +5,23 @@
   <body>
     <div id="main">
       
-    <?php include "include.php"; ?>
+    <?php include "include.php"; 
+      
+      session_start();
+      if(!isset($_SESSION['zair2345'])) {
+       header("Location: login.php" );
+        exit();
+      }
+
+?>
+      
     Before
     <div id="News" >  
     
-    <?php		
+    <?php			
 		//phpinfo();
 		
-		$news = "<span id='title'>Welcome to Angel's Skateboard News</span>";
+		$news = "<span id='title'>Welcome to Zair's Soccer News</span>";
          
 		echo "<h1>".$news."</h1>";
 	?> 
@@ -109,6 +118,7 @@
             mysqli_close($dbc); //mysqli
           
         }
+ 
               
         
         

@@ -9,6 +9,12 @@
     <div id="main">
 	<?php
    	 include "include.php"
+       session_start();
+	if(!isset($_SESSION['owner123'])){
+    header("Location: login.php");
+      exit();
+      
+    }
 	?>
 
       <div id="right"> 
@@ -89,7 +95,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   }
           if($error == 0) {
             //for testing
-            $name = "dianag";
+            $name = $_SESSION['owner123'];
             
             $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."','".$title."')";
             $q3= mysqli_query($dbc,$s3);

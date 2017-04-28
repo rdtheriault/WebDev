@@ -7,13 +7,19 @@
   
   <body>
     <div id="main">
-    	<?php include "include.php" ?>
+    	<?php include "include.php"
+      	      	session_start();
+				if(!isset($_SESSION["owner123"])) {
+                  header("Location: login.php");
+                  exit();
+                }
+      ?>
     		<div id="right">
               <img class="image" src="http://sportsdaydfw.imgix.net/Samford+TCU+Football_39527717_79121.JPG">
     
     	<?php
 			echo "<h1 class='purp'>World of Football</h1><br>";
-			$owner = "zackt";
+			$owner = $_SESSION['owner123'];
 			echo "<h2>Blog Posts</h2>";
 			include "../../connect.php";
 			$s = "select * from hhs_blog WHERE user like '". $owner. "' and category like '%Football%'";

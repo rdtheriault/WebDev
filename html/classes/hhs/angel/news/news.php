@@ -11,7 +11,7 @@
     	Before
     <div id="News" >      
     <?php		
-		$owner = "angelv";
+		$owner = $_SESSION['angel345'];
 			echo "<h1>Blog Post<h1>";
 			include "../../connect.php";
 		$s = "Select * from hhs_blog WHERE user ='".$owner."' and category like '%skateboard%'";
@@ -20,7 +20,7 @@
           {
            while($row = mysqli_fetch_array($q, MYSQLI_ASSOC))
            {
-             echo '<h2 class="class">'.$row['title'].'</h2><div class="div1">'.$row['info'].'</div>';
+             echo '<h2 class="class">'.$row['title'].' by - '.$row['user'].'</h2><div class="div1">'.$row['info'].'</div>';
            }
             
           }

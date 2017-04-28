@@ -7,12 +7,18 @@
   
   <body>
     <div id="main">
-    	<?php include "include.php" ?>
+    	<?php include "include.php" 
+      		    session_start();
+				if(!isset($_SESSION["owner123"])) {
+                  header("Location: login.php");
+                  exit();
+                }      
+      ?>
     		<div id="right">
     		<img class="image" src="http://static.hudl.com/users/prod/544464_91ba0cf47a4f41668ef8e9acae017a01.jpg">
     	<?php
 			echo "<h1 class='purp'>Hermiston High School</h1><br>";
-			$owner = "zackt";
+			$owner = $_SESSION['owner123'];
 			echo "<h2>Blog Posts</h2>";
 			include "../../connect.php";
 			$s = "select * from hhs_blog WHERE user like '". $owner. "' and category like '%Hermiston High School%'";

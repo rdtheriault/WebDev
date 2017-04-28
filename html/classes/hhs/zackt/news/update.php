@@ -7,7 +7,13 @@
   
   <body>
     <div id="main">
-    	<?php include "include.php" ?>
+    	<?php include "include.php"
+      		    session_start();
+				if(!isset($_SESSION["owner123"])) {
+                  header("Location: login.php");
+                  exit();
+                }
+      ?>
     		<div id="right">
     
     	<?php
@@ -85,7 +91,7 @@
               }
               
               if ($error == 0) {
-                $name = "zackt";
+                $name = $_SESSION['owner123'];
                 $s3 = "insert into hhs_blog (user, category, info, title) Values ('".$name."', '".$category."', '".$info."', '".$title."')";
             	$q3 = mysqli_query($dbc,$s3);
                 if (q3) {
