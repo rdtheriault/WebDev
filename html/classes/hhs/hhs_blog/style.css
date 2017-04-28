@@ -15,8 +15,19 @@
 }
 #right {
  padding-left:75px; 
+  width:100%;
 }
 
 a {
  color:white; 
+}
+.titles{
+  color:purple;
+  
+}
+.infos {
+  border:2px solid black;
+  border-radius:2px;
+  padding:5px;
+  width:750px
 }

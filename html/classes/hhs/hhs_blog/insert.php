@@ -5,7 +5,15 @@
   <body>
     <div id="main">
       
-      <?php include "include.php"; ?>
+      <?php include "include.php";
+		      
+			session_start();
+			if(!isset($_SESSION['owner123'])){
+              	header( "Location: login.php" ); 
+              	exit();
+            }
+      
+      ?>
       
       <div id="right">
         <img src="hhs.png" style="width:900px"><br><br>
@@ -85,7 +93,7 @@
           if($error == 0) {
             
             //for testing
-            $name = "admin";
+            $name = $_SESSION['owner123'];
             
             $s3 = "Insert into hhs_blog (user, category, info, title) Values ('".$name."','".$category."','".$info."','".$title."')";
 

@@ -1,4 +1,4 @@
-<div id="sidebar" style="">
+<div id="sidebar">
   <a href="index.php">Home</a><br><br>
   <a href="insert.php">Create new post</a><br><br>
   <a href="tech.php">Cool Tech Posts</a><br><br>

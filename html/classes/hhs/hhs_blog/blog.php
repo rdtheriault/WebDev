@@ -6,20 +6,25 @@
     <div id="main">
       <?php include "include.php"; ?>
       <div id="right">
-        Before<br><br>
+        <img src="hhs.png" style="width:900px"><br><br>
         <?php 
-			$owner = "admin";
+			session_start();
+			if(!isset($_SESSION['owner123'])){
+              	header( "Location: login.php" ); 
+              	exit();
+            }
+			$owner = $_SESSION['owner123'];
 			//id user category info title approved
             echo "<h1>Blog Posts</h1>";
             
 			include "../connect.php";
-			$s = "Select * From hhs_blog WHERE user like 'zackt' and category like '%Football%'"; // Where owner = '".$owner."'";
+			$s = "Select * From hhs_blog";// WHERE user like 'zackt' and category like '%Football%'"; // Where owner = '".$owner."'";
 		$q = mysqli_query($dbc,$s);
 		if($q)
 		{   
 			while($row = mysqli_fetch_array($q, MYSQLI_ASSOC))
 			{
-				echo '<h2>'.$row['title'].'</h2><div>'.$row['info'].'</div>';
+				echo '<h2 class="titles">'.$row['title'].' - by '.$row['user'].'</h2><div class="infos">'.$row['info'].'</div><br>';
 			}
 	
 		}
@@ -30,7 +35,7 @@
 		}
 		mysqli_close($dbc);
         ?>
-        <br><br>After
+        
       </div>
     </div>
   </body>
