@@ -8,7 +8,7 @@
   <body>
     <div id="main">
     <?php include "include.php"; ?>
-    Before
+  
     <div id="News" >      
     <?php		
 
@@ -32,7 +32,7 @@
         <div> <img src="https://i.ytimg.com/vi/4GFIXrybfKg/maxresdefault.jpg"  width="468px"/></div>
       </div>
     </div>              
-    After
+    
    </div>
     
     

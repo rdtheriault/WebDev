@@ -12,13 +12,13 @@
   <br>
   <a href="football.php">Football</a><br>
   <br>
-  <a href="hhs.php">Hermiston High School</a><br>
+  <a href="basketball.php">Hermiston High School</a><br>
   <br>
   <a href="update.php"><strong>Create Post</strong></a><br>
   <br>
 </div>    		<div id="right">
     
-    	<h1>Welcome to the news</h1><h2>Here are the categories:</h2> <br><h3>Football <br>Hermiston high school</h3> <br><img class='uno' src = 'http://www.eastoregonian.com/storyimage/EO/20161008/ARTICLE/161009799/EP/1/6/EP-161009799.jpg&MaxW=600'><img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br><button id='btn1'>CLICK</button>
+    	<h1>Welcome to the news</h1><h2>Here are the categories:</h2> <br><h3>Football <br>Basketball</h3> <br><img class='uno' src = 'http://www.charlotteobserver.com/sports/nfl/carolina-panthers/f5kgsz/picture23782843/alternates/FREE_640/0612PANTHERS_30.JPG'><img class='uno' src='https://cdn.nba.net/nba-drupal-prod/styles/tile_640w/s3/2017-02/GettyImages-642989146.jpg?itok=jXAdkUpS'> <br><button id='btn1'>CLICK</button>
         <br>
        	<form action="update.php" method="post">
         Title:
@@ -35,11 +35,19 @@
             
           </select>
           
-          
+         
           <input type="submit" value="Add Post">
         </form>
                         
           
+      
+      
+      
+      
+      
+      
+      
+      
        </div>
     </div>
 

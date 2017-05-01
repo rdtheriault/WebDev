@@ -17,14 +17,24 @@ function newPopup(url) {
 </script>
   
 <style>
+    @font-face{
+  font-family:banana;
+  src:url(BANAAN.TTF);
+  }
+  #toc{
+  font-family:banana; text-align:center; color:blue;
+  }
 	h1{
-      color:rgb(0, 0, 153); font-size:2.9em;}    
+      color:rgb(0, 0, 153); font-size:1.25em}    
 	.orange_letters{
-      color:yellow; font-size:1.5em; text-decoration:none;
+      color:yellow; font-size:1.25em;
     }
   .blue_letters{
-    color:blue;font-size:1.5em; text-decoration:none;
+    color:blue;font-size:1.25em; 
     }
+  .letters{text-decoration:none; font-family:banana;
+  
+  }
 	body{
       text-align:center; background:url(http://static.wixstatic.com/media/aec6b3_f97276cfd4a347d9a5a10c090ec6f844.jpg_srz_389_554_85_22_0.50_1.20_0.00_jpg_srz)
     }
@@ -48,63 +58,65 @@ width:40px; height:40px;
   #banana{
    width:50%; position:fixed; right:25%; top:0%; text-align:left; background-color:yellow; border:rgb(0, 102, 255) ridge 20px;
   }
+  
+
 </style>
 </head>
 <body>
 
   <div id="banana" >
-    <img src="/preview/m/bfec0a207b5c6bf7188079934c506de5.png">
-   <div id=first class="blue">  
-        <a class="orange_letters" href="http://hermiston.k12.or.us/">
+    <h1 id="toc">Table of Content</h1>
+   <div id="first" class="blue">  
+        <a class="orange_letters letters" href="http://hermiston.k12.or.us/">
         <img src ="http://hermiston.k12.or.us/wp-content/uploads/hsd/2014/01/HHS-Logo.png" width="50" alt="High School Logo" style="position:relative; top:5px;">District Page</a>
     </div>
 
     <div id="second" class="yellow">  
-        <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/review.html">
+        <a class="blue_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/review.html">
         <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Review</a>
     </div>
 
     <div id="third" class="blue">
-        <a class="orange_letters" href="https://www.khanacademy.org/">
+        <a class="orange_letters letters" href="https://www.khanacademy.org/">
         <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Khan Academy</a>
     </div>
 
     <div id="fourth" class="yellow">
-        <a class="blue_letters" href="https://classroom.google.com/h">
+        <a class="blue_letters letters" href="https://classroom.google.com/h">
         <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Classroom</a>
     </div>
 
     <div id="fifth" class="blue">	
-        <a class="orange_letters" href="https://web.hermiston.k12.or.us:10000/">
+        <a class="orange_letters letters" href="https://web.hermiston.k12.or.us:10000/">
         <img class="size" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Webmin</a>
     </div>
 
     <div id="sixth" class="yellow">  
-      <a class="blue_letters" href="https://drive.google.com/drive/my-drive">
+      <a class="blue_letters letters" href="https://drive.google.com/drive/my-drive">
         <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Drive</a>
     </div>
 
     <div id="seventh" class="blue">  
-       <a class="orange_letters" href="https://powerschool.hermiston.k12.or.us/public/">
+       <a class="orange_letters letters" href="https://powerschool.hermiston.k12.or.us/public/">
        <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">PowerSchool</a>
     </div>
 
     <div id="eighth" class="yellow">  
-      <a class="blue_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/project.html">
+      <a class="blue_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/project.html">
         <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Project</a>
     </div>
 
     <div id="ninth" class="blue">  
-       <a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/index.php">
+       <a class="orange_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/index.php">
        <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Blog</a>
     </div>  
 
     <div id="tenth" class="yellow">  
-      <a class="blue_letters" href="https://docs.google.com/document/u/0/?tgif=c">
+      <a class="blue_letters letters" href="https://docs.google.com/document/u/0/?tgif=c">
         <img class="size pic" src ="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Google Docs</a>
     </div>
 	<div id="eleventh" class="blue">  
-       <a class="orange_letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/test.html">
+       <a class="orange_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/test.html">
        <img class="size" src="http://i0.kym-cdn.com/entries/icons/original/000/000/188/DancingBannana.gif" alt="Dancing Banana">Test</a>
     </div>
         <script>

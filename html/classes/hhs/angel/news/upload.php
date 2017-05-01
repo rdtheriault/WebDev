@@ -15,7 +15,7 @@
 
 ?>
       
-    Before
+    
     <div id="News" >  
     
     <?php		
@@ -61,7 +61,7 @@
      '
       
     </div>              
-    After
+    
    </div>
     
     <?php

@@ -8,7 +8,7 @@
   <body>
     <div id="main">
 	<?php
-   	 include "include.php"
+   	 include "include.php";
        session_start();
 	if(!isset($_SESSION['owner123'])){
     header("Location: login.php");

@@ -7,12 +7,19 @@
   </head>
   <body>
     <div id="main">
-    <?php include "include.php"; ?>
-    	Before
+    <?php include "include.php"; 
+      session_start();
+      if(!isset($_SESSION['angel345'])) {
+        header("Location: login.php" );
+        exit();
+      }
+      
+      ?>
+    	
     <div id="News" >      
     <?php		
 		$owner = $_SESSION['angel345'];
-			echo "<h1>Blog Post<h1>";
+			echo "<h1>Skateboard posts<h1>";
 			include "../../connect.php";
 		$s = "Select * from hhs_blog WHERE user ='".$owner."' and category like '%skateboard%'";
      $q = mysqli_query($dbc,$s);
@@ -32,7 +39,7 @@
   
       </div>
     </div>              
-    After
+    
    </div>
     
     

@@ -7,20 +7,37 @@
   
   <body>
     <div id="main">
-    	<div id="sidebar">
-  <a href="football.php">Football</a><br>
-  <a href="hhs.php">Hermiston High School</a><br>
-  <a href="index.php">Home</a><br>
-  <a href="update.php">Create Post</a><br>
-</div>    		<div id="right">
-    
-    	<h1>World of Football</h1><h2>Here are the categories:</h2> <br><h3>Football <br>Hermiston high school</h3> <br><img class='uno' src='http://www.eastoregonian.com/storyimage/EO/20161008/ARTICLE/161009799/EP/1/6/EP-161009799.jpg&MaxW=600'><img class='uno' src='http://www.aawielandarchitecture.com/communities/5/004/012/577/575//images/4609934040.jpg'> <br><button id='btn1'>CLICK</button>    		</div>
+    	<?php include("include.php");
+      	      	session_start();
+				if(!isset($_SESSION["owner123"])) {
+                  header("Location: login.php");
+                  exit();
+                }
+      ?>
+    		<div id="right">
+              <img class="image" src="http://www.panthers.com/assets/images/imported/CAR/photos/2015/11-November/151106_shaq_inside.jpg
+    	<?php
+			echo "<h1 class='purp'>World of Football</h1><br>";
+			$owner = $_SESSION['owner123'];
+			echo "<h2>Blog Posts</h2>";
+			include "../../connect.php";
+			$s = "select * from hhs_blog WHERE user like '". $owner. "' and category like '%Football%'";
+	        $q = mysqli_query($dbc, $s);
+			if($q) {
+              while($row = mysqli_fetch_array($q, MYSQLI_ASSOC)){
+                
+                echo '<h2 class="title">'.$row['title'].'</h2><div class="post">'.$row['info'].'</div>';
+              }
+            } 
+			else {
+              echo '<p>'. mysqli_error($dbc).'</p>';
+              echo 'query issue';
+            }
+		?>
+
+              
+    		</div>
     </div>
-    $q = mysqil_query($db,$s);
-    if($q)
-    {
-    while($row = mysqil_fetch_array($q, MYSQIL_ASSOC))
-    {
     
     
   </body>

@@ -32,3 +32,10 @@ color:yellow;
 .div1 {
  border:2px solid blue; 
 }
+a:link { 
+  text-decoration:none;
+  
+}
+a:visited {
+ color:blue; 
+}

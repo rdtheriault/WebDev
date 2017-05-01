@@ -6,8 +6,9 @@
     
     </head>
   <body>
-    <div id="main">
-    <?php
+    <div id="main">   
+
+<?php
     include "include.php";
 session_start();
 	if(!isset($_SESSION['owner123'])){
@@ -42,5 +43,3 @@ session_start();
       </div>
       </div>
   </body>
-  
- </html> 
