@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.18, for Linux (x86_64)
 --
 -- Host: localhost    Database: hhs_main
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.2
+-- Server version	5.7.18-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,7 +30,7 @@ CREATE TABLE `hhs_blog` (
   `title` text,
   `approved` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `hhs_blog` (
 
 LOCK TABLES `hhs_blog` WRITE;
 /*!40000 ALTER TABLE `hhs_blog` DISABLE KEYS */;
-INSERT INTO `hhs_blog` VALUES (3,'zackt','Hermiston High School','Good Day Fellow Students!','Day 1',0),(4,'zackt','Football\r\n','Struggle Bus. No joke.','Jabril Peppers',0),(5,'angelv','skateboard\r\n','asdf','asdf',0),(6,'dianag','Ocean\r\n','Hello world','My first blog.',0),(7,'angelv','skateboard\r\n','asdf','asdf',0),(8,'zackt','Football\r\n','Adrian Peterson signs with NO Saints.','AP',0),(9,'angelv','skateboard\r\n','skateboards are cool','Skateboards',0),(10,'angelv','skateboard\r\n','Monday, October 12. After hugging his father and Boulala at the top, he attacked the 25 again. The set fought back, though, and Jaws slammed forward onto the bricks several times. On one occasion he completely lost the board from under his feet. On another attempt, the force of his landing sheared a wheel off its axle, leaving the bearings on either side somehow still in place—a peculiar display of the power of the drop.\r\n\r\n\"I\'ve never seen that,\" said fellow skater Clint Walker, holding up Jaws\'s board in the YouTube video of the trick, which Thrasher Magazine published last week.\r\n\r\nJaws changed out his wheel and replaced his eighth-inch spacers—plastic pads that prevent the wheels from biting into the board—with quarter-inch ones given to him by French Fred. To reduce friction, he rubbed deodorant into the grooves that the wheels had cut into the underside of the board. His next attempt, made to screams of encouragement, was closer. He landed the drop and rolled momentarily before crashing.\r\n\r\n\"Oh my god,\" he said after fall. \"I can do it though!\"\r\n\r\nAnd then he did.\r\n\r\nHe snapped off the top, grabbed the board, floated the roughly three seconds to the landing, and rolled away. His dad charged down the stairs behind him. Walker sprayed some champagne. According to Boulala, Jaws and his father were in tears.\r\n\r\nLater, Jaws received a text message from Tony Hawk, whose Birdhouse Skateboard company Jaws skates for.\r\n\r\n\"Congrats,\" it said. \"That is one of the greatest feats in skateboarding history.\"','Jaws jumps the Lyon 25',0),(11,'mirandaa','Sports\r\n','Hi','Hi',0);
+INSERT INTO `hhs_blog` VALUES (3,'zackt','Hermiston High School','Good Day Fellow Students!','Day 1',0),(4,'zackt','Football\r\n','Struggle Bus. No joke.','Jabril Peppers',0),(6,'dianag','Ocean\r\n','Hello world','My first blog.',0),(8,'zackt','Football\r\n','Adrian Peterson signs with NO Saints.','AP',0),(9,'angelv','skateboard\r\n','skateboards are cool','Skateboards',0),(10,'angelv','skateboard\r\n','Monday, October 12. After hugging his father and Boulala at the top, he attacked the 25 again. The set fought back, though, and Jaws slammed forward onto the bricks several times. On one occasion he completely lost the board from under his feet. On another attempt, the force of his landing sheared a wheel off its axle, leaving the bearings on either side somehow still in place—a peculiar display of the power of the drop.\r\n\r\n\"I\'ve never seen that,\" said fellow skater Clint Walker, holding up Jaws\'s board in the YouTube video of the trick, which Thrasher Magazine published last week.\r\n\r\nJaws changed out his wheel and replaced his eighth-inch spacers—plastic pads that prevent the wheels from biting into the board—with quarter-inch ones given to him by French Fred. To reduce friction, he rubbed deodorant into the grooves that the wheels had cut into the underside of the board. His next attempt, made to screams of encouragement, was closer. He landed the drop and rolled momentarily before crashing.\r\n\r\n\"Oh my god,\" he said after fall. \"I can do it though!\"\r\n\r\nAnd then he did.\r\n\r\nHe snapped off the top, grabbed the board, floated the roughly three seconds to the landing, and rolled away. His dad charged down the stairs behind him. Walker sprayed some champagne. According to Boulala, Jaws and his father were in tears.\r\n\r\nLater, Jaws received a text message from Tony Hawk, whose Birdhouse Skateboard company Jaws skates for.\r\n\r\n\"Congrats,\" it said. \"That is one of the greatest feats in skateboarding history.\"','Jaws jumps the Lyon 25',0),(11,'mirandaa','Sports\r\n','Hi','Hi',0),(12,'','skateboard\r\n','hi','skateboard',0),(13,'','skateboard\r\n','hi','skateboard',0);
 /*!40000 ALTER TABLE `hhs_blog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +56,7 @@ CREATE TABLE `hhs_user` (
   `pw` text,
   `level` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,6 +65,7 @@ CREATE TABLE `hhs_user` (
 
 LOCK TABLES `hhs_user` WRITE;
 /*!40000 ALTER TABLE `hhs_user` DISABLE KEYS */;
+INSERT INTO `hhs_user` VALUES (1,'zackt','HermistonSD1',NULL),(2,'angelv','HermistonSD1',NULL),(3,'dianag','HermistonSD1',NULL),(4,'mirandaa','HermistonSD1',NULL),(5,'WebDev','HermistonSD1',NULL);
 /*!40000 ALTER TABLE `hhs_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-28  0:00:02
+-- Dump completed on 2017-05-01  0:00:02

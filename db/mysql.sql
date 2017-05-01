@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.18, for Linux (x86_64)
 --
 -- Host: localhost    Database: mysql
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.2
+-- Server version	5.7.18-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -380,7 +380,7 @@ CREATE TABLE `innodb_index_stats` (
 
 LOCK TABLES `innodb_index_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT INTO `innodb_index_stats` VALUES ('hhs_main','hhs_blog','PRIMARY','2017-04-26 19:43:35','n_diff_pfx01',8,1,'id'),('hhs_main','hhs_blog','PRIMARY','2017-04-26 19:43:35','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_blog','PRIMARY','2017-04-26 19:43:35','size',1,NULL,'Number of pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_diff_pfx01',0,1,'id'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-03-27 14:54:12','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_diff_pfx01',2,1,'variable'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','size',1,NULL,'Number of pages in the index');
+INSERT INTO `innodb_index_stats` VALUES ('hhs_main','hhs_blog','PRIMARY','2017-04-28 19:30:54','n_diff_pfx01',9,1,'id'),('hhs_main','hhs_blog','PRIMARY','2017-04-28 19:30:54','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_blog','PRIMARY','2017-04-28 19:30:54','size',1,NULL,'Number of pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-04-28 14:25:26','n_diff_pfx01',4,1,'id'),('hhs_main','hhs_user','PRIMARY','2017-04-28 14:25:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('hhs_main','hhs_user','PRIMARY','2017-04-28 14:25:26','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2016-11-18 18:17:26','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_diff_pfx01',2,1,'variable'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2016-11-18 18:17:27','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -408,7 +408,7 @@ CREATE TABLE `innodb_table_stats` (
 
 LOCK TABLES `innodb_table_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT INTO `innodb_table_stats` VALUES ('hhs_main','hhs_blog','2017-04-26 19:43:35',8,1,0),('hhs_main','hhs_user','2017-03-27 14:54:12',0,1,0),('mysql','gtid_executed','2016-11-18 18:17:26',0,1,0),('sys','sys_config','2016-11-18 18:17:27',2,1,0);
+INSERT INTO `innodb_table_stats` VALUES ('hhs_main','hhs_blog','2017-04-28 19:30:54',9,1,0),('hhs_main','hhs_user','2017-04-28 14:25:26',4,1,0),('mysql','gtid_executed','2016-11-18 18:17:26',0,1,0),('sys','sys_config','2016-11-18 18:17:27',2,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1008,4 +1008,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-28  0:00:03
+-- Dump completed on 2017-05-01  0:00:02

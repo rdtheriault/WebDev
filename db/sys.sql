@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.18, for Linux (x86_64)
 --
 -- Host: localhost    Database: sys
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.2
+-- Server version	5.7.18-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,7 +16,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Temporary view structure for view `host_summary`
+-- Temporary table structure for view `host_summary`
 --
 
 DROP TABLE IF EXISTS `host_summary`;
@@ -39,7 +39,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `host_summary_by_file_io`
+-- Temporary table structure for view `host_summary_by_file_io`
 --
 
 DROP TABLE IF EXISTS `host_summary_by_file_io`;
@@ -53,7 +53,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `host_summary_by_file_io_type`
+-- Temporary table structure for view `host_summary_by_file_io_type`
 --
 
 DROP TABLE IF EXISTS `host_summary_by_file_io_type`;
@@ -69,7 +69,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `host_summary_by_stages`
+-- Temporary table structure for view `host_summary_by_stages`
 --
 
 DROP TABLE IF EXISTS `host_summary_by_stages`;
@@ -85,7 +85,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `host_summary_by_statement_latency`
+-- Temporary table structure for view `host_summary_by_statement_latency`
 --
 
 DROP TABLE IF EXISTS `host_summary_by_statement_latency`;
@@ -105,7 +105,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `host_summary_by_statement_type`
+-- Temporary table structure for view `host_summary_by_statement_type`
 --
 
 DROP TABLE IF EXISTS `host_summary_by_statement_type`;
@@ -126,7 +126,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `innodb_buffer_stats_by_schema`
+-- Temporary table structure for view `innodb_buffer_stats_by_schema`
 --
 
 DROP TABLE IF EXISTS `innodb_buffer_stats_by_schema`;
@@ -144,7 +144,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `innodb_buffer_stats_by_table`
+-- Temporary table structure for view `innodb_buffer_stats_by_table`
 --
 
 DROP TABLE IF EXISTS `innodb_buffer_stats_by_table`;
@@ -163,7 +163,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `innodb_lock_waits`
+-- Temporary table structure for view `innodb_lock_waits`
 --
 
 DROP TABLE IF EXISTS `innodb_lock_waits`;
@@ -200,7 +200,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `io_by_thread_by_latency`
+-- Temporary table structure for view `io_by_thread_by_latency`
 --
 
 DROP TABLE IF EXISTS `io_by_thread_by_latency`;
@@ -219,7 +219,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `io_global_by_file_by_bytes`
+-- Temporary table structure for view `io_global_by_file_by_bytes`
 --
 
 DROP TABLE IF EXISTS `io_global_by_file_by_bytes`;
@@ -239,7 +239,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `io_global_by_file_by_latency`
+-- Temporary table structure for view `io_global_by_file_by_latency`
 --
 
 DROP TABLE IF EXISTS `io_global_by_file_by_latency`;
@@ -259,7 +259,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `io_global_by_wait_by_bytes`
+-- Temporary table structure for view `io_global_by_wait_by_bytes`
 --
 
 DROP TABLE IF EXISTS `io_global_by_wait_by_bytes`;
@@ -283,7 +283,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `io_global_by_wait_by_latency`
+-- Temporary table structure for view `io_global_by_wait_by_latency`
 --
 
 DROP TABLE IF EXISTS `io_global_by_wait_by_latency`;
@@ -308,7 +308,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `latest_file_io`
+-- Temporary table structure for view `latest_file_io`
 --
 
 DROP TABLE IF EXISTS `latest_file_io`;
@@ -324,7 +324,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `memory_by_host_by_current_bytes`
+-- Temporary table structure for view `memory_by_host_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `memory_by_host_by_current_bytes`;
@@ -341,7 +341,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `memory_by_thread_by_current_bytes`
+-- Temporary table structure for view `memory_by_thread_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `memory_by_thread_by_current_bytes`;
@@ -359,7 +359,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `memory_by_user_by_current_bytes`
+-- Temporary table structure for view `memory_by_user_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `memory_by_user_by_current_bytes`;
@@ -376,7 +376,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `memory_global_by_current_bytes`
+-- Temporary table structure for view `memory_global_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `memory_global_by_current_bytes`;
@@ -394,7 +394,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `memory_global_total`
+-- Temporary table structure for view `memory_global_total`
 --
 
 DROP TABLE IF EXISTS `memory_global_total`;
@@ -406,7 +406,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `metrics`
+-- Temporary table structure for view `metrics`
 --
 
 DROP TABLE IF EXISTS `metrics`;
@@ -421,7 +421,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `processlist`
+-- Temporary table structure for view `processlist`
 --
 
 DROP TABLE IF EXISTS `processlist`;
@@ -460,7 +460,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `ps_check_lost_instrumentation`
+-- Temporary table structure for view `ps_check_lost_instrumentation`
 --
 
 DROP TABLE IF EXISTS `ps_check_lost_instrumentation`;
@@ -473,7 +473,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_auto_increment_columns`
+-- Temporary table structure for view `schema_auto_increment_columns`
 --
 
 DROP TABLE IF EXISTS `schema_auto_increment_columns`;
@@ -494,7 +494,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_index_statistics`
+-- Temporary table structure for view `schema_index_statistics`
 --
 
 DROP TABLE IF EXISTS `schema_index_statistics`;
@@ -516,7 +516,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_object_overview`
+-- Temporary table structure for view `schema_object_overview`
 --
 
 DROP TABLE IF EXISTS `schema_object_overview`;
@@ -530,7 +530,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_redundant_indexes`
+-- Temporary table structure for view `schema_redundant_indexes`
 --
 
 DROP TABLE IF EXISTS `schema_redundant_indexes`;
@@ -551,7 +551,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_table_lock_waits`
+-- Temporary table structure for view `schema_table_lock_waits`
 --
 
 DROP TABLE IF EXISTS `schema_table_lock_waits`;
@@ -580,7 +580,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_table_statistics`
+-- Temporary table structure for view `schema_table_statistics`
 --
 
 DROP TABLE IF EXISTS `schema_table_statistics`;
@@ -610,7 +610,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_table_statistics_with_buffer`
+-- Temporary table structure for view `schema_table_statistics_with_buffer`
 --
 
 DROP TABLE IF EXISTS `schema_table_statistics_with_buffer`;
@@ -646,7 +646,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_tables_with_full_table_scans`
+-- Temporary table structure for view `schema_tables_with_full_table_scans`
 --
 
 DROP TABLE IF EXISTS `schema_tables_with_full_table_scans`;
@@ -661,7 +661,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `schema_unused_indexes`
+-- Temporary table structure for view `schema_unused_indexes`
 --
 
 DROP TABLE IF EXISTS `schema_unused_indexes`;
@@ -675,7 +675,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `session`
+-- Temporary table structure for view `session`
 --
 
 DROP TABLE IF EXISTS `session`;
@@ -714,7 +714,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `session_ssl_status`
+-- Temporary table structure for view `session_ssl_status`
 --
 
 DROP TABLE IF EXISTS `session_ssl_status`;
@@ -729,7 +729,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statement_analysis`
+-- Temporary table structure for view `statement_analysis`
 --
 
 DROP TABLE IF EXISTS `statement_analysis`;
@@ -763,7 +763,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statements_with_errors_or_warnings`
+-- Temporary table structure for view `statements_with_errors_or_warnings`
 --
 
 DROP TABLE IF EXISTS `statements_with_errors_or_warnings`;
@@ -784,7 +784,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statements_with_full_table_scans`
+-- Temporary table structure for view `statements_with_full_table_scans`
 --
 
 DROP TABLE IF EXISTS `statements_with_full_table_scans`;
@@ -809,7 +809,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statements_with_runtimes_in_95th_percentile`
+-- Temporary table structure for view `statements_with_runtimes_in_95th_percentile`
 --
 
 DROP TABLE IF EXISTS `statements_with_runtimes_in_95th_percentile`;
@@ -836,7 +836,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statements_with_sorting`
+-- Temporary table structure for view `statements_with_sorting`
 --
 
 DROP TABLE IF EXISTS `statements_with_sorting`;
@@ -860,7 +860,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `statements_with_temp_tables`
+-- Temporary table structure for view `statements_with_temp_tables`
 --
 
 DROP TABLE IF EXISTS `statements_with_temp_tables`;
@@ -938,7 +938,7 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
--- Temporary view structure for view `user_summary`
+-- Temporary table structure for view `user_summary`
 --
 
 DROP TABLE IF EXISTS `user_summary`;
@@ -961,7 +961,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `user_summary_by_file_io`
+-- Temporary table structure for view `user_summary_by_file_io`
 --
 
 DROP TABLE IF EXISTS `user_summary_by_file_io`;
@@ -975,7 +975,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `user_summary_by_file_io_type`
+-- Temporary table structure for view `user_summary_by_file_io_type`
 --
 
 DROP TABLE IF EXISTS `user_summary_by_file_io_type`;
@@ -991,7 +991,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `user_summary_by_stages`
+-- Temporary table structure for view `user_summary_by_stages`
 --
 
 DROP TABLE IF EXISTS `user_summary_by_stages`;
@@ -1007,7 +1007,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `user_summary_by_statement_latency`
+-- Temporary table structure for view `user_summary_by_statement_latency`
 --
 
 DROP TABLE IF EXISTS `user_summary_by_statement_latency`;
@@ -1027,7 +1027,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `user_summary_by_statement_type`
+-- Temporary table structure for view `user_summary_by_statement_type`
 --
 
 DROP TABLE IF EXISTS `user_summary_by_statement_type`;
@@ -1048,7 +1048,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `version`
+-- Temporary table structure for view `version`
 --
 
 DROP TABLE IF EXISTS `version`;
@@ -1061,7 +1061,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `wait_classes_global_by_avg_latency`
+-- Temporary table structure for view `wait_classes_global_by_avg_latency`
 --
 
 DROP TABLE IF EXISTS `wait_classes_global_by_avg_latency`;
@@ -1078,7 +1078,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `wait_classes_global_by_latency`
+-- Temporary table structure for view `wait_classes_global_by_latency`
 --
 
 DROP TABLE IF EXISTS `wait_classes_global_by_latency`;
@@ -1095,7 +1095,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `waits_by_host_by_latency`
+-- Temporary table structure for view `waits_by_host_by_latency`
 --
 
 DROP TABLE IF EXISTS `waits_by_host_by_latency`;
@@ -1112,7 +1112,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `waits_by_user_by_latency`
+-- Temporary table structure for view `waits_by_user_by_latency`
 --
 
 DROP TABLE IF EXISTS `waits_by_user_by_latency`;
@@ -1129,7 +1129,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `waits_global_by_latency`
+-- Temporary table structure for view `waits_global_by_latency`
 --
 
 DROP TABLE IF EXISTS `waits_global_by_latency`;
@@ -1145,7 +1145,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary`
+-- Temporary table structure for view `x$host_summary`
 --
 
 DROP TABLE IF EXISTS `x$host_summary`;
@@ -1168,7 +1168,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary_by_file_io`
+-- Temporary table structure for view `x$host_summary_by_file_io`
 --
 
 DROP TABLE IF EXISTS `x$host_summary_by_file_io`;
@@ -1182,7 +1182,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary_by_file_io_type`
+-- Temporary table structure for view `x$host_summary_by_file_io_type`
 --
 
 DROP TABLE IF EXISTS `x$host_summary_by_file_io_type`;
@@ -1198,7 +1198,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary_by_stages`
+-- Temporary table structure for view `x$host_summary_by_stages`
 --
 
 DROP TABLE IF EXISTS `x$host_summary_by_stages`;
@@ -1214,7 +1214,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary_by_statement_latency`
+-- Temporary table structure for view `x$host_summary_by_statement_latency`
 --
 
 DROP TABLE IF EXISTS `x$host_summary_by_statement_latency`;
@@ -1234,7 +1234,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$host_summary_by_statement_type`
+-- Temporary table structure for view `x$host_summary_by_statement_type`
 --
 
 DROP TABLE IF EXISTS `x$host_summary_by_statement_type`;
@@ -1255,7 +1255,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$innodb_buffer_stats_by_schema`
+-- Temporary table structure for view `x$innodb_buffer_stats_by_schema`
 --
 
 DROP TABLE IF EXISTS `x$innodb_buffer_stats_by_schema`;
@@ -1273,7 +1273,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$innodb_buffer_stats_by_table`
+-- Temporary table structure for view `x$innodb_buffer_stats_by_table`
 --
 
 DROP TABLE IF EXISTS `x$innodb_buffer_stats_by_table`;
@@ -1292,7 +1292,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$innodb_lock_waits`
+-- Temporary table structure for view `x$innodb_lock_waits`
 --
 
 DROP TABLE IF EXISTS `x$innodb_lock_waits`;
@@ -1329,7 +1329,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$io_by_thread_by_latency`
+-- Temporary table structure for view `x$io_by_thread_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$io_by_thread_by_latency`;
@@ -1348,7 +1348,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$io_global_by_file_by_bytes`
+-- Temporary table structure for view `x$io_global_by_file_by_bytes`
 --
 
 DROP TABLE IF EXISTS `x$io_global_by_file_by_bytes`;
@@ -1368,7 +1368,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$io_global_by_file_by_latency`
+-- Temporary table structure for view `x$io_global_by_file_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$io_global_by_file_by_latency`;
@@ -1388,7 +1388,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$io_global_by_wait_by_bytes`
+-- Temporary table structure for view `x$io_global_by_wait_by_bytes`
 --
 
 DROP TABLE IF EXISTS `x$io_global_by_wait_by_bytes`;
@@ -1412,7 +1412,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$io_global_by_wait_by_latency`
+-- Temporary table structure for view `x$io_global_by_wait_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$io_global_by_wait_by_latency`;
@@ -1437,7 +1437,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$latest_file_io`
+-- Temporary table structure for view `x$latest_file_io`
 --
 
 DROP TABLE IF EXISTS `x$latest_file_io`;
@@ -1453,7 +1453,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$memory_by_host_by_current_bytes`
+-- Temporary table structure for view `x$memory_by_host_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `x$memory_by_host_by_current_bytes`;
@@ -1470,7 +1470,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$memory_by_thread_by_current_bytes`
+-- Temporary table structure for view `x$memory_by_thread_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `x$memory_by_thread_by_current_bytes`;
@@ -1488,7 +1488,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$memory_by_user_by_current_bytes`
+-- Temporary table structure for view `x$memory_by_user_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `x$memory_by_user_by_current_bytes`;
@@ -1505,7 +1505,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$memory_global_by_current_bytes`
+-- Temporary table structure for view `x$memory_global_by_current_bytes`
 --
 
 DROP TABLE IF EXISTS `x$memory_global_by_current_bytes`;
@@ -1523,7 +1523,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$memory_global_total`
+-- Temporary table structure for view `x$memory_global_total`
 --
 
 DROP TABLE IF EXISTS `x$memory_global_total`;
@@ -1535,7 +1535,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$processlist`
+-- Temporary table structure for view `x$processlist`
 --
 
 DROP TABLE IF EXISTS `x$processlist`;
@@ -1574,7 +1574,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$ps_digest_95th_percentile_by_avg_us`
+-- Temporary table structure for view `x$ps_digest_95th_percentile_by_avg_us`
 --
 
 DROP TABLE IF EXISTS `x$ps_digest_95th_percentile_by_avg_us`;
@@ -1587,7 +1587,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$ps_digest_avg_latency_distribution`
+-- Temporary table structure for view `x$ps_digest_avg_latency_distribution`
 --
 
 DROP TABLE IF EXISTS `x$ps_digest_avg_latency_distribution`;
@@ -1600,7 +1600,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$ps_schema_table_statistics_io`
+-- Temporary table structure for view `x$ps_schema_table_statistics_io`
 --
 
 DROP TABLE IF EXISTS `x$ps_schema_table_statistics_io`;
@@ -1621,7 +1621,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_flattened_keys`
+-- Temporary table structure for view `x$schema_flattened_keys`
 --
 
 DROP TABLE IF EXISTS `x$schema_flattened_keys`;
@@ -1638,7 +1638,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_index_statistics`
+-- Temporary table structure for view `x$schema_index_statistics`
 --
 
 DROP TABLE IF EXISTS `x$schema_index_statistics`;
@@ -1660,7 +1660,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_table_lock_waits`
+-- Temporary table structure for view `x$schema_table_lock_waits`
 --
 
 DROP TABLE IF EXISTS `x$schema_table_lock_waits`;
@@ -1689,7 +1689,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_table_statistics`
+-- Temporary table structure for view `x$schema_table_statistics`
 --
 
 DROP TABLE IF EXISTS `x$schema_table_statistics`;
@@ -1719,7 +1719,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_table_statistics_with_buffer`
+-- Temporary table structure for view `x$schema_table_statistics_with_buffer`
 --
 
 DROP TABLE IF EXISTS `x$schema_table_statistics_with_buffer`;
@@ -1755,7 +1755,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$schema_tables_with_full_table_scans`
+-- Temporary table structure for view `x$schema_tables_with_full_table_scans`
 --
 
 DROP TABLE IF EXISTS `x$schema_tables_with_full_table_scans`;
@@ -1770,7 +1770,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$session`
+-- Temporary table structure for view `x$session`
 --
 
 DROP TABLE IF EXISTS `x$session`;
@@ -1809,7 +1809,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statement_analysis`
+-- Temporary table structure for view `x$statement_analysis`
 --
 
 DROP TABLE IF EXISTS `x$statement_analysis`;
@@ -1843,7 +1843,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statements_with_errors_or_warnings`
+-- Temporary table structure for view `x$statements_with_errors_or_warnings`
 --
 
 DROP TABLE IF EXISTS `x$statements_with_errors_or_warnings`;
@@ -1864,7 +1864,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statements_with_full_table_scans`
+-- Temporary table structure for view `x$statements_with_full_table_scans`
 --
 
 DROP TABLE IF EXISTS `x$statements_with_full_table_scans`;
@@ -1889,7 +1889,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statements_with_runtimes_in_95th_percentile`
+-- Temporary table structure for view `x$statements_with_runtimes_in_95th_percentile`
 --
 
 DROP TABLE IF EXISTS `x$statements_with_runtimes_in_95th_percentile`;
@@ -1916,7 +1916,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statements_with_sorting`
+-- Temporary table structure for view `x$statements_with_sorting`
 --
 
 DROP TABLE IF EXISTS `x$statements_with_sorting`;
@@ -1940,7 +1940,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$statements_with_temp_tables`
+-- Temporary table structure for view `x$statements_with_temp_tables`
 --
 
 DROP TABLE IF EXISTS `x$statements_with_temp_tables`;
@@ -1962,7 +1962,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary`
+-- Temporary table structure for view `x$user_summary`
 --
 
 DROP TABLE IF EXISTS `x$user_summary`;
@@ -1985,7 +1985,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary_by_file_io`
+-- Temporary table structure for view `x$user_summary_by_file_io`
 --
 
 DROP TABLE IF EXISTS `x$user_summary_by_file_io`;
@@ -1999,7 +1999,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary_by_file_io_type`
+-- Temporary table structure for view `x$user_summary_by_file_io_type`
 --
 
 DROP TABLE IF EXISTS `x$user_summary_by_file_io_type`;
@@ -2015,7 +2015,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary_by_stages`
+-- Temporary table structure for view `x$user_summary_by_stages`
 --
 
 DROP TABLE IF EXISTS `x$user_summary_by_stages`;
@@ -2031,7 +2031,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary_by_statement_latency`
+-- Temporary table structure for view `x$user_summary_by_statement_latency`
 --
 
 DROP TABLE IF EXISTS `x$user_summary_by_statement_latency`;
@@ -2051,7 +2051,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$user_summary_by_statement_type`
+-- Temporary table structure for view `x$user_summary_by_statement_type`
 --
 
 DROP TABLE IF EXISTS `x$user_summary_by_statement_type`;
@@ -2072,7 +2072,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$wait_classes_global_by_avg_latency`
+-- Temporary table structure for view `x$wait_classes_global_by_avg_latency`
 --
 
 DROP TABLE IF EXISTS `x$wait_classes_global_by_avg_latency`;
@@ -2089,7 +2089,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$wait_classes_global_by_latency`
+-- Temporary table structure for view `x$wait_classes_global_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$wait_classes_global_by_latency`;
@@ -2106,7 +2106,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$waits_by_host_by_latency`
+-- Temporary table structure for view `x$waits_by_host_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$waits_by_host_by_latency`;
@@ -2123,7 +2123,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$waits_by_user_by_latency`
+-- Temporary table structure for view `x$waits_by_user_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$waits_by_user_by_latency`;
@@ -2140,7 +2140,7 @@ SET character_set_client = utf8;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary view structure for view `x$waits_global_by_latency`
+-- Temporary table structure for view `x$waits_global_by_latency`
 --
 
 DROP TABLE IF EXISTS `x$waits_global_by_latency`;
@@ -4948,4 +4948,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-28  0:00:03
+-- Dump completed on 2017-05-01  0:00:02

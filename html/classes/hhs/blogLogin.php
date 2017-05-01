@@ -38,8 +38,8 @@ session_start();
         {
             echo "Your attempt to hack this site has been reported to the FBI..."; 
             $_SESSION['owner123'] = "";
-          	$_SESSION['zackt'] = $name;
-          	$_SESSION['angel345'] = $name;
+          	$_SESSION['zackt'] = "";
+          	$_SESSION['angel345'] = "";
 
         }  
     }

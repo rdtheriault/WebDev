@@ -34,9 +34,11 @@
                 <input type="submit" value="Login">
               </form>
               <?php 
-				if($_SERVER['REQUEST_METHOD'] == 'post') {
+				if($_SERVER['REQUEST_METHOD'] == 'POST') {//if($_SERVER['REQUEST_METHOD'] == 'post') {
+                  echo "test";
                   include("../../blogLogin.php");
                 }
+				//if($_SERVER['REQUEST_METHOD'] == 'POST'){ include("../../blogLogin.php"); }
 			  ?>
     		</div>
     </div>
