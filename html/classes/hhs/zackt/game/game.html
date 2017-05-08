@@ -9,25 +9,30 @@
         background-color: navy;
         border: 5px dashed yellow;
       }
+      #whole {
+        display: flex;
+        margin: 10px;
+      }
+      .xxx {
+        border: 10px solid white;
+      }
     </style>
     </head>
   <body>
     <h1 style="color: orange;">@ToveyGames</h1>
       <br>
     <h2 style="color: lightblue;">The Great Adventure of Kyle!</h2>
+    <div id='whole'>
     <div id="all" class="xxx">
-      <canvas id="game" data-processing-sources="game.pde"></canvas>
+        <canvas id="game" data-processing-sources="game.pde"></canvas>
+      </div>
+      <br>
+      <br>
+      <div id="dos" class="xxx">
+        <canvas data-processing-sources="game2.pde"></canvas>
+      </div>
     </div>
-    <br>
-    <br>
-    <div id="dos" class="xxx">
-      <canvas data-processing-sources="game2.pde"></canvas>
-    </div>
-    <div id="rules" class="xxx">
-      <h3><u>Rules</u></h3>
-      <p>Avoid projectiles <br> **A level is passing successfully over 2 balls, causing it to go faster** <br> Good Luck!</p>
-      
-    </div>
+
     <script>
      
     </script>

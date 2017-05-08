@@ -15,7 +15,8 @@
                 }
       ?>
     		<div id="right">
-              <img class="image" src="http://www.panthers.com/assets/images/imported/CAR/photos/2015/11-November/151106_shaq_inside.jpg
+              <img class="image" src="http://sportsdaydfw.imgix.net/Samford+TCU+Football_39527717_79121.JPG">
+    
     	<?php
 			echo "<h1 class='purp'>World of Football</h1><br>";
 			$owner = $_SESSION['owner123'];

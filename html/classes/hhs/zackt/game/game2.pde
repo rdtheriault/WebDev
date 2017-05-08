@@ -1,8 +1,8 @@
 void setup() {
   size(500, 400);
   frameRate(30);
-  background(0, 212, 244);
-  fill(0, 188, 31);
+  background(150, 127, 219);
+  fill(194, 149, 45);
   rect(-1, 300, 501, 100);
   //text("what", 0, 230);
 
@@ -30,7 +30,7 @@ jump = 0;
 void draw() {
   
   if(scene == 1) {
-  fill(0, 150, 150);
+  fill(232, 100, 100);
   rect(100, 100, 150, 50, 5);
   fill(0,0,0);
   textSize(19);
@@ -63,8 +63,8 @@ void draw() {
 
 funtion jumped() {
     if(keyPressed == true) {
-    background(0, 212, 244);
-  fill(0, 188, 31);
+	background(150, 127, 219);
+  fill(194, 149, 45);
   rect(-1, 300, 501, 100);
     image(b, xPos, yPos+jump, 75, 75);
     if (jump > -100) {
@@ -76,14 +76,14 @@ funtion jumped() {
     if (jump < 0) {
       
       jump += 10;
-      background(0, 212, 244);
-  fill(0, 188, 31);
+	background(150, 127, 219);
+  fill(194, 149, 45);
   rect(-1, 300, 501, 100);
       image(b, xPos, yPos+jump, 75, 75);
       //text(jump, 10, 10);
     } else {
-      background(0, 212, 244);
-  fill(0, 188, 31);
+  background(150, 127, 219);
+  fill(194, 149, 45);
   rect(-1, 300, 501, 100);
       image(b, xPos, yPos+jump, 75, 75);
       //text(jump, 10, 10);
@@ -93,7 +93,7 @@ funtion jumped() {
 var o1xPos = 500;
 var o1yPos = 275;
 function object1() {
-  fill(250, 0, 0);
+  fill(255, 255, 255);
   ellipse(o1xPos, o1yPos, 25, 25);
   o1xPos -= speed;
   
@@ -114,7 +114,7 @@ function object1() {
 var o2xPos = 750;
 var o2yPos = 175;
 function object2() {
-  fill(237, 52, 52);
+  fill(255, 255, 255);
   ellipse(o2xPos, o2yPos, 25, 25);
   o2xPos -= speed;
   
@@ -135,8 +135,8 @@ function object2() {
 }
 function leveling() {
 	turn++;
-	if (turn == 2){
-    	speed += 5;   
+	if (turn == 1){
+    	speed += 2;   
     	turn = 0; //reset turns
     	level++;
 	}
@@ -153,12 +153,12 @@ void mousePressed() {
 }
 
 void scene3() {
-  background(250, 0, 0);
-  fill(168, 168, 168);
+  background(50, 100, 40);
+  fill(105, 88, 42);
   rect(-1, 300, 501, 100);
-  fill(0, 150, 150);
+  fill(247, 0, 255);
   rect(100, 100, 150, 50, 5);
-  fill(0,0,0);
+  fill(0,0,8);
   textSize(19);
   text("try again", 110, 133);
   fill(0,0,0);
