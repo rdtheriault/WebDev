@@ -18,5 +18,16 @@
           </select>
           <input type="submit" value="Select">
         </form>
+    <?php 
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          	$car = $_POST["title"];
+          	$why = $_POST["why"];
+          	$rate = $_POST["cat"];
+          	echo "Your favorite car is $car <br>";
+            echo "You like this car because:<br>$why";
+            echo "<br>You gave it a rating of $cat";
+
+        }
+	?>
   </body>
 </html>

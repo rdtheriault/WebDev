@@ -2,7 +2,8 @@
   <head>
   </head>
   <body>
-    <form action="phpquiz.php" method="post">
+    <form action="phpq.php" method="post">
+      <h1>Cars</h1>
         Hermiston:<input type="text" name="title" value""><br>
         Football:<input type="password" name="sport"><br>
           <select id="cat" name="cat">               
@@ -13,8 +14,15 @@
     <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $car = $_POST["title"];
-  $why = $_POST["why"];
+  $why = $_POST["dog"];
   $rate = $_POST["cat"];
+  
+  echo "Your favorite car is $car <br>";
+  echo "You like this car because:<br>$why";
+  echo "<br>You gave it a Rating of $cat";
+  
+  
+  
   
 }
 ?>

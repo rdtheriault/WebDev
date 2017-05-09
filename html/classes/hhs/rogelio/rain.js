@@ -178,7 +178,7 @@ function rain(item) {
     	    var rand = Math.floor((Math.random() * 3) + 1);
     	    if (rand === 1) {picture = "Dancebanana.gif";}
     	    else if (rand === 2) {picture = "pixelbanana.gif";}
-    	    else if (rand === 3) {picture = "Dancingbanana2.gif";}
+    	    else if (rand === 3) {picture = "DancingBanana2.gif";}
     	    flake = jQuery('<div>').text(' ').css({
 	            backgroundImage: "url('"+picture+"')",
 	            backgroundSize: 'contain'

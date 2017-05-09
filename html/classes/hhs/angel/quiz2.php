@@ -21,9 +21,9 @@
           
       <form action="quiz2.php" method="post">
           Title:<br>
-          <input type="Favorite Car" name="Why do you like it" value""><br>
+          <input type="Favorite Car" name="car" value""><br>
           post:<br>
-        <textarea name="post" style="width:250px:height:150"></textarea>
+        <textarea name="why" style="width:250px:height:150"></textarea>
         <select id="cat" name="cat">
      <?php
         $ratings = array("Awesome","Great","eh","ew");
@@ -32,22 +32,15 @@
              echo '<option value="'.($x+1).'">'.$ratings[$x].'</options>';
            }
           ?>
-          <?php
-
-
-
-
-?>
- <p>
+    
+ 
       </select>
         
         
           <input type="submit" value="Add Post">
         </form>
-    <select
-    
-			</select>
-			</p>
+
+			
           <?php  
     
      
@@ -64,7 +57,20 @@
         }
 	
    ?>
-  
+        <?php
+
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          $car = $_POST["car"];
+            $why = $_POST["why"];
+            $rate = $_POST["cat"];
+          echo "<h1>your favorite car is $car</h1>";
+          echo "<p>you like this car because:$why</p>";
+          echo "<h1>you gave it a rating of $rate</h1>";
+        }
+
+
+
+?>
   </body>
   <style>
     #img {
@@ -72,8 +78,10 @@
     }
     
     body {
-     background-color:red; 
+     background-color:red;
+       border-style: dotted;
     }
+
     
     
   </style>
