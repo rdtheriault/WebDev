@@ -4,6 +4,7 @@
       .com {
         color: blue;
         font-family: cursive;
+      }
       #r {
         border: 5px groove purple;
         padding: 5px;
@@ -41,7 +42,7 @@
           echo "<h1 class='com'>your favorite car is: <p id='r'>$car</p> </h1><br>";
           echo "<h1 class='com'>you like this car because: <br> <p id='s'>$why</p> </h1><br>";
           echo "<h1 class='com'>you gave this car a rate of: <p id='t'>$rate</p></h1> <br>";
-        
+        }
 	?>
   </body>
 </html>

@@ -1,5 +1,8 @@
 <html>
   <head>
+    <style>
+      
+    </style>
   </head>
   <body>
     <form action="phpq.php" method="post">
