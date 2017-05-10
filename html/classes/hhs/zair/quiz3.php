@@ -13,14 +13,6 @@
       <select id="cat" name="cat">
       
       
-      
-      <?php
-      $rating = array("name", "favorite city","favorite color");
-  $arrleng = count($rating);
-for($x = 0; $x < $arrleng; $x++){
-  echo  '<option value="' .($x+1).'">' .$rating[$x].'</option>';
-}
-?>
       </select>
       <input type="submit" value="select">
     </form>
