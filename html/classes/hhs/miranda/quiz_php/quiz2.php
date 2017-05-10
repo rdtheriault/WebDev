@@ -11,7 +11,7 @@
     </form> 
     <?php
 		if ($name) { 
-          echo  Welcome
+          //echo  Welcome
         }
 	?>
   </body>

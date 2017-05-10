@@ -5,9 +5,23 @@
           background-color: black;
           color: white;
         }
+      #colors {
+        color: yellow;
+      }
     </style>
   </head>
   <body>
+        <p>Attractions in my favorite city, Corvallis, are:
+    <?php 
+		$ratings = array("Oregon State University!", "Grandpas House!", "Cresent Valley High School!", "Izzy's and Cold Stone!");
+		$arrleng = count($ratings);
+		for($x = 0; $x < count($ratings); $x++) {
+        echo '<option value="'.($ratings[$x]).'">'.$ratings[$x].'</option>';
+       }
+    ?>
+    <p>Corvallis is rainy. Corvallis is wet. Corvallis is "The Valley of Sadness." It is in central Oregon. There are a lot of people in corvallis.
+      I love corvallis. There is a college, waterparks, and many bread places. Corvallis is awesome!</p>
+    <hr>
 	<form action='phpq2.php' method='post'>
       Name: <input type='text' name='name'>
       <br>
@@ -22,6 +36,7 @@
       
       <?php 
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
           $name = $_POST['name'];
           $city = $_POST['city'];
           $color = $_POST['color'];
@@ -38,20 +53,14 @@
                		document.getElementById('phone').innerHTML = 'Too bad, $city is not as cool as my city.';
                	}
       		</script>";
-          echo "<p>I don't know why I asked you, but your favorite color is $color.</p><br>";
+          echo "<p>I don't know why I asked you, but your favorite color is <span id='colors'>$color</span>.</p><br>";
+          echo "<script>
+          document.body.style.backgroundColor = 'white';
+          document.body.style.color = 'black';
+          </script>";
         }
+		
     ?>
-    <hr>
-    <p>Attractions in my favorite city, Corvallis, are:
-    <?php 
-		$ratings = array("Oregon State University!", "Grandpas House!", "Cresent Valley High School!", "Izzy's and Cold Stone!");
-		$arrleng = count($ratings);
-		for($x = 0; $x < count($ratings); $x++) {
-        echo '<option value="'.($ratings[$x]).'">'.$ratings[$x].'</option>';
-       }
-    ?>
-    <p>Corvallis is rainy. Corvallis is wet. Corvallis is "The Valley of Sadness." It is in central Oregon. There are a lot of people in corvallis.
-      I love corvallis. There is a college, waterparks, and many bread places. Corvallis is awesome!</p>
     
   </body>
 </html>
