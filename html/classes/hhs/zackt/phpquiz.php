@@ -34,6 +34,7 @@
           </select>
           <input type="submit" value="Select">
         </form>
+    if (
     <?php 
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
           $car = $_POST['title'];
