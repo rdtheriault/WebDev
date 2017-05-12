@@ -18,20 +18,23 @@
           <input type= "submit" value="Add Post">
             
     </form>
-    Welcome <?php echo $_POST["name"]; ?> !<br>
-    
-    Your favorite color is... <?php echo $_POST["color"]; ?><br>
-    
-    Your favorite city is... <?php echo $_POST["city"]; ?><br>
     <?php
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+    echo '<h1>Welcome  $_POST["name"]; !<br></h1>';
+    
+     echo 'Your favorite color is...   $_POST["color"]; <br>';
+    
+    echo 'Your favorite city is...  $_POST["city"]; <br>'
+  
     if($_POST["city"]=="San Francisco"){
       echo "Awesome, I choose San Francisco as well";
     }
 
 
-?>
-    Too bad  <?php echo $_POST["city"]; ?> is not as cool as my city<br>
-    I don't know why I asked you for your favorite color but it is <?php echo $_POST["color"]; ?><br>
+    echo 'Too bad   $_POST["city"] is not as cool as my city<br>';
+    echo 'I dont know why I asked you for your favorite color but it is  $_POST["color"]<br>';
+      }
+  ?>
     </body> 
   
   </html>
