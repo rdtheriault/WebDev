@@ -1,9 +1,38 @@
 <!DOCTYPE html>
   <html>
   <head>
+  <style>
+  h1  { color: red; } body 
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+html, body 
+{
+   height: 100%;
+}
+html 
+{
+    display: table;
+    margin: auto;
+} 
+h1 {
+  padding: 2cm 
+}
+#main{display:flex;}
+</style>
   <body>
+  <div id="main">
+  <div>
   <h1> Profit </h1>
 <h2> Uncovered Dreamz </h2>
-</body>
+<h3> Click Me </h3>
+</div>
+<div>
+<a href="https://soundcloud.com/profithiphop/sets/uncoverd-dreamz">
+<img style="width:400px;heigth:200px;" src="https://i.ytimg.com/vi/2K79ikiPgPA/maxresdefault.jpg">
+</a> </div> 
+</div>
+  </body>
 </head>
 </html>

@@ -1,24 +1,56 @@
 <html>
-  <head>
-    <style>
+<head>
+  <style>
+    #title {
+      color:blue;
+    }
+  </style>
     <script>
-      document.body.innerHTML ="i just jacked your site";
-      </script>
-    </style>
-  </head>
-    <body>
-      <h1 id="title">Title of page</h1>
-      <p> This is paragraph 1</p>
-      <p> This is paragraph 2</p>
-      <p> this is paragraph 3</p>
-      <script>
-      //document.body.innerHTML ="i just jacked your site";
-     
-      document.getElementbyId("title").innerHTML ="Hello World";
-      </script>
-      
-    
-    </body>
+  document.body.innerHtml = "i just jacked your site";
+  </script>
   
+  </head>
+  <body id="body">
+  <h1 id="title" class= "dis">Title of page</h1>
+    <p> <span class="dis">This</span> is paragraph</p>
+    <p> <span class="dis">This</span> is paragraph</p>
+    <p> <span>This</span> is paragraph</p>
+    <div id="array"></div>
+  <img id="picture"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png">
+    <a id="link" href="https://www.youtube.com/"> link</a>
+    <button id="btn"> Click Here</button>
+   <script>
+  //document.body.innerHTML = "i just jaked your site";
+     document.getElementById("title").innerHTML = "hello world";
+     //document.getElementById("title").style.color = "red";
+    document.getElementById("body").style.background.color="yellow";
+     document.getElementById("picture").src="http://4.bp.blogspot.com/-3FyS0qe6ZIw/UozsXuOzwaI/AAAAAAAAGUM/ShveVfsWkUo/s1600/today.png";
+     document.getElementById("link").href="https://www.google.com";
+     var test= 5+5;
+     document.getElementById("title").innerHTML = test;
+     test =test +10;
+     document.getElementById("title").innerHTML= test;
+     var array = ["blue","green","yellow","red","pink"];
+     document.getElementById("title").innerHTML = array[1];
+     
+     for (var i = 0;i < array.length; i =  i + 1){
+       document.getElementById("title").innerHTML += array[i];
+     }
+     
+     var elspan = document.getElementsByClassName("dis");
+    for (var i = 0;i < elspan.length; i =  i + 1){
+       elspan[i].style.color = "green";
+     }
+     function doSomething() {
+       document.getElementById("title").innerHTML ="you got functioned";
+		document.getElementById("body").style.background="green"; 
+       document.getElementById("title").style.color="blue";
+     }
+         
+     
+     document.getElementById("btn").addEventlistner("click",dosomething);
+    </script>
+  
+  </body>
 </html>
       

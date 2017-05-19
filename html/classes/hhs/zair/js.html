@@ -1,23 +1,54 @@
 <html>
   <head>
     <style>
+      #title {
+       color:red; 
+      }
     </style>
     <script>
-      document.body.innerHTML = "I just jacked your site";
+      document.body.innerHTML = "I just jacked your site bro ";
     </script>
     
   </head>
-  <body>
+    <body id="body">
     <h1 id="title">Title of page </h1> 
-    <p> This is paragraph 1 </p>
-     <p> This is paragraph 2 </p>
-     <p> This is paragraph 3 </p>
+    <p> <span class="dis">This</span> is paragraph 1 </p>
+     <p><span class="dis"> This</span> is paragraph 2 </p>
+     <p> <span>This</span> is paragraph 3</p>
+     <img id="picture" width =300px src ="https://www.eastcobber.com/wp-content/uploads/2015/03/o-SOCCER-BALL-facebook1.jpg"/><br>
+    <div id="array"></div>
+     <a id="link" href ="https://www.youtube.com/"> youtube</a>
+      <button id="btn">click here</button>
      <script>
-      document.body.innerHTML = "<h1>I just jacked your site</h1> ";
+    //  document.body.innerHTML = "<h1>I just jacked your site bro</h1> ";
        document.getElementById("title").innerHTML ="hello world";
+      document.getElementById("body").style.background="gold";
+       document.getElementById("picture").src="http://grfx.cstv.com/photos/schools/geo/sports/w-soccer/auto_vipgiant_w/12151309.jpeg";
+       document.getElementById("link").href ="https://www.youtube.com";
+       var test=1 + 9;
+       document.getElementById("title").innerHTML = test;
+       test = test + 10;
+       document.getElementById("title").innerHTML = test;
+       var array = ["red","blue","gold","green","navy"];
+       document.getElementById("title").innerHTML = array[1];
+       for (var i = 0;i < array.length; i=i +1){
+        document.getElementById("title").innerHTML += array[i]; 
+       }
+       var elspan = document.getElementsByClassName("dis");
+       for (var i = 0;i <elspan.length; i=i +1){
+         elspan[i].style.color = "blue";
+       }
+      function doSomething(){
+                document.getElementById("title").innerHTML = "you got clicked";
+        document.getElementById("body").style.background="green";
+        document.getELementById("link").href="http://hermiston.k12.or.us/";
+                }
+       document.getElementById("btn").addEventListener("click",doSomething);
+
+       
     </script>
       
-    
+   
   </body>
 </html>
 

@@ -1,21 +1,67 @@
 <html>
     <head>
        <style>
-
+         #title{
+             color:red
+         
+         }
+     
       </style>
  <script>
- document.body.innerHTML="I just jacked your site";
+ 
 </script>
  </head>
 <body>
-<h1>id="Title"Title of page</h1>
-<p>This is Paragraph 1</p>
-<p>This is Paragraph 2</p>
-<p>This is Paragraph 3</p>
-<script>
+<h1 id="title">Title of page</h1>
+<p><span class="dis">This</span> is Paragraph 1</p>
+<p><span class="dis">This</span> is Paragraph 2</p>
+<p><span>This</span> is Paragraph 3</p>
+  <div id="array"></div>
+  
+  <img id="picture" width="250px" src="https://static.pexels.com/photos/39517/rose-flower-blossom-bloom-39517.jpeg" alt="rose-flower-blossom-bloom-39517.jpeg (3482×2321)"/>
+  <a href="https://google.com" id="link">Click Here</a>
+  <button id="btn">Press Me</button>
+  <script>
  //document.body.innerHTML="I just jacked your site";
- document.getELementById("title").innerHTML="Hello World"
+ document.getElementById("title").innerHTML="Hello World";
+ document.getElementById("title").style.color="pink";
+ document.body.style.backgroundColor="blue";
+ document.getElementById("picture").src="https://static.pexels.com/photos/36753/flower-purple-lical-blosso.jpg";
+ document.getElementById("link").href="https://bing.com";
+ var test =1+5;
+ document.getElementById("title").innerHTML=test;
+ test=test+5;
+ //document.getElementById("title").innerHTML=test;
+ 
+ var array=["Red","Pink","blue","yellow","black"];
+ //document.getElementById("title").innerHTML=array[1];
+ 
+ for (var i= 0;i < array.length;i = i + 1){
+ document.getElementById("title").innerHTML+=array[i]; 
+ }
+  
+ var elspan=document.getElementsByClassName("dis");
+ for (var i = 0;i <elspan.length; i = i+1){
+     elspan[i].style.color="blue";
+ }
+ 
+  function doSomething() {
+         document.getElementById("title).innerHTML= "you got clicked"; 
+                                 
+      document.getElementById("title").style.color="blue";                          
+      document.body.style.backgroundColor="purple";                           
+                                 
+      }
+  
+  
+     
+  document.getElementById("button").addEventListener("click",doSomething);
+                                 
+              
+                                 
+ 
   </script>
 
-</body>
+
+ </body>
 </html>

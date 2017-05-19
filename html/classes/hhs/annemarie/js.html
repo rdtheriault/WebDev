@@ -1,7 +1,9 @@
 <html>
  <head>
    <style>
-     
+     #title {
+      color:red; 
+     }
      
    </style>
    <script>
@@ -9,15 +11,48 @@
      
    </script>
   </head>
-  <body>
+  <body id="body">
     <h1 id="title">title of page</h1>
-    <p>this is oaragraph 1</p>
-    <p>this is paragraph 2</p>
-    <p>this is paragraph 3</p>
-      <script>
+    <p><span class="dis">this</span> is paragraph 1</p>
+    <p><span class="dis">this</span> is paragraph 2</p>
+    <p><span>this</span> is paragraph 3</p>
+    <div id="array"></div>
+    <img id="picture" width="250px" src="http://www.almanac.com/sites/default/files/birth_month_flowers-primary-1920x1280px_pixabay.jpg">
+   <a id="link" href="https://www.google.com/search?q=cats&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjIqpSCjvXTAhVN42MKHQkyD3gQ_AUIBigB&biw=1366&bih=654&safe=active&ssui=on#imgrc=zoRBY827n2XcOM:">Link</a>
+    
+    
+    <script>
      //document.body.innerHTML = "<h1>i just jacked your site</h1>";
-     document.getElementById("title").innerHTML = "hello world";
-   </script>
+     document.getElementById("title").innerHTML = "Hello World";
+  //document.getElementById("title").style.color = "red";
+        document.getElementById("body").style.backgroundColor = "pink";
+        document.getElementById("picture").src = "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg";
+        document.getElementById("link").href = "https://www.google.com/search?q=cata&oq=cata&aqs=chrome..69i57j0l5.1323j0j8&sourceid=chrome&ie=UTF-8&safe=active&ssui=on#safe=active&q=dogs";
+        var test = 1+5;
+      document.getElementById("title").innerHTML = test;
+      test = test + 5;
+      document.getElementById("title).innerHTML = test;
+                              
+         var array = ["red","pink","yellow","blue","black"];
+            //document.getElementById("title").innerHTML = array[1];                  
+        
+          for (var i=0;i <array.length; i = i + 1) {
+        document.getElementById("title").innerHTML += array[1];
+      }
+                              
+        var elspan = document.getElementsByClassName("dis");
+      for (var i= 0;i < elspan.length; i = i +1) {
+        elspan[i].style.color = "blue"
+      }
+        
+        
+        
+        
+        
+        
+        
+    
+    </script>
     
     
     
