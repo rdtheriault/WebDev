@@ -7,6 +7,7 @@
   </head>
   <body id="body">
     <h1 id="title">Llevame a volar</h1>
+    <!-- you need an <ul> around the <li> -0.1  -->
     <li><span class="list">Bailame</span></li>
     <li><span class="list">Ahora dice</span></li>
     <li><span class="list">felices los 4</span></li>
@@ -16,10 +17,10 @@
       var elspan = document.getElementsByClassName("array");
        for (var i = 0;i <elspan.length; i=i +1){
          elspan[i].style.color = "red";
-       }
+       } // good start, still should be inside function. -0.1
       function doSomething(){
         document.getElementById("title").innerHTML = "Songs I like";
-        document.getElementById("list").style.color="yellow";
+        document.getElementById("list").style.color="yellow";//this is wher ethe array loop goes -0.1
         document.getElementById("body").style.background="blue";
       }
       document.getElementById("attribute").addEventListener("click",doSomething);

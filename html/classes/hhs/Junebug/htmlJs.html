@@ -8,6 +8,7 @@
   </head>
   <body>
     <h1 id="Song">Candy Paint</h1>
+    <!-- the correct html for outside of a <li> is <ul> or <ol> -0.1    -->
     <table>
       <tr>
     <li>Horse</li>
@@ -25,6 +26,7 @@
       document.body.style.backgroundColor = "Cyan";
         document.GetElementById("li").style.color = "Crimson";
         document.getElementById("Para").innerHTML = '<p>These songs are off of <i>The Fate of the Furious</i>,My Favorite movie and the songs involve the best rappers including Lil Uzi Vert,PnB Rock,Kodak Black and Etc.</p>';
+        // -0.2 not looping through <li> to change color
       }
       document.getElementById("btn").addEventListener("click", doSomething);
       
