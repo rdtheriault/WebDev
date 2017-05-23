@@ -16,20 +16,25 @@ html
     display: table;
     margin: auto;
 } 
-h1 {
-  padding: 2cm 
 }
 #main{display:flex;}
 </style>
   <body>
   <div id="main">
   <div>
-  <h1> Profit </h1>
+  <h1> PROFIT </h1>
 <h2> Uncovered Dreamz </h2>
 <h3> Click Me </h3>
+<p> The "Hometown Hero" Profit, was born in Reedly, CA and raised in Fresno, CA. On August 14 of the year 2000 
+Stephanie(Mom) and William Felipe Sr(Dad) had only been married for 5 months and were about be gifted with a little boy.
+7 pounds, 9 ounces WIlliam Felipe Jr(Profit) was born. At a young age William showed interest in music, rap to be more 
+specific.WIth his parents music listening habbits a young William was exposed to huge names in rap including 2pac, 
+Notorious B.I.G, N.W.A, Nas, Eminem, Jay Z, Kanye West, and a whole lot more. After 12 years and 2 beautiful girls Mom 
+and Dad decided it was time for a change and moved the family to Umatilla, OR to live with the Dad's older brother, Danny.
+
 </div>
 <div>
-<a href="https://soundcloud.com/profithiphop/sets/uncoverd-dreamz">
+<a href="https://soundcloud.com/profithiphop/sets/uncoverd-dreamz"> 
 <img style="width:400px;heigth:200px;" src="https://i.ytimg.com/vi/2K79ikiPgPA/maxresdefault.jpg">
 </a> </div> 
 </div>

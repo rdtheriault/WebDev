@@ -2,7 +2,7 @@
 <head>
   <style>
     #title {
-      color:blue;
+      color:green;
     }
   </style>
     <script>
@@ -17,15 +17,15 @@
     <p> <span>This</span> is paragraph</p>
     <div id="array"></div>
   <img id="picture"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png">
-    <a id="link" href="https://www.youtube.com/"> link</a>
-    <button id="btn"> Click Here</button>
+    <a id="link" href="https://web.hermiston.k12.or.us:10000"> web</a>
+    <button id= "btn">click here</button>
    <script>
   //document.body.innerHTML = "i just jaked your site";
      document.getElementById("title").innerHTML = "hello world";
      //document.getElementById("title").style.color = "red";
-    document.getElementById("body").style.background.color="yellow";
+     document.getElementById("body").style.backGround="blue";
      document.getElementById("picture").src="http://4.bp.blogspot.com/-3FyS0qe6ZIw/UozsXuOzwaI/AAAAAAAAGUM/ShveVfsWkUo/s1600/today.png";
-     document.getElementById("link").href="https://www.google.com";
+     document.getElementById("link").href="https://www.youtube.com";
      var test= 5+5;
      document.getElementById("title").innerHTML = test;
      test =test +10;
@@ -42,15 +42,14 @@
        elspan[i].style.color = "green";
      }
      function doSomething() {
-       document.getElementById("title").innerHTML ="you got functioned";
-		document.getElementById("body").style.background="green"; 
+                document.getElementById("title").innerHTML = "you got hacked";
+       document.getElementById("body").style.background="green";
+       document.getElementById("link").href="https://www.nitrotype.com";
        document.getElementById("title").style.color="blue";
+       
      }
-         
      
-     document.getElementById("btn").addEventlistner("click",dosomething);
+     
+     document.getElementById("btn").addEventListener("click",doSomething);
+     
     </script>
-  
-  </body>
-</html>
-      
