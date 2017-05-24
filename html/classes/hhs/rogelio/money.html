@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+  #all{
+  display:none;
+  }
+
+  
+  
+</style>
+
+</head>
+<body>
+<div id="all">
+<img src="https://mefminute.files.wordpress.com/2015/04/money1.jpg" width="400px">
+<img id="heart" src="http://images.huffingtonpost.com/2014-06-19-bigstockTheLoveOfMoney302143011.jpg" width="400px">
+
+<button id="button2">Make the magic happen</button>
+</div>
+<button id="button1">Show me the money</button>
+<script>
+document.getElementById("button1").addEventListener("click",money);
+document.getElementById("button2").addEventListener("click",money2);
+
+var all = document.getElementById("all")
+function money() {
+ all.style.display = "block"; 
+}
+
+var heart = document.getElementById("heart");
+
+function money2() {
+ heart.src = "doge.png";
+  document.body.style.backgroundColor = "blue";
+}
+
+
+</script> 
+</body>
+</html>

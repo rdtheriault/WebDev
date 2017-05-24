@@ -58,11 +58,11 @@
 <body>
 	<div id="all"> 
 		<div id="header">
-        	<h1>Leonardo Da Vinci</h1>
+        	<h1 id="title">Leonardo Da Vinci</h1>
 		</div>
 		<div id="middle">
         	<div id="pic-div">
-        	 <a href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci">
+        	 <a id="link" href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci">
           <img id="pic" src="http://www.leonardodavinci.net/images/leonardo-da-vinci.jpg" height="500px"></a>
              </div> 
           	<div id="paragraphs">
@@ -152,16 +152,24 @@
 <script>
 var clickerButton = document.getElementById("button-clicker");
 var image = document.getElementById("pic");
-
+var header = document.getElementById("header");
+var mid = document.getElementById("paragraphs");
+var end = document.getElementById("end");
+var buttonColor = document.getElementById("button");
+var list = document.getElementById("list");
+var title = document.getElementById("title");
+var link = document.getElementById("link");
   var onButtonClick = function() {
 	image.src = "leo.jpg";
-  
-  
-  
-  
-  
-  
-  
+  document.body.style.background = "url(tmnt.jpg)";
+  document.body.style.backgroundColor = "darkGreen";
+  header.style.backgroundColor = "blue";
+  mid.style.backgroundColor = "lime";
+  mid.innerHTML =  "<h1 class ='padding'>Brief Info</h1><p class ='padding'>leo wears a blue bandana. His signature weapons are two swords. Leonardo is the most spiritual, the most disciplined, and the most in-line with Splinters  teachings and thoughts, and is generally (and popularly) seen as the leader of the Turtles. He is named after Leonardo da Vinci.<p> <h1 class='padding'>What he is know for</h1>";
+  end.style.backgroundColor = "blue";
+  buttonColor.style.border = "3px solid lime"; 
+  title.textContent = "Leonardo the turtle";
+  link.href = "https://en.wikipedia.org/wiki/Leonardo_(Teenage_Mutant_Ninja_Turtles)";
   };  
 clickerButton.addEventListener("click", onButtonClick);  
   

@@ -51,7 +51,6 @@
     	
 	</head>
 	<body>
-          
   <div id="image"><img id="move" src=""></div>
   <div id="all" style="display:none;">
       <button onClick="goAway()">GO AWAY</button>
@@ -83,7 +82,7 @@
 
    }
    function show() {
-    <a href="http://flashfooty.com/igre/dkicker/index.php?embed=47">Football Games<br /><img src="http://flashfooty.com/igre/dkicker/_descriptions/thumb_110x80.jpg" border="0"><br />Dkicker</a>;
+    left.innerHTML="<img src = 'https://media2.giphy.com/media/5dxI9D9ErSVdS/200.gif#132'>";
     right.innerHTML="<img src = 'https://media3.giphy.com/media/CnvgpwPPkV88o/200.gif#131'>";
     document.getElementById("all").style.display = "block"
    }

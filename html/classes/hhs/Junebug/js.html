@@ -5,6 +5,9 @@
       #title{
        color:red; 
       }
+      span.dis {
+        
+      }
     </style>
     <script>
       document.body.innerHTML = "<h1>I just jacked your site</h1>";
@@ -12,41 +15,17 @@
   </head>
   <body>
     <h1 id="title">Title</h1>
-    <p>This is Paragraph 1</p>
-    <p>This is Paragraph 2</p>
-    <p>This is Paragraph 3</p>
-    <img id="picture"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmR1NI83isyqCubwTcl0_SYN-9QL5JsOTtEsoCw80TBnPxjqfQQ">
+    <p><span class="dis">This is </span>Paragraph 1</p>
+    <p>This is <span class="dis">Paragraph 2</span></p>
+    <p><span class="dis">This is Paragraph 3</span></p>
+    <img class="dis" id="picture" width="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmR1NI83isyqCubwTcl0_SYN-9QL5JsOTtEsoCw80TBnPxjqfQQ">
     <a id="link"href="https://soundcloud.com/bigsean-1/living-single">Chill Bro!</a>
     <button id="btn">Juice! Juice! Juice!</button>
   <script>
-       //document.body.innerHTML = '<h3>just jacked your site lol</h3>';
-      //document.getElementById("title").innerHTML = "HELLO WORLD!";
-      //document.getElementById("title").style.color = "red";
-      document.body.style.backgroundColor = "lightblue";
-      document.getElementById("picture").src = "http://pixel.nymag.com/imgs/daily/vulture/2017/05/16/16-spongebob-explainer.w710.h473.jpg";
-      //document.getElementById("link").href = "https://www.youtube.com/watch?v=YM4O4_duCX4";
-      var test = 2 * 5;
-      //document.getElementById('title').innerHTML = test;
-      //test = "Sup Cutie;)";
-      //document.getElementById('title').innerHTML = test;
-      //document.getElementById('title').innerHTML = test - 45132607186642;
-      //document.getElementById('title').innerHTML = test + test;
-      var array = ['white', 'gray', 'crimson', 'orange', 'yellow', 'lime', 'cyan', 'indigo', 'pink', 'gold', 'brown', 'black'];
-      //document.getElementById('title').innerHTML = array[5];
-      for (i = 0; i < array.length; i++) {
-        document.getElementById('array').innerHTML += "<br>" + array[i] + "<hr>";
-      }
-      var elspan = document.getElementsByClassName("dis");
-      for (i = 0; i < elspan.length; i++) {
-        //document.getElementById('array').innerHTML += "<br>" + array[i] + "<hr>";
-        elspan[i].style.color = 'cyan';
-      }
-    function doSomething() {
-      document.getElementById("title").innerHTML = "you got Clicked";
-       document.getElementById("btn")style.backgroundColor("Cyan");
-    }
-    document.getElementById("btn").addEeventListener("click", doSomething);
-    
+		var elDis = document.querySelector("span.dis");
+ 		for(var i = 0;i < elDis.length; i++){
+          elDis[i].style.display = "none";
+        }
     
     </script>
     
