@@ -6,7 +6,7 @@
     }
     </style>
    <body id="body">
-<h1>Humble by Kendrick Lamar</h1>
+<h1 id="title">Humble by Kendrick Lamar</h1>
      <h2>similar songs</h2>
      <!-- you need an <ul> around the <li> -0.1  -->
      <li>Fear by Kendrick Lamar</li>
@@ -14,18 +14,17 @@
      <li>xxx by Kendrick Lamar feat U2</li>
     
      <button id="btn">click here</button>
-     <!-- missing div -0.1  -->
-     
+     <div id="text"></div>
      <script>
-        function doSomething() {
-                document.getElementById("title").innerHTML = "Songs I like";
-       		document.getElementById("body").style.background="green";
-      		// -0.1 not changing div to include <p>
-      		// -0.2 not looping through <li> to change color
-       
-     }
-	// -0.1 missing button listenter
-     
+       document.getElementById("btn").addEventListener("click",doSomething);
+       function doSomething() {
+         document.body.style.background = "red";
+         var elLi = document.getElementsByTagName("li");
+         for (var i = 0;i <elLi.length;i++){
+           elLi[i].style.color = "blue";
+         }
+         document.getElementById("title").innerHTML = "My Songs";
+       }   
      </script>
      
     </body>

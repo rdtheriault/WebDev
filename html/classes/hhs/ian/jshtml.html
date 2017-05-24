@@ -27,6 +27,10 @@
         document.getElementById("body").style.background="blue";
         document.getElementById("p1").innerHTML="i like these songs because I like what the artist says in these songs and i think they are catchy.";
         // -0.2 not looping through <li> to change color
+        var eLI = document.getElementsByTagName("li");
+        for(var I =0;I <eLI.length;I++){
+        eLI[I].style.color = "white";
+        }
       }
            document.getElementById("btn").addEventListener("click",doSomething);
      
