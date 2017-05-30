@@ -2,7 +2,7 @@
 <head>
 <style>
   #all{
-  display:none;
+  display:none; 
   }
 
   
@@ -19,12 +19,15 @@
 </div>
 <button id="button1">Show me the money</button>
 <script>
-document.getElementById("button1").addEventListener("click",money);
-document.getElementById("button2").addEventListener("click",money2);
+var button1 = document.getElementById("button1")
+button1.addEventListener("click",money);
+var button2 = document.getElementById("button2")
+button2.addEventListener("click",money2);
 
 var all = document.getElementById("all")
 function money() {
  all.style.display = "block"; 
+ button1.remove();
 }
 
 var heart = document.getElementById("heart");
@@ -32,6 +35,7 @@ var heart = document.getElementById("heart");
 function money2() {
  heart.src = "doge.png";
   document.body.style.backgroundColor = "blue";
+
 }
 
 

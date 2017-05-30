@@ -33,7 +33,7 @@
   width:100%; height:100%;
   }
   #list{
-    background-color:rgb(53,89,99); overflow:auto; color:black; height:100%; width:20%;
+    background-color:rgb(53,89,99); overflow:auto; color:black; height:100%; width:20%; text-align:center;
   }
   td{
   border:blue ridge;
@@ -90,7 +90,9 @@
 		</div>
 		<div id="end">
          
-          <div id="list"><ol>   
+          <div id="list">
+            <h4>studied</h4>
+         <ol>   
          <li>invention</li>
           <li>painting</li>
           <li>sculpting</li> 
@@ -170,6 +172,8 @@ var link = document.getElementById("link");
   buttonColor.style.border = "3px solid lime"; 
   title.textContent = "Leonardo the turtle";
   link.href = "https://en.wikipedia.org/wiki/Leonardo_(Teenage_Mutant_Ninja_Turtles)";
+  list.style.background ="blue";
+  list.innerHTML ="<h4>Skills</h4><ul><li>ninjutsu</li><li>Olympic-level agility, speed, and strength</li><li>Keen strategist</li><li>Master of stealth</li><li>Mastery of kenjutsu and iaidō</li><li>Master swordsman</li><li>Mastery of various forms of hand-to-hand combat</li><li>Enhanced slashing & slicing (via ninjato)</li><li>Exceptional leadership skills</li></ul>"
   };  
 clickerButton.addEventListener("click", onButtonClick);  
   
