@@ -21,12 +21,22 @@
     <img class="dis" id="picture" width="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmR1NI83isyqCubwTcl0_SYN-9QL5JsOTtEsoCw80TBnPxjqfQQ">
     <a id="link"href="https://soundcloud.com/bigsean-1/living-single">Chill Bro!</a>
     <button id="btn">Juice! Juice! Juice!</button>
+    <input type="text" id="input">
+    <div id="num">
+    </div>
   <script>
 		var elDis = document.querySelector("span.dis");
  		for(var i = 0;i < elDis.length; i++){
           elDis[i].style.display = "none";
         }
-    
+    document.getElementById("btn").addEventListener('click', btnClick);
+    var input = document.getElementById("input").value;
+    document.getElementById("num").innerHTML = "that is not less than 11";
+    function btnClick() {
+      for(var i = 0; i<input; i++) {
+      document.getElementById("num").innerHTML += (i+1)"<br>";
+      }
+    }
     </script>
     
   </body>

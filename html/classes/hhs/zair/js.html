@@ -22,12 +22,28 @@
     <div id="array"></div>
      <a id="link" href ="https://www.youtube.com/"> youtube</a>
       <button id="btn">click here</button>
+      <input type="text" id="num">
      <script>
        var elDis = document.querySelectorAll("span.dis");
-       for (var i = 0; i < elDis.length; i ++);
+       for (var i = 0; i < elDis.length; i ++) {
        elDis[i].style.display ="none";
+       }
             
-
+       
+       
+       function press() {
+         var input = document.getElementById("num").value;
+         if (input < 11){
+         for (var i = 0;i < input +1;i ++){
+         document.getElementById("array").innerHTML += (i + 1)+"<br>";
+       }
+         }
+         else{
+           document.getElementById("array").innerHTML = "no stop";
+         }
+           
+       }
+       document.getElementById("btn").addEventListener("click",press);
 
        
     </script>

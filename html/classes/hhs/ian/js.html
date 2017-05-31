@@ -4,10 +4,11 @@
     #title {
       color:green;
     }
+    span.dis{
+      
+    }
   </style>
-    <script>
-  document.body.innerHtml = "i just jacked your site";
-  </script>
+    
   
   </head>
   <body id="body">
@@ -19,24 +20,10 @@
   <img id="picture"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png">
     <a id="link" href="https://web.hermiston.k12.or.us:10000"> web</a>
     <button id= "btn">click here</button>
+         <input type="text" id="num">
    <script>
   //document.body.innerHTML = "i just jaked your site";
-     document.getElementById("title").innerHTML = "hello world";
-     //document.getElementById("title").style.color = "red";
-     document.getElementById("body").style.backGround="blue";
-     document.getElementById("picture").src="http://4.bp.blogspot.com/-3FyS0qe6ZIw/UozsXuOzwaI/AAAAAAAAGUM/ShveVfsWkUo/s1600/today.png";
-     document.getElementById("link").href="https://www.youtube.com";
-     var test= 5+5;
-     document.getElementById("title").innerHTML = test;
-     test =test +10;
-     document.getElementById("title").innerHTML= test;
-     var array = ["blue","green","yellow","red","pink"];
-     document.getElementById("title").innerHTML = array[1];
-     
-     for (var i = 0;i < array.length; i =  i + 1){
-       document.getElementById("title").innerHTML += array[i];
-     }
-     
+    
      var elspan = document.getElementsByClassName("dis");
     for (var i = 0;i < elspan.length; i =  i + 1){
        elspan[i].style.color = "green";
@@ -46,10 +33,28 @@
        document.getElementById("body").style.background="green";
        document.getElementById("link").href="https://www.nitrotype.com";
        document.getElementById("title").style.color="blue";
-       
+            document.getElementById("btn").addEventListener("click",doSomething);
+
+     }
+     document.getElementById("btn").addEventListener("click",press);
+    function press() {
+         var input = document.getElementById("num").value;
+      if (input < 11){
+       for (var i = 0;i < input; i++){
+        document.getElementById("array").innerHTML += (i + 1)+"<br>";   
+      }
+       }
+     else{
+       document.getElementById("array").innerHTML ="no stop";
      }
      
+    }
+    
+    
+ 
      
-     document.getElementById("btn").addEventListener("click",doSomething);
      
     </script>
+  </body>
+</html>
+  
