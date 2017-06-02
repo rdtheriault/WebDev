@@ -39,11 +39,14 @@
      document.getElementById("btn").addEventListener("click",press);
     function press() {
          var input = document.getElementById("num").value;
-      if (input < 11){
-       for (var i = 0;i < input; i++){
-        document.getElementById("array").innerHTML += (i + 1)+"<br>";   
+      if(isNaN(input)){
+        document.getElementById("array").innerHTML="<h1>that is not a number";
       }
-       }
+     else if (input < 11){
+      document.getElementById("link").href="https://www.nitrotype.com";
+       document.getElementById("picture").src="http://cdn.shopify.com/s/files/1/0257/6087/products/48-Soccer-Ball-Solo_Single_Front_grande.png?v=1484173769";
+      }
+       
      else{
        document.getElementById("array").innerHTML ="no stop";
      }

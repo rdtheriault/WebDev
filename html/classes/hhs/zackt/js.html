@@ -28,7 +28,7 @@
     <p><span>tHiS iS a</span> PaRaGrApH</p>
     <div id="array">
     </div>
-    <!-- <img id='pic' src='https://cdn.meme.am/cache/images/folder874/600x600/17446874/spongebob-chicken-meme.jpg'><br> -->
+    <img id='pic' src='https://cdn.meme.am/cache/images/folder874/600x600/17446874/spongebob-chicken-meme.jpg'><br>
     <a id='link' href="https://www.teamvisionary.com/" target='_blank'><h2>Team Visionary!</h2></a>
     <button id='btn'>Press for fun and games and maybe more you never know:)</button><br>
     
@@ -43,12 +43,17 @@
       
       function buttonClick() {
         var input = document.getElementById('input').value;
-        if (input<11) {
-        for (var i = 0; i < input; i++) {
-         document.getElementById('array').innerHTML += i;
-         }
+        if (isNaN(input)) {
+          document.getElementById('array').innerHTML = "<h1>not a number bro!</h1>";
+        } else if (input<11) {
+        //for (var i = 0; i < input; i++) {
+         //document.getElementById('array').innerHTML += i;
+         //}
+          document.getElementById('link').href = 'http://yahoo.com';
+          document.getElementById('pic').src = 'https://upload.wikimedia.org/wikipedia/commons/7/76/Coast_Garter_Snake.jpg';
+          document.getElementById('pic').style.width = '250px';
         } else {
-          document.getElementById('array').innerHTML = "not less than 11";
+          document.getElementById('array').innerHTML = "<h1>not less than 11</h1>";
         }
       }
       

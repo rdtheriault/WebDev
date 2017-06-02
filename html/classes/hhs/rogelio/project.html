@@ -51,8 +51,13 @@
   .padding{
   padding-left:10px;
   }
-
+  .color{
+  border:lime ridge;
+  }
   
+  #table-color{
+  background:blue:
+  }
 </style>
 </head>
 <body>
@@ -162,6 +167,8 @@ var list = document.getElementById("list");
 var title = document.getElementById("title");
 var link = document.getElementById("link");
 var table = document.getElementById("table");
+var color = document.getElementsByTagName("td");
+var tableColor = document.getElementsByTagName("table");  
   var onButtonClick = function() {
 	image.src = "leo.jpg";
   document.body.style.background = "url(tmnt.jpg)";
@@ -170,13 +177,13 @@ var table = document.getElementById("table");
   mid.style.backgroundColor = "lime";
   mid.innerHTML =  "<h1 class ='padding'>Brief Info</h1><p class ='padding'>leo wears a blue bandana. His signature weapons are two swords. Leonardo is the most spiritual, the most disciplined, and the most in-line with Splinters  teachings and thoughts, and is generally (and popularly) seen as the leader of the Turtles. He is named after Leonardo da Vinci.<p> <h1 class='padding'>What he is know for</h1><p>Leonardo is the most serious, mature and focused of the team. Being the designated leader of the group, Leonardo is very enthusiastic about his role. he tries to be the mature and responsible sibling, but there are occasional times where he can be as childish as his brothers.</p>";
   end.style.backgroundColor = "blue";
-  buttonColor.style.border = "3px solid lime"; 
+  buttonColor.style.border = "lime solid"; 
   title.textContent = "Leonardo the turtle";
   link.href = "https://en.wikipedia.org/wiki/Leonardo_(Teenage_Mutant_Ninja_Turtles)";
   list.style.background ="blue";
   list.innerHTML ="<h4>Skills</h4><ul><li>ninjutsu</li><li>Olympic-level agility, speed, and strength</li><li>Keen strategist</li><li>Master of stealth</li><li>Mastery of kenjutsu and iaidō</li><li>Master swordsman</li><li>Mastery of various forms of hand-to-hand combat</li><li>Enhanced slashing & slicing (via ninjato)</li><li>Exceptional leadership skills</li></ul>"
   table.innerHTML ="<table><tbody><tr><td style=’font-weight: bold;’>Movie</td><td style=’font-weight: bold;’>Date</td></tr><tr><td style=’font-weight: bold;’>TNMT</td><td>1990</td></tr><tr><td style=’font-weight: bold;’>TMNT2</td><td>1991</td></tr><tr><td style=’font-weight: bold;’>TMNT3</td><td>1993</td></tr></tbody></table>";
-  table.style.background = "blue";
+  tableColor[0].style.backgroundColor = "lime";
   };  
 clickerButton.addEventListener("click", onButtonClick);  
   

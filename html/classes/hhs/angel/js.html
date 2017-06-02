@@ -30,12 +30,15 @@
       
        function press() {
           var input = document.getElementById("num").value;
-         if (input < 11){
-            for (var i = 1; i<input+1; i++){
-           	 document.getElementById("array").innerHTML +=(i+1)+"<br>";
-          }
-           
+         if (isNaN(input)) {
+            document.getElementById("array").innerHTML="<h1>no stop</h1>";
          }
+           
+        else if (input < 11){
+          document.getElementById("link").href="http://yahoo.com";
+          document.getElementById("picture").src="https://cdn.pixabay.com/photo/2014/04/10/11/24/red-rose-320868_960_720.jpg";
+        }
+            
          else{
            document.getElementById("array").innerHTML="no stop";
          }

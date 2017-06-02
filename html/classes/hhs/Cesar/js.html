@@ -23,6 +23,7 @@
   <div id="array"></div>
   
   <img class="dis" id="picture" width="250px" src="https://static.pexels.com/photos/39517/rose-flower-blossom-bloom-39517.jpeg" alt="rose-flower-blossom-bloom-39517.jpeg (3482×2321)"/>
+  
   <a href="https://google.com" id="link">Click Here</a>
   <button id="btn">Press Me</button>
   <input type="text" id="num">
@@ -36,10 +37,12 @@
   document.getElementById("btn").addEventListener("click",btnClick);
   function btnClick() {
     var input=document.getElementById("num").value;
-    if (input<11) {
-    for (var i=0; i <input;i++){
-        document.getElementById("array").innerHTML+=(i+1)+"<br>";
-      }
+    if(isNaN(input)){
+      document.getElementById("array").innerHTML="<h1>That is not a number</h1>"
+     }
+    else if (input<11) {
+    document.getElementById("picture").src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=&url=https%3A%2F%2Fwww.rodalesorganiclife.com%2Fgarden%2Fguide-starting-annual-flower-seeds&psig=AFQjCNH--ALhWyXJVZSqcouw8QjlAvkkPA&ust=1496517665030599"; 
+      document.getElementById("link").href="http://bing.com";      
     }
     else{
         document.getElementById("array").innerHTML="that is not less than 11";

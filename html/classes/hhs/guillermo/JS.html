@@ -16,34 +16,33 @@
     <p> <span class="dis">This</span> is paragraph</p>
     <p> <span>This</span> is paragraph</p>
     <div id="array"></div>
-  <img id="picture"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png">
+  <img class="dis" id="picture"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png">
     <a id="link" href="https://web.hermiston.k12.or.us:10000"> web</a>
     <button id= "btn">click here</button>
     <input type="text" id="num">
     <script>
-     
-        var elDis = document.querySelectorAll("span.dis");
+    var elDis = document.querySelectorAll("span.dis");
        for (var i = 0; i < elDis.length; i ++) {
        elDis[i].style.display ="none";
        }
-      
-      
             
        
        
        function press() {
          var input = document.getElementById("num").value;
-         if (input < 11){
-         for (var i = 1;i < input +1;i ++);
-         document.getElementById("array").innerHTML += (i + 1)+"<br>";
+         if (isNaN(input))
+           document.getElementById("array").innerHTML = "<h1>That's not a number";
+         else if (input < 11){
+         document.getElementById("link").href="https://www.google.com/";
+           document.getElementById("picture").src="http://lsuchurch.org/images/uploads/Soccer.jpg";
+           
          }
-         else(
-           documentgetElementById("array").innerHTML="no stop";
-         )
-         
-       //document.queryselector("span.dis").style.display="none";
+         else{
+           document.getElementById("array").innerHTML = "no stop";
+         }
+           
+       }
        document.getElementById("btn").addEventListener("click",press);
-
       
     </script>
   
