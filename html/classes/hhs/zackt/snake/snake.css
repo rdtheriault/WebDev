@@ -55,7 +55,7 @@ a.snake-link:hover {
 .snake-food-block {
     margin: 0px;
     padding: 0px;
-    background-color: #ed8804;
+    background-color: #0D2256;
     border: 0px solid #000080;
     position: absolute;
 }
