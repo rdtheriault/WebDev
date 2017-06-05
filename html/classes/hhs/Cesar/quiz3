@@ -1,0 +1,38 @@
+<html>
+ <head>
+  <style>
+
+
+
+
+
+ </style>
+</head>
+
+<body>
+<div id="press me"></div>
+<div id="press"></div>
+<div id="me"></div>
+
+<button id="btn">press me</button>
+  <input type="text" id="press me">
+<script>
+document.getElementById("btn").addEventListener("click",btnClick);
+
+function btnClick() {
+    var input=document.getElementById("num").value;
+    if(isNaN(input)){
+      document.getElementById("array").innerHTML="<h1>That is not a number</h1>"
+     }
+      else if (input<20)
+
+else{
+        document.getElementById("array").innerHTML="that is not less than 21";
+    }  
+
+
+
+</script>
+
+</body>
+</html>

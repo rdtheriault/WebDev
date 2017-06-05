@@ -28,25 +28,24 @@
 <input id="input" type="text">
 <button id="button">button</button>
 <script>
-var apple = document.getElementById("apple");
-apple.innerHTML = "<ol><li>banana</li><li>apple</li><li>orange</li></ol>";
+banana = document.getElementById("banana"); 
+for(i=2;i<21;i+=2){
+banana.innerHTML = i;
 
-var orange = document.getElementById("orange");
-function input(){
-var inputBox = document.getElementById("input").value;
-orange.innerHTML = inputBox;
-};  
+
+};
   
-  
-  
-  
-var button = document.getElementById("button")
-button.addEventListener("click",input);
+  var apple = document.getElementById("apple");
+  apple.innerHTML = "<ol><li>banana</li><li>apple</li><li>orange</li></ol>";
 
+    var orange = document.getElementById("orange");
+    function input(){
+    var inputBox = document.getElementById("input").value;
+    orange.innerHTML = inputBox;
+    };  
 
-
-
-
+    var button = document.getElementById("button")
+    button.addEventListener("click",input);
 
 </script>
 </body>
