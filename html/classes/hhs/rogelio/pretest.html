@@ -25,14 +25,23 @@
 <div id="orange">
   
 </div>
-<input type="text">
-<button>button</button>
+<input id="input" type="text">
+<button id="button">button</button>
 <script>
 var apple = document.getElementById("apple");
-apple.innerHTML = "<ol><li>banana</li><li>banana</li><li>banana</li></ol>";
+apple.innerHTML = "<ol><li>banana</li><li>apple</li><li>orange</li></ol>";
+
+var orange = document.getElementById("orange");
+function input(){
+var inputBox = document.getElementById("input").value;
+orange.innerHTML = "<p>(inputBox)</p>";
+};  
+  
+  
+  
   
 var button = document.getElementById("button")
-button1.addEventListener("click",);
+button.addEventListener("click",input);
 
 
 

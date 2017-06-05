@@ -5,17 +5,23 @@
     <div id="1"></div>
     <div id="2"></div>
     <div id="3"></div>
-    <input id="num"><input>
+    <input type="text" id="num"><input>
     <button id="btn"></button>
     <script>
-      var elDis = document.querySelectorAll("span.dis");
-       for (var i = 0; i < elDis.length; i ++)      
+       function test() {
+          var name = document.getElementById("name").value;
+  
+      	  for ( var i =0; i<10;i++){
+        		document.getElementById("goodbye").innerHTML+= name+"<br>";
+      	  
+       }
+         
+         var input = documnet.getElementById("num").value;
       
       
         
       
       
-      document.getElementById("btn").addEventListener("click",press);
 
     </script>
     

@@ -13,11 +13,17 @@
           </ul>
         </div>
         <div id="three"> </div>
-        <button id="click me">PRESS MEEEEEE</button>
+        <button id="clickme">PRESS MEEEEEE</button>
        	<input type="text" id="2"> 
         
       </body>
       <script>
+          for(
+            var i = 0; i < 21; i+=2)
+              {
+        document.getElementById('one').innerHTML += i + "<br>";
+      }
+       
         document.getElementById("body").style.background="orange";
 
         function after(){
@@ -25,6 +31,8 @@
  
           
         }
+        document.getElementById("clickme").addEventListener("click",after);
+
         
       </script>
   
