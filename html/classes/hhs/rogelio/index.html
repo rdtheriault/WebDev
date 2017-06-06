@@ -2,9 +2,7 @@
 <html>
 <head>
 		<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="code.js"></script>
     <title>Banana</title>
     <style>
     @font-face{
@@ -45,9 +43,13 @@ background-color:yellow;
   .size{
 width:40px; height:40px;
   }
-  #banana{
+      #banana{
    width:50%; position:fixed; right:25%; top:0%; text-align:left; background-color:yellow; border:rgb(0, 0, 153) double 20px;
   }
+      #first{
+        text-align:center;
+      }
+      
 </style>
 </head>
 <body>
@@ -55,13 +57,12 @@ width:40px; height:40px;
   <div id="banana" >
     <h1 id="toc">Table of Content</h1>
    <div id="first" class="blue">  
-        <a class="orange_letters letters" href="http://hermiston.k12.or.us/">
-        <img src ="HHS-Logo.png" width="50" alt="High School Logo" style="position:relative; top:5px;">District Page</a>
+     <button id="button">Push</button>
     </div>
 
-    <div id="second" class="yellow">  
-        <a class="blue_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/review.html">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Review</a>
+   <div id="second" class="yellow">  
+        <a class="blue_letters letters" href="http://hermiston.k12.or.us/">
+        <img src ="HHS-Logo.png" width="50" alt="High School Logo" style="position:relative; top:10px;">District Page</a>
     </div>
 
     <div id="third" class="blue">
@@ -123,6 +124,17 @@ if (test2 === "http://hermiston.k12.or.us/"){
 }
 </script>   
 
+<script>
+var clickerButton = document.getElementById("button");
+    var onButtonClick = function() {
+
+
+
+
+
+    }
+clickerButton.addEventListener("click", onButtonClick); 
+</script>
   </div>
 </body>
 </html>

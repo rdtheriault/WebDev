@@ -23,6 +23,7 @@
         
         document.getElementById("tysen").innerHTML = "<ul> <li></li> <li></li> <li></li> </ul>";
         function doSomething() {
+          //the event listener goes outside of the function
           document.getElementById("btn").addEventListener("click", doSomething);
         }
       </script>

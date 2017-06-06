@@ -17,9 +17,13 @@
 <button id="btn">press me</button>
   <input type="text" id="press me">
 <script>
+    //missing adding list to first div -0.3
+    //missing adding for loop -0.3    
+    
 document.getElementById("btn").addEventListener("click",btnClick);
 
 function btnClick() {
+  //button does not do what it needs to do -0.2
     var input=document.getElementById("num").value;
     if(isNaN(input)){
       document.getElementById("array").innerHTML="<h1>That is not a number</h1>"
