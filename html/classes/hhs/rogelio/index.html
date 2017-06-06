@@ -49,7 +49,7 @@ width:40px; height:40px;
       #first{
         text-align:center;
       }
-      
+         
 </style>
 </head>
 <body>
@@ -125,16 +125,24 @@ if (test2 === "http://hermiston.k12.or.us/"){
 </script>   
 
 <script>
-var clickerButton = document.getElementById("button");
-    var onButtonClick = function() {
-
-
-
-
-
-    }
-clickerButton.addEventListener("click", onButtonClick); 
+var clicker= document.getElementById("button");
+  var blue = document.getElementsByClassName("blue");
+  var yellow = document.getElementsByClassName("yellow");
+  var blueLetters = document.getElementsByClassName("blue_letters");
+  var yellowLetters = document.getElementsByClassName("orange_letters");
+  
+    var onClick = function() {
+    document.body.style.background = "url(apple.jpg)";
+	for (var i = 0; i < blue.length; i++) {
+                blue[i].style.background = "red";
+      			yellow[i].style.background = "lime";
+				blueLetters[i].style.color = "red";
+     			yellowLetters[i].style.color = "lime";
+       }}
+ clicker.addEventListener("click", onClick)  
+ 
 </script>
+
   </div>
 </body>
 </html>

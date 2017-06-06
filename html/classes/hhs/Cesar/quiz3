@@ -10,32 +10,30 @@
 </head>
 
 <body>
-<div id="press me"></div>
-<div id="press"></div>
-<div id="me"></div>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
 
 <button id="btn">press me</button>
-  <input type="text" id="press me">
+  <a href="https://google.com"id="link">Click</a>
+  <input id="in" type="text">
 <script>
-    //missing adding list to first div -0.3
-    //missing adding for loop -0.3    
-    
-document.getElementById("btn").addEventListener("click",btnClick);
+    for (var i=0, i<10;i+=2){
+        document.getElementById("one")innerHTML+=(i+1)*2+"<br>";    
+    }    
+    document.getElementById("two")innerHTML="<ul><li>Item1</li><li>Item2</li><li>Item3</li></ul>";
+document.getElementById("btn").addEventListener("click",doSomething);
 
-function btnClick() {
-  //button does not do what it needs to do -0.2
-    var input=document.getElementById("num").value;
-    if(isNaN(input)){
-      document.getElementById("array").innerHTML="<h1>That is not a number</h1>"
-     }
-      else if (input<20)
+function doSomething() {
+  var input=document.getElementById=("in").value;
+    document.getElementById("three")innerHTML="<h1>"+input+"</h1>";
+     document.getElementById("three").style.backgroundColor="cyan";
+     document.getElementById("link").href="https://yahoo.com";
+  if(input==="10"){
+  document.getElementById("three").innerHTML="That was ten";
+  }
 
-else{
-        document.getElementById("array").innerHTML="that is not less than 21";
-    }  
-
-
-
+}
 </script>
 
 </body>

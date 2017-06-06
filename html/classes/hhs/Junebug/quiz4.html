@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>QUIZ!!!!!</title>
+    <title></title>
     <style>
       
     </style>
@@ -16,16 +16,17 @@
       <input type="text" id="input">
       <button id="btn">JUICE</button>
       <script>
-        
-             var elDis = document.querySelectorAll("");
-      for (var i=20; i < .length; i+2) {
-       .style.display = "none" ; 
-        
-        document.getElementById("tysen").innerHTML = "<ul> <li></li> <li></li> <li></li> </ul>";
-        function doSomething() {
-          //the event listener goes outside of the function
-          document.getElementById("btn").addEventListener("click", doSomething);
+        for (var i=0;i < 10; i++) {
+          document.getElementById("zack").innerHTML += (i+1)*2+"<br>";
         }
+       document.getElementById("tysen").innerHTML = "<ul> <li>Kyle</li> <li>Chance</li> <li>PnB</li> </ul>";
+        
+        function doSomething() {
+          var input = document.getElementById("input").value;
+          document.getElementById("G").innerHTML = "<h1>"+input+"</h1>";
+          document.getElementById("G").style.backgroundColor = "cyan";
+        }
+        document.getElementById("btn").addEventListener = ("Click", doSomething);
       </script>
       
     </body>

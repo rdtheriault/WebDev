@@ -37,7 +37,7 @@
     <body>
         
       <h1 id="title"><strong>Steve Jobs</strong></h1>
-      <a href="https://en.wikipedia.org/wiki/Steve_Jobs"><img id="foto" src="https://pbs.twimg.com/media/C5e5HUcWQAAntPc.jpg"></a>
+      <a id="fotoLink" href="https://en.wikipedia.org/wiki/Steve_Jobs"><img id="foto" src="https://pbs.twimg.com/media/C5e5HUcWQAAntPc.jpg"></a>
   <p id= "text"><strong>Steven Paul "Steve" Jobs</strong> (/ˈdʒɒbz/; February 24, 1955 – October 5, 2011) was an American entrepreneur, businessman, inventor, and industrial designer. He was the co-founder, chairman, and chief executive officer (CEO) of Apple Inc.; CEO and majority shareholder of Pixar;[2] a member of The Walt Disney Company's board of directors following its acquisition of Pixar; and founder, chairman, and CEO of NeXT. Jobs and Apple co-founder Steve Wozniak are widely recognized as pioneers of the microcomputer revolution of the 1970s and 1980s.
 
 Jobs was born in San Francisco and adopted at birth; he was raised in the San Francisco Bay Area during the 1960s.[3] Jobs briefly attended Reed College in 1972 before dropping out.[4] He then decided to travel through India in 1974 seeking enlightenment and studying Zen Buddhism.[5] Jobs's declassified FBI report stated that an acquaintance knew that Jobs had used the illegal drugs marijuana and LSD while he was in college.[6] Jobs once told a reporter that taking LSD was "one of the two or three most important things" he did in his life.[7]
@@ -58,11 +58,21 @@ February 24, 1955
       <strong>Died</strong>	October 5, 2011 (aged 56)
       Palo Alto, California, U.S.</li>
   </ul>
+      <button id="btn">Click</button>
       <script>
+        document.getElementById("btn").addEventListener("click", change);
+        function change(){
       var biography = document.getElementById("text");
       biography.innerHTML="Stephen William Hawking, CH, CBE, FRS, FRSA (Listeni/ˈstiːvən ˈhɔːkɪŋ/; born 8 January 1942) is an English theoretical physicist, cosmologist, author and Director of Research at the Centre for Theoretical Cosmology within the University of Cambridge.[16][17] His scientific works include a collaboration with Roger Penrose on gravitational singularity theorems in the framework of general relativity and the theoretical prediction that black holes emit radiation, often called Hawking radiation. Hawking was the first to set out a theory of cosmology explained by a union of the general theory of relativity and quantum mechanics. He is a vigorous supporter of the many-worlds interpretation of quantum mechanics.";
+        biography.style.backgroundColor= "rgb(153, 255, 153)";
         var imageEl= document.getElementById("foto");
         imageEl.src= "http://www.carmencitta.me/En/wp-content/uploads/2016/08/Carmencitta-The-New-Einstein-Stephen-Hawking-2.jpg";
-  </script>
+        imageEl.width= "100";
+        var newLink = document.getElementById("fotoLink");
+        newLink.href= "https://en.wikipedia.org/wiki/Stephen_Hawking";
+          var newTitle= document.getElementById("title");
+          newTitle.innerHTML = "Stephen Hakings";
+        }
+      </script>
     </body>
 </html>

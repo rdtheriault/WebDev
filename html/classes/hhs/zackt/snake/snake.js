@@ -66,7 +66,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
     
     var instanceNumber = 0;
     var blockPool = [];
-    
+    var move = 0;
     var SnakeBlock = function() {
         this.elm = null;
         this.elmStyle = null;
@@ -115,14 +115,14 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         var me = this,
             playingBoard = config.playingBoard,
             myId = instanceNumber++,
-            growthIncr = 5,
+            growthIncr = 7;
             moveQueue = [], // a queue that holds the next moves of the snake
             currentDirection = 1, // 0: up, 1: left, 2: down, 3: right
             columnShift = [0, 1, 0, -1],
             rowShift = [-1, 0, 1, 0],
             xPosShift = [],
             yPosShift = [],
-            snakeSpeed = 115;
+            snakeSpeed = 80;
             isDead = false;
         
         // ----- public variables -----
@@ -239,7 +239,15 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             if ( grid[newHead.row] && grid[newHead.row][newHead.col] ) {
                 grid[newHead.row][newHead.col] = 0;
             }
-        
+          
+          //random move code
+        	move++;
+          	if (move === 12){
+             	me.eatFood(1);
+              	move = 0;
+            }
+          
+          
             if (moveQueue.length){
                 myDirection = currentDirection = moveQueue.pop();
             }
@@ -274,9 +282,15 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         * This method is called when it is determined that the snake has eaten some food.
         * @method eatFood
         */
-        me.eatFood = function() {
+        me.eatFood = function(num) {
             if (blockPool.length <= growthIncr) {
+              //random move code
+              if (num === 1){
+                createBlocks(0);
+              }
+              else{
                 createBlocks(growthIncr*2);
+              }
             }
             var blocks = blockPool.splice(0, growthIncr);
             
