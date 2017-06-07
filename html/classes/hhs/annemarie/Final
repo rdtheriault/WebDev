@@ -27,18 +27,15 @@
   </table>
    
   <div id="one">
-    <img src="http://ricebullridingcompany.com/attachments/Image/20130811-1781-8x10-ZF-4199-47181-1-009.jpg?template=generic" height="400px;" style="border:10px solid black;">
+    <img class"dis" src="http://ricebullridingcompany.com/attachments/Image/20130811-1781-8x10-ZF-4199-47181-1-009.jpg?template=generic" height="400px;" style="border:10px solid black;">
     </div>
   <div id="two" style="color:orange;">Font color</div>
   <div id="three" style="color:violet;">Font color</div>
   
    <input id="in" type="text">
     <button id=btn">Press Me</button>
-    <script>
-    var cars = "saab";
-     
-  
-  </scrpt>
+   
+  <p><h2>Sorry i gave up on the javascrpt</h2></p>
   
   
   

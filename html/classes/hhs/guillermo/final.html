@@ -38,7 +38,7 @@
       </div>
       </table>
     <div id="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg" border="3px">
+    <img id="picture" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg" border="3px">
 </div>
     <div id="one"></div>
     <div id="two"></div>
@@ -46,8 +46,16 @@
     <button id="btn">click here</button>
     <input type="text" id="num">   
     <script>
+      for (var i = 0; i < 4; i++){
+      document.getElementById("one").innerHTML += i+"<br>";
+    }
     var leagues = ["SD1","ID1","EPL"];
-    document.getElementById("container").src="http://a.espncdn.com/combiner/i/?img=/photo/2015/0219/soc_a_etihad_mb_1296x729.jpg&w=738&site=espnfc";
+      leagues.toString();
+      
+     function doSomething(){
+    document.getElementById("picture").src="http://a.espncdn.com/combiner/i/?img=/photo/2015/0219/soc_a_etihad_mb_1296x729.jpg&w=738&site=espnfc";
+      
+      }
     </script>
   </body>
 </html>

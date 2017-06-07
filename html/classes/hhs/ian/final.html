@@ -9,13 +9,30 @@ body {
   background-color:blue;
 }
 img {
- border: 5px soild black;
+padding: 5px soild black;
 }
 
     </style>
   </head>
   <body id="body">
     <h1> Title</h1>
+    <table>
+    <tr>
+    <th>.......</th>
+    <th>.......</th> 
+    <th>.......</th>
+  </tr>
+  <tr>
+    <td>......</td>
+    <td>......</td> 
+    <td>......</td>
+  </tr>
+  <tr>
+    <td>......</td>
+    <td>......</td> 
+    <td>......</td>
+  </tr>
+</table>
  
     <div id="one">   <img id="picture"src="https://static.ylilauta.org/files/ti/thumb/lapewxxv.jpg">
  </div>
@@ -25,10 +42,26 @@ img {
     <button id="btn"> click here</button>
       
       <script>
+         
+    for (var i = 0; i < 20; i++) {
+       document.getElementById("three").innerHTML +=(i+1)+"<br>";
+        
+    }
+        
         function doSomething() {
-       document.getElementById("picture").src="https://i.ytimg.com/vi/86ubpx33PaQ/hq720.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FL8rqJ_wLdz2YTIrWdW8zsh-Zm4";
+            var input = document.getElementById("num").value;
+         if (input === "11") {
+            document.getElementById("three").innerHTML="found me";
+                  document.getElementById("picture").src="https://i.ytimg.com/vi/86ubpx33PaQ/hq720.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FL8rqJ_wLdz2YTIrWdW8zsh-Zm4";
+				document.getElementById("two").style.height="100px";
+          document.getElementById("two").style.width="100px";
+          document.getElementById("two").style.background.color="red";
+         }
         }
            document.getElementById("btn").addEventListener("click",doSomething);
+       
+         
+        
         
     </script>
         

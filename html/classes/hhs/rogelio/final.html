@@ -5,7 +5,7 @@
   background:blue;
   }
   #banana{
-  color:yellow;
+  color:yellow; background:white; width:520px;
   } 
   #apple{
   color:red;
@@ -20,7 +20,7 @@
 </style>
 </head>  
 <body>
-<h1>BasketBall</h1> 
+<h1>Banana</h1> 
 <table>  
   <tr>
     <td>banana</td>
@@ -28,14 +28,14 @@
     <td>banana</td>
   </tr>
   <tr>
-    <td>banana</td>
-    <td>banana</td>
-    <td>banana</td>
+    <td>apple</td>
+    <td>apple</td>
+    <td>apple</td>
   </tr>
   <tr>
-    <td>banana</td>
-    <td>banana</td>
-    <td>banana</td>
+    <td>orange</td>
+    <td>orange</td>
+    <td>orange</td>
   </tr>
 </table>  
 <div id="banana">  
@@ -54,17 +54,21 @@
 <script>
 
 var doge = document.getElementById("doge");
-doge.src = "http://www.worldstopmost.com/wp-content/uploads/2016/05/Kobe-Bryant-Richest-Basketball-Players-2017.jpg";
+doge.src = "DancingBanana.gif";
 var apple = document.getElementById("apple");
 apple.style.width="100";
 apple.style.height="100";
-apple.style.background="yellow";
+apple.style.background="purple";
 var orange = document.getElementById("orange");
 var input = function(){
 for(i=0 ; i<4 ; i++){
 var array = ["banana", "apple", "orange", "strawberry"] 
-orange.innerHTML += array[i]+br
-
+var inputBox = document.getElementById("input").value;
+if (inputBox == array[i]){
+orange.innerHTML += "Found Me"+"<br>";
+}else{
+orange.innerHTML += array[i]+"<br>";
+}
 }
 }  
 var button = document.getElementById("button")

@@ -65,7 +65,15 @@
         var input = document.getElementById('input').value;
         //document.getElementById('three').innerHTML = input;
 		for (var i = 0; i < array.length; i++) {
-          document.getElementById('three').innerHTML += array[i] + "<br>";
+          //document.getElementById('three').innerHTML += array[i] + "<br>";
+          if (input == array[i]) {
+            document.getElementById('three').innerHTML += 'you got it<br>';
+          } else {
+            document.getElementById('three').innerHTML += array[i] + "<br>";
+          }
+          //if (input !== array[i]) {
+            //document.getElementById('three').innerHTML = 'not an option. try again:)';
+          //}
         }
         
       }
