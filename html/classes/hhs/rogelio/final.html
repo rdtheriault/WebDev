@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+  body{
+  background:blue;
+  }
+  #banana{
+  color:yellow;
+  } 
+  #apple{
+  color:red;
+  }
+  #orange{
+  color:orange;
+  }
+  #doge{
+  border:yellow ridge 10px;
+  }
+  
+</style>
+</head>  
+<body>
+<h1>BasketBall</h1> 
+<table>  
+  <tr>
+    <td>banana</td>
+    <td>banana</td>
+    <td>banana</td>
+  </tr>
+  <tr>
+    <td>banana</td>
+    <td>banana</td>
+    <td>banana</td>
+  </tr>
+  <tr>
+    <td>banana</td>
+    <td>banana</td>
+    <td>banana</td>
+  </tr>
+</table>  
+<div id="banana">  
+<img id="doge" src="doge.png" width="500px"> 
+</div>  
+  
+<div id="apple">  
+  
+</div>    
+  
+<div id="orange">  
+  
+</div>    
+<input Id="input" type="text">  
+<button id="button">button</button>  
+<script>
+
+var doge = document.getElementById("doge");
+doge.src = "http://www.worldstopmost.com/wp-content/uploads/2016/05/Kobe-Bryant-Richest-Basketball-Players-2017.jpg";
+var apple = document.getElementById("apple");
+apple.style.width="100";
+apple.style.height="100";
+apple.style.background="yellow";
+var orange = document.getElementById("orange");
+var input = function(){
+for(i=0 ; i<4 ; i++){
+var array = ["banana", "apple", "orange", "strawberry"] 
+orange.innerHTML += array[i]+br
+
+}
+}  
+var button = document.getElementById("button")
+    button.addEventListener("click",input);  
+</script>
+</body>
+</html>

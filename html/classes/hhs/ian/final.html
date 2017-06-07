@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+body {
+  background-color:blue;
+}
+img {
+ border: 5px soild black;
+}
+
+    </style>
+  </head>
+  <body id="body">
+    <h1> Title</h1>
+ 
+    <div id="one">   <img id="picture"src="https://static.ylilauta.org/files/ti/thumb/lapewxxv.jpg">
+ </div>
+        <div id="two"></div>
+    <div id="three"></div>
+    <input type="text" id="num">
+    <button id="btn"> click here</button>
+      
+      <script>
+        function doSomething() {
+       document.getElementById("picture").src="https://i.ytimg.com/vi/86ubpx33PaQ/hq720.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FL8rqJ_wLdz2YTIrWdW8zsh-Zm4";
+        }
+           document.getElementById("btn").addEventListener("click",doSomething);
+        
+    </script>
+        
+
+    
+  </body>
