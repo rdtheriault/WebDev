@@ -7,9 +7,13 @@
       color:red;
    font-family:cursive;
         }
+      h1 {
+        color:gold;
+      }
         h2 {
             font-family:cursive;
             font-weight:strong;
+          color: yellow;
         }
         ul {
             font-weight:bold;
@@ -18,38 +22,42 @@
 h1 {
     color: red;
 }
+      p{
+        color:turquoise;
+      }
 
             </style>
     <title> My favorite athlete</title>
     <body id="body" style="background-image:url(http://www.almedan.co.il/files/news/tryivkbijpkxqe9hj1926zllfn.JPG)">
     <h1 id="title"> Lionel Messi</h1>
+      <div id="DIV"></div>
     <h2 id="body2">Messi is one of the best FIFA players in the world </h2>
      <h2> Accomplishments and reasons why he is great 
         </h2> 
         <ul>    
-    <li> Messi went to Barcelona since he was a kid because they saw he had talent </li> 
-    <li> Multiple times voted best soccer player of the year </li>
-    <li> Barcelona's all-time top-scorer: 513 and counting </li>
-    <li> He is the top scorer in the champions league hystory </li>
-    <li> Has won 5 ballon'd oro</li>
-    <li>He had led Argentina to championships and he is the capitain</li>
-    <li>and he can break anckles</li>
+    <li id="li1"> Messi went to Barcelona since he was a kid because they saw he had talent </li> 
+    <li id="li1"> Multiple times voted best soccer player of the year </li>
+    <li id="li1"> Barcelona's all-time top-scorer: 513 and counting </li>
+    <li id="li1"> He is the top scorer in the champions league hystory </li>
+    <li id="li1"> Has won 5 ballon'd oro</li>
+    <li id="li1">He had led Argentina to championships and he is the capitain</li>
+    <li id="li1">and he can break anckles</li>
 </ul>
-<p id="p1"> The Reason I chose Lionel Messi as my athlete is becuase I like the team he's on and i'm facinated by how well he plays<br> and how many goals he scores amd how many assit he can make and still be a top scorer <br>plus he is very small and that doesn't stop him of being the best in the world.<br> Lionel Messi is one of the best soccer players that there will ever be when he retires he will be a legend. <br>He will also be one of Argentina's best players ever.
+<p id="DIV"> The Reason I chose Lionel Messi as my athlete is becuase I like the team he's on and i'm facinated by how well he plays<br> and how many goals he scores amd how many assit he can make and still be a top scorer <br>plus he is very small and that doesn't stop him of being the best in the world.<br> Lionel Messi is one of the best soccer players that there will ever be when he retires he will be a legend. <br>He will also be one of Argentina's best players ever.
   </p>    
-  <img id ="picture" class="https://media.giphy.com/media/MFvZvyccHphq8/giphy.gif" alt="" style="margin-top: 24px;" src="https://media.giphy.com/media/MFvZvyccHphq8/giphy.gif" width="500" height="350">
+  <img id ="picture" class="pic" alt="" style="margin-top: 24px;" src="https://media.giphy.com/media/MFvZvyccHphq8/giphy.gif" width="500" height="350">
       <button id="btn">CLick Here</button>
     </body>
       <script>
          function doSomething() {
                 document.getElementById("title").innerHTML="Raul Jimenez";
-           document.getElementById("style").src="http://wrmx00.epimg.net/radio/imagenes/2016/05/16/deportes/1463419062_552269_1463420588_noticia_normal.jpg";
                document.getElementById("title").style.color="white";
-               document.body.style.backgroundColor = "red";
+           document.getElementById("body2").innerHTML="Raul Jimenez is one of the best FIFA players in the world";
+           document.getElementById("body2").style.color="white";
                var img = document.getElementById("picture").src="http://orig06.deviantart.net/5f4a/f/2015/173/5/9/raul_jimenez_wallpaper__mexico__by_chrisramos4-d8ya2ok.jpg";
-               document.getElementById("p1").innerHTML="Javier Hernandez also known as Chicharito is a mexican prefessionial<br> soccer player that currenlty playes for Bayer and also for Mexico";
-               
-               
+            document.body.style.backgroundImage = "url('http://wrmx00.epimg.net/radio/imagenes/2016/05/16/deportes/1463419062_552269_1463420588_noticia_normal.jpg')";
+           document.getElementById("DIV").innerHTML="<h2>Raul JImenez is one of the best FIFA players and currently the UCL champion </h2><h2> Accomplishments and reasons why he is great </h2> <ul><li> youngest player to score 200 goals </li> <li> 2009 World soccer player of the year </li><li> Fifa top goal scorerer 09-10 10-11 </li><li> La liga player of the month 2016 </li><li> 2009 ballon dor </li></ul>    ";
+
 
 
              }

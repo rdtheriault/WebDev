@@ -130,7 +130,7 @@ var clicker= document.getElementById("button");
   var yellow = document.getElementsByClassName("yellow");
   var blueLetters = document.getElementsByClassName("blue_letters");
   var yellowLetters = document.getElementsByClassName("orange_letters");
-  
+  var banana = document.getElementById("banana")
     var onClick = function() {
     document.body.style.background = "url(apple.jpg)";
 	for (var i = 0; i < blue.length; i++) {
@@ -138,7 +138,12 @@ var clicker= document.getElementById("button");
       			yellow[i].style.background = "lime";
 				blueLetters[i].style.color = "red";
      			yellowLetters[i].style.color = "lime";
-       }}
+    }
+    banana.style.background ="lime";
+    
+    
+    
+    }
  clicker.addEventListener("click", onClick)  
  
 </script>
