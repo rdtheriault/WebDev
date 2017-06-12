@@ -12,6 +12,8 @@ function rain(item) {
 	if (item === "heart") {picture = "http://www.sagefirellc.com/images/heart.png";}
 	if (item === "clover") {picture = "http://www.sagefirellc.com/images/clover.png";}
 	if (item === "rain") {picture = "http://www.sagefirellc.com/images/rain.png";}
+  	if (item === "apple") {picture = "apple.gif";}
+    if (item === "banana") {picture = "DancingBanana.gif";}
 
     // How many frames per second?  More => smoother but more processor intensive
     var fps = 30;
