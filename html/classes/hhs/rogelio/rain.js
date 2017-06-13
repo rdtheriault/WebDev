@@ -1,17 +1,9 @@
 function rain(item) {
 
-	var picture = "http://www.sagefirellc.com/images/leaf.png";
+	var picture = "DancingBanana.gif";
 
 
-	if (item === "leaf") {picture = "http://www.sagefirellc.com/images/leaf.png";}
-	if (item === "snow") {picture = "http://www.sagefirellc.com/images/flake.png";}
-	if (item === "jack") {picture = "http://www.sagefirellc.com/images/jack.png";}
-	if (item === "turkey") {picture = "http://www.sagefirellc.com/images/turkey.png";}
-	if (item === "ornamate") {picture = "http://www.sagefirellc.com/images/ornamate.png";}
-	if (item === "egg") {picture = "http://www.sagefirellc.com/images/easter1.png";}
-	if (item === "heart") {picture = "http://www.sagefirellc.com/images/heart.png";}
-	if (item === "clover") {picture = "http://www.sagefirellc.com/images/clover.png";}
-	if (item === "rain") {picture = "http://www.sagefirellc.com/images/rain.png";}
+
   	if (item === "apple") {picture = "apple.gif";}
     if (item === "banana") {picture = "DancingBanana.gif";}
 
