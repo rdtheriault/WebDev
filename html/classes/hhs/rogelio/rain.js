@@ -4,7 +4,7 @@ function rain(item) {
 
 
 
-  	if (item === "apple") {picture = "apple.gif";}
+  	if (item === "apple") {picture = "Apple.gif";}
     if (item === "banana") {picture = "DancingBanana.gif";}
 
     // How many frames per second?  More => smoother but more processor intensive

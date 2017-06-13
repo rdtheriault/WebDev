@@ -119,31 +119,41 @@ width:40px; height:40px;
 
 <script>//you can use leaf,snow,jack,turkey,ornamate, egg, clover, heart  
 var easter_egg = new Konami();
-			easter_egg.code = function() { rain("banana"); }
+var fruit ="banana"
+			easter_egg.code = function() {getfruit();}
 			easter_egg.load();
+  var getfruit = function(){
+  rain(fruit);
+  }
 
-</script>
-  
-<script>
+
 var clicker= document.getElementById("button");
   var blue = document.getElementsByClassName("blue");
   var yellow = document.getElementsByClassName("yellow");
   var blueLetters = document.getElementsByClassName("blue_letters");
   var yellowLetters = document.getElementsByClassName("orange_letters");
-  var banana = document.getElementById("banana")
-    var whenClick = function() {
+  var first = document.getElementById("first");
+   var toc = document.getElementById("toc");
+    var img = document.getElementsByTagName("img");
+    var ifClick = function() {
     document.body.style.background = "url(apple.jpg)";
 	for (var i = 0; i < blue.length; i++) {
-                blue[i].style.background = "red";
+                blue[i].style.background = "rgb(255, 26, 26)";
 				yellowLetters[i].style.color = "lime";
     }
     for (var i = 0; i < yellow.length; i++) {
       			yellow[i].style.background = "lime";
-     			blueLetters[i].style.color = "red";
+     			blueLetters[i].style.color = "rgb(255, 26, 26)";
     }
-    banana.style.background ="lime";
+    for (var i = 1; i <11; i++) {
+    img[i].src="Apple.gif";  			
+    }
     
- clicker.addEventListener("click", whenClick)
+    banana.style.background ="lime";
+    fruit="apple";
+    first.style.background ="rgb(255, 26, 26)";
+    }
+ clicker.addEventListener("click", ifClick)
  
 </script>
     

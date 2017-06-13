@@ -14,9 +14,17 @@
       <p>Guess my Name???</p>
       <input type="text" id="input">
       <button id="btn">Name</button>
-      <p></p>
+      <p id="para"></p>
     </div>
     <script>
+      var main = "junior";
+      document.getElementById("btn").addEventListener("click", doSomething);
+      function doSomething () {
+        var input = document.getElementbyId("input").value;
+        if(main == input){
+        document.getElementById("para").innerHTML = "";
+        }
+           }
       document.getElementById(""). ="";
       document.getElementById(""). ="";
     </script>
