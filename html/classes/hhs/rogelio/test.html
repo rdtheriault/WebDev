@@ -1,153 +1,39 @@
-<!DOCTYPE html>
 <html>
-<head>
-		<meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <title>Banana</title>
-    <style>
-    @font-face{
-  font-family:banana;
-  src:url(BANAAN.TTF);
-  }
-  #toc{
-  font-family:banana; text-align:center; color:blue;
-  }
-	h1{
-      color:rgb(0, 0, 153); font-size:1.25em}    
-	.orange_letters{
-      color:yellow; font-size:1.25em;
-    }
-  .blue_letters{
-    color:blue;font-size:1.25em; 
-    }
-  .letters{text-decoration:none; font-family:banana;
+<head>  
+<style>  
   
-  }
-	body{
-     text-align:center;  background:url(background.jpg)
-    }
-	.pic{
-      -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-}
-	.blue{
-background-color:blue;
-    }
-	.yellow{
-background-color:yellow;
-    }
-  .size{
-width:40px; height:40px;
-  }
-      #banana{
-   width:50%; position:fixed; right:25%; top:0%; text-align:left; background-color:yellow; border:rgb(0, 0, 153) double 20px;
-  }
-      #first{
-        text-align:center; background:blue;
-      }
-         
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </style>
 </head>
 <body>
-
-  <div id="banana" >
-    <h1 id="toc">Table of Content</h1>
-   <div id="first">  
-     <button id="button">Push</button>
-    </div>
-
-   <div id="second" class="yellow">  
-        <a class="blue_letters letters" href="http://hermiston.k12.or.us/">
-        <img src ="HHS-Logo.png" width="50" alt="High School Logo" style="position:relative; top:10px;">District Page</a>
-    </div>
-
-    <div id="third" class="blue">
-        <a class="orange_letters letters" href="https://www.khanacademy.org/">
-        <img class="size" src ="DancingBanana.gif" alt="Dancing Banana">Khan Academy</a>
-    </div>
-
-    <div id="fourth" class="yellow">
-        <a class="blue_letters letters" href="https://classroom.google.com/h">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Google Classroom</a>
-    </div>
-
-    <div id="fifth" class="blue">	
-        <a class="orange_letters letters" href="https://web.hermiston.k12.or.us:10000/">
-        <img class="size" src ="DancingBanana.gif" alt="Dancing Banana">Webmin</a>
-    </div>
-
-    <div id="sixth" class="yellow">  
-      <a class="blue_letters letters" href="https://drive.google.com/drive/my-drive">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Google Drive</a>
-    </div>
-
-    <div id="seventh" class="blue">  
-       <a class="orange_letters letters" href="https://powerschool.hermiston.k12.or.us/public/">
-       <img class="size" src="DancingBanana.gif" alt="Dancing Banana">PowerSchool</a>
-    </div>
-
-    <div id="eighth" class="yellow">  
-      <a class="blue_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/project.html">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Project</a>
-    </div>
-
-    <div id="ninth" class="blue">  
-       <a class="orange_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/blog/index.php">
-       <img class="size" src="DancingBanana.gif" alt="Dancing Banana">Blog</a>
-    </div>  
-
-    <div id="tenth" class="yellow">  
-      <a class="blue_letters letters" href="https://docs.google.com/document/u/0/?tgif=c">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Google Docs</a>
-    </div>
-	<div id="eleventh" class="blue">  
-       <a class="orange_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/test.html">
-       <img class="size" src="DancingBanana.gif" alt="Dancing Banana">Test</a>
-    </div>
-    <div id="twelvth" class="yellow">  
-      <a class="blue_letters letters" href="http://web.hermiston.k12.or.us/classes/hhs/rogelio/car.html">
-        <img class="size pic" src ="DancingBanana.gif" alt="Dancing Banana">Camaro</a>
-    </div>   
-
-    <script src="konami.js" type="text/javascript"></script>
-
-<script src="rain.js" type="text/javascript"></script>
-
-<script>//you can use leaf,snow,jack,turkey,ornamate, egg, clover, heart  
-var easter_egg = new Konami();
-			easter_egg.code = function() { rain("banana"); }
-			easter_egg.load();
-
-</script>
-  
+<input id="input" type="text">
+<button id="submit">submit</button>
 <script>
-var clicker= document.getElementById("button");
-  var blue = document.getElementsByClassName("blue");
-  var yellow = document.getElementsByClassName("yellow");
-  var blueLetters = document.getElementsByClassName("blue_letters");
-  var yellowLetters = document.getElementsByClassName("orange_letters");
-  var banana = document.getElementById("banana")
-    var whenClick = function() {
-    document.body.style.background = "url(apple.jpg)";
-	for (var i = 0; i < blue.length; i++) {
-                blue[i].style.background = "red";
-				yellowLetters[i].style.color = "lime";
-    }
-    for (var i = 0; i < yellow.length; i++) {
-      			yellow[i].style.background = "lime";
-     			blueLetters[i].style.color = "red";
-    }
-    banana.style.background ="lime";
-    
- clicker.addEventListener("click", whenClick)
- 
-</script>
-    
 
-  </div>
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+</script>  
+  
 </body>
 </html>
