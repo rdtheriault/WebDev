@@ -1,10 +1,23 @@
 <div id="topbar">
-<a href="index.php">Main</a><br>
-<a href="test.php">Test</a>
 
+<div class="tabs">
+<button class="inner-tabs" id="home"></button>
+</div>
+  
+<div class="tabs">
+<button class="inner-tabs" id="about"></button>
+</div>
+ 
+<div class="tabs">
+<button class="inner-tabs" id="location"></button>
+</div>
 
+<div class="tabs">
+<button class="inner-tabs" id="events"></button>
+</div>
 
-
-
+<div class="tabs">
+<button class="inner-tabs" id="home"></button>
+</div>
 
 </div>

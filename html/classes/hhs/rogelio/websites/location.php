@@ -16,7 +16,6 @@
 	$word = "banana";
 	echo "<h2>".$word."</h2>";
 ?>  
-  
 </div>
 </div>  
 </body>
