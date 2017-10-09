@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css"> 
-  
+
   
 
 </head>
@@ -10,14 +10,14 @@
   
 <?php include "include.php";?> 
 
-<div id="right">
-
+<div id="top">
 <?php
 	$word = "banana";
 	echo "<h2>".$word."</h2>";
 ?>  
 
 </div>
-</div>  
+</div> 
+
 </body>
 </html>
