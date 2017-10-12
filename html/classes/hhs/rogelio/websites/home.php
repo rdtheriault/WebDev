@@ -11,10 +11,7 @@
 <?php include "include.php";?> 
 
 <div id="top">
-<?php
-	$word = "banana";
-	echo "<h2>".$word."</h2>";
-?>  
+<h1>hola</h1>
 
 </div>
 </div> 

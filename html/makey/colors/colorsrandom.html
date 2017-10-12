@@ -15,12 +15,9 @@ and open the template in the editor.
           
 $(document).ready(function(){
  
-  var fry = ["the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from",
-             "or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do",
-              "how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time",
-              "has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","now",
-              "find","long","down","day","did","get","come","made","may","part","over"];
-  var pick = Math.random() * (99 - 0) + 0;
+  var fry = ["#663300", "purple", "yellow", "black", "#ff471a", "#d31515", "green", "blue"];
+  var colors = ["brown", "purple", "yellow", "black", "orange", "red", "green", "blue"];
+  var pick = Math.random() * (fry.length - 0) + 0;
   var audio;
   var one = "";
   var two = "";
@@ -31,7 +28,7 @@ $(document).ready(function(){
   var now = 0;//holder for current array number
   var mstrArry;//holds the array that is selected
   var type = "";//holds the type of cards to be used
-  var ranNum = Math.floor(Math.random() * (99 - 0) + 0);
+  var ranNum = Math.floor(Math.random() * (fry.length - 0) + 0);
   
   
 //$('#up').attr('src', 'files/up.png');
@@ -108,32 +105,33 @@ $(document).ready(function(){
   
   changeMaster();
   function changeMaster(pick) {
-     ranNum = Math.floor(Math.random() * (99 - 0) + 0);
+     ranNum = Math.floor(Math.random() * (fry.length - 0) + 0);
      playAudio()
      randomizer()
   }
   
   function playAudio() { 
-    var holder = fry[ranNum];
-    var sound = "sounds/" + holder + ".mp3";
+    var holder = colors[ranNum];
+    var sound = holder + ".mp3";
      audio = new Audio(sound);
      audio.play();
   }
   //playAudio();
   
   function reset() {
-    $("#up").css("background-color", "white");
-    $("#down").css("background-color", "white");
-    $("#right").css("background-color", "white");
-    $("#left").css("background-color", "#FFF");
+    $("#up").css("border", "none");
+    $("#down").css("border", "none");
+    $("#right").css("border", "none");
+    $("#left").css("border", "none");
+    
   }
     
   
   
   function checkColor(current, id){
 		
-        if (current !== answer) { $(id).css("background-color", "gray");}
-        if (current === answer) { $(id).css("background-color", "orange");}
+        if (current !== answer) { $(id).css("border", "solid 5px gray");}
+        if (current === answer) { $(id).css("border", "solid 5px turquoise");}
         
   }
   
@@ -160,28 +158,28 @@ $(document).ready(function(){
   	//if the random then put the correct answer in it, otherwise get another random answer
   	if (rand == 1){
       	one = fry[ranNum];
-        document.getElementById("up").innerHTML = one;
+        document.getElementById("up").style.backgroundColor = one;
     }
   	else {
       	check(1);
     }
   	if (rand == 2){
       	two = fry[ranNum];
-        document.getElementById("down").innerHTML = two;
+        document.getElementById("down").style.backgroundColor = two;
     }
   	else {
       	check(2);
     }
   	if (rand == 3){
       	three = fry[ranNum];
-        document.getElementById("right").innerHTML = three;
+        document.getElementById("right").style.backgroundColor = three;
     }
   	else {
       	check(3);
     }
     if (rand == 4){
       	four = fry[ranNum];
-        document.getElementById("left").innerHTML = four;
+        document.getElementById("left").style.backgroundColor = four;
     }
   	else {
       	check(4);
@@ -201,19 +199,19 @@ $(document).ready(function(){
   	else {
      	if (num == 1){
           one = fry[rand];
-          document.getElementById("up").innerHTML = one;
+          document.getElementById("up").style.backgroundColor = one;
         }
         else if (num == 2){
           two = fry[rand];
-          document.getElementById("down").innerHTML = two;
+          document.getElementById("down").style.backgroundColor = two;
         }
       	else if (num ==3){
           three = fry[rand];
-          document.getElementById("right").innerHTML = three;
+          document.getElementById("right").style.backgroundColor = three;
         }
         else if (num ==4){
           four = fry[rand];
-          document.getElementById("left").innerHTML = four;
+          document.getElementById("left").style.backgroundColor = four;
         }
     }
   }
