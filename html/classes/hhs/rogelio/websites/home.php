@@ -6,13 +6,18 @@
 
 </head>
 <body>
-<div id="main">
-  
-<?php include "include.php";?> 
-
+<div id="main">  
 <div id="top">
-<h1>hola</h1>
-
+<?php include "include.php";?> 
+</div>
+<div id = image-bar-main>
+<div class="div-space2"></div>
+<div id="image-bar">
+<div class="div-space"></div>
+<img id="church-pic" src="Church.png">
+<div class="div-space"></div>
+</div>
+<div class="div-space2"></div>
 </div>
 </div> 
 

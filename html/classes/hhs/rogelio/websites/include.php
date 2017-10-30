@@ -24,10 +24,5 @@
   <div class="tabs divButton">
   	<div class="inner-tabs" id="staff"><p>Staff</p></div>
   </div>
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </div>
 <script src="tabs.js"></script>
