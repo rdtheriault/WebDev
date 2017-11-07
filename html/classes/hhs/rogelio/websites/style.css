@@ -38,6 +38,7 @@ height:95%;
 #main{
 height:90%;
 display:block;
+text-align:center;
 }
 #image-bar{
 width:95%;
@@ -58,4 +59,15 @@ display:flex;
 }
 .div-space2{
 width:2.5%;
+}
+#table{
+display:flex;
+}
+table{
+width:50%;
+background:blue;
+border-radius: 10px;
+}
+.table-space{
+width:25%;
 }

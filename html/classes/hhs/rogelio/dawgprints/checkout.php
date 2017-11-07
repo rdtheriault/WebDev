@@ -4,7 +4,7 @@
   </head>
   <body>
     <div id='main'>
-      <img id='banner' src='pics/HHS-Banner.png'>
+      <img src='pics/HHS-Banner.png'>
       <div id='nav'>
         <div id='home' class='btn'>
           Main
@@ -22,21 +22,7 @@
           Promotions
           </div>
       </div>
-      <div id='middle'>
-        <div id='left'>
-          <div id='img'>
-            <img id='main-logo' src='pics/main-logo.png'>
-            </div>
-         <div id='about'>
-           <h1>We are Dawg Prints</h1>
-            </div>
-        </div>
-        <div id='right'>
-          <div id='twitter'>
-          </div>
-        </div>
-      </div>
+          <script src="scripts.js"></script>
     </div>
-    <script src="scripts.js"></script>
   </body>
 </html>
