@@ -63,4 +63,6 @@ html
     border-right: groove 10px #56009e;
     border-left: ridge 10px #56009e;
     border-bottom: groove 3px #56009e;
+  	width: 1000px;
+  	background-color: black;
 }
