@@ -14,7 +14,7 @@
       <div class="div-space2"></div>
         <div id="image-bar">
           <div class="div-space"></div>
-          	<img id="church-pic" src="Church.png">
+          	<img id="church-pic" src="logo.png">
           <div class="div-space"></div>
         </div>
       <div class="div-space2"></div>
