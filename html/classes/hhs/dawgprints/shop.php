@@ -35,6 +35,15 @@
       var itemEl = document.getElementById('items');
       var fill = "";
       var count = 0;
+      if (localStorage.getItem("cart") != null) {
+      	masterArray.push(localStorage.getItem("cart"));
+	  }
+      
+      
+      
+      
+      
+      
       function createItem(product) {
         fill += "<div class='outeri'>";
         fill += "<div class='pici'>";
