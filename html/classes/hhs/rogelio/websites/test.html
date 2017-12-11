@@ -1,16 +1,32 @@
 <html>
 <head>
 <style>
-@font-face{
-  font-family:banana;
-  src:url(futur.ttf);
-  } 
-  h1{
-  font-family:banana;
-  }
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+}
+
+.first {
+  height: 50px;
+  width:100px;
+}
+
+.second {
+  flex-grow: 1;
+}
 </style>
 </head>
 <body>
-<h1>banana</h1>
+<div id="wrapper">
+<div id="first"></div>
+<div id="second" ></div>
+
+</div>
 </body>
 </html>

@@ -2,7 +2,7 @@
   <head>
     <style>
       body {
-        background-color: grey;
+        background-color: gray;
       }
       #outer {
         display: flex;
@@ -83,7 +83,7 @@
             <div class='colour' id='color1'></div><div class='colour' id='color2'></div><div class='colour'id='color3'></div><div class='colour'id='color4'></div>
             </div>
           <div  id='dropdown'>
-            total: $<br><br>
+            <div id='data'>Total: $</div><br>
             <div class='styled-select black rounded'>
             <select id='select1'>
               <option value='medium'>Medium</option>

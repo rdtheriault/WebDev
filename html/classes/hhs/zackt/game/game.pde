@@ -19,7 +19,7 @@ var turn = 0;
 
     PImage b;
 
-    b = loadImage("https://upload.wikimedia.org/wikipedia/commons/d/d4/Scratchcat.svg");
+    b = loadImage("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjsg8r9vPPXAhVV-2MKHY8xCeUQjRwIBw&url=http%3A%2F%2Fclubpenguin.wikia.com%2Fwiki%2FFile%3ASpongegar.png&psig=AOvVaw20XZkBy0g8pRaxmjed7XXu&ust=1512584091927667");
 
     image(b, 0, 225, 75, 75);
 xPos = 0;

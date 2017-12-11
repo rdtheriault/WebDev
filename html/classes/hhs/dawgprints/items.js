@@ -1,20 +1,40 @@
-var cup = {
-  productname:"dawg cup",
-  size:['medium','large'],
+var hat= {
+  productname:"Dawg Hat",
+  size:['Universal'],
   quantity:"",
   number:"0",
-  color:['gray', 'white', 'purple'],
+  color:['Gray', 'White', 'Purple'],
   type:"acccerory",
-  imgsrc:"http://www.solocup.com/media/1206/su16_fuchsia-purple-400x400.jpg",
-  price:"$2"
+  imgsrc:"pics/hat1.jpg",
+  price:"5"
 };
 var shirt = {
-  productname:"dawg shirt",
-  size:['small','medium','large','xlarge'],
+  productname:"Grey Tee Shirt",
+  size:['S','M','L','XL'],
   quantity:"",
   number:"1",
-  color:['gray', 'white', 'purple'],
+  color:['Gray', 'White', 'Purple'],
   type:"clothing",
-  imgsrc:"http://www.bigtalltees.com/files/3867130/uploaded/purple-big-and-tall-t-shirts.jpg",
-  price:"$12"
+  imgsrc:"pics/shirt1.jpg",
+  price:"10"
+};
+var sweatshirt1 = {
+  productname:"Black Sweater",
+  size:['S','M','L','XL'],
+  quantity:"",
+  number:"1",
+  color:['Gray', 'White', 'Purple'],
+  type:"clothing",
+  imgsrc:"pics/sweatshirt1.jpg",
+  price:"22"
+};
+var sweatshirt2 = {
+  productname:"Grey Sweater",
+  size:['S','M','L','XL'],
+  quantity:"",
+  number:"1",
+  color:['Gray', 'White', 'Purple'],
+  type:"clothing",
+  imgsrc:"pics/sweatshirt2.jpg",
+  price:"22"
 };

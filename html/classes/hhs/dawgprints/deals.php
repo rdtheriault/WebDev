@@ -23,6 +23,9 @@
           </div>
       </div>
           <script src="scripts.js"></script>
+      <div id="footer">
+  <img id="footer_s" src="pics/footer_statement.png">
+      </div>
     </div>
   </body>
 </html>
