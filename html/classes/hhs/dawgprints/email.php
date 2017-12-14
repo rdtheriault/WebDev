@@ -6,8 +6,8 @@
   $cart = $_POST['cart'];
   //echo $cart;
 	$items = explode(",", $cart);
-  	echo 'Thanks '.$fn.' for your order of '.$items[2];
-	$fill = 'Thanks '.$fn.' for your order of:\r\n ';
+  	echo 'Thanks '.$fn.' for your order of '.$items[2].'<br>';
+	$fill = 'Thanks '.$fn.' for your order of:\n\r ';
 
 	
 	$arrlength = count($items);
