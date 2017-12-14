@@ -7,7 +7,7 @@
   //echo $cart;
 	$item = explode(",", $items);
   	echo 'Thanks '.$fn.' for your order of '.$item[2];
-	$body = 'Thanks '.$fn.' for your order of: '.$item[2];
+	$fill = 'Thanks '.$fn.' for your order of:\r\n ';
 
 	
 
@@ -19,7 +19,7 @@
     $from = '<student-webmaster@hermistonsd.org>';
     $to = '<'.$em.'>';
     $subject = 'Thank you for your order from Dawg Prints';
-    $body = "Hi,\n\nHow are you?";
+    $body = $fill;
 
     $headers = array(
         'From' => $from,
@@ -28,7 +28,6 @@
     );
 
     $smtp = Mail::factory('smtp', array(
-    //$smtp = Mail::factory('mail', array(
             'host' => 'ssl://smtp.gmail.com',
             'port' => '465',
             'auth' => true,
@@ -39,9 +38,9 @@
     $mail = $smtp->send($to, $headers, $body);
 
     if (PEAR::isError($mail)) {
-        echo('<p>' . $mail->getMessage() . '</p>');
+        echo('<p>' . $mail->getMessage() . ' Please check your email to ensure it is correct.</p>');
     } else {
-        echo('<p>Message successfully sent!</p>');
+        echo('<p>Order was successfully sent!</p>');
     }
 
 
