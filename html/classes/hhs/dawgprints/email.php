@@ -3,14 +3,19 @@
   $ln = $_POST['ln'];
   $em = $_POST['em'];
   $pn = $_POST['pn'];
-  $items = $_POST['cart'];
+  $cart = $_POST['cart'];
   //echo $cart;
-	$item = explode(",", $items);
-  	echo 'Thanks '.$fn.' for your order of '.$item[2];
+	$items = explode(",", $cart);
+  	echo 'Thanks '.$fn.' for your order of '.$items[2];
 	$fill = 'Thanks '.$fn.' for your order of:\r\n ';
 
 	
+	$arrlength = count($items);
 
+    for($x = 0; $x < $arrlength; $x++) {
+        echo $items[$x];
+        echo "<br>";
+    }
 
 
 	// Pear Mail Library

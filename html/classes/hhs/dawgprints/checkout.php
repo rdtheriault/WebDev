@@ -36,16 +36,17 @@
           Promotions
           </div>
       </div>
-      
-      <div id='cartlist'></div>
-      <div id='personal'>
-        
-          First Name: <input type="text" id="firstname"><br>
-          Last Name: <input type="text" id="lastname"><br>
-          Email: <input type="text" id="email"><br>
-          Phone Number: <input type="text" id="phone"><br>
-          <button id='checkout'>Checkout</button>
-        
+      <div id="infoC">
+        <div id='cartlist'></div>
+        <div id='personal'>
+
+            First Name: <input type="text" id="firstname"><br>
+            Last Name: <input type="text" id="lastname"><br>
+            Email: <input type="text" id="email"><br>
+            Phone Number: <input type="text" id="phone"><br>
+            <button id='checkout'>Checkout</button>
+
+        </div>
       </div>
       <div class='spacer'></div>
 <div id="footer">
@@ -108,6 +109,7 @@
         loadCart();
       }
       loadCart();
+      
       document.getElementById('checkout').addEventListener ("click", checkout);
       function checkout() {
         var FN = document.getElementById('firstname').value;
@@ -120,7 +122,7 @@
         var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function()  {
 				  if (this.readyState == 4 && this.status == 200) {
-				    document.getElementById('cartlist').innerHTML = xmlhttp.responseText;
+				    document.getElementById('infoC').innerHTML = xmlhttp.responseText;
 				  }
 				};
 				//xmlhttp.open("GET", "http://10.80.46.40/sense.json?nocache=" + (new Date()).getTime(), true);
