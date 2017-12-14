@@ -37,7 +37,8 @@
             'port' => '465',
             'auth' => true,
             'username' => 'student-webmaster@hermistonsd.org',
-            'password' => 'HermistonSD'
+            'password' => 'HermistonSD',
+  			'Content-type' => "text/plain; charset=iso-8859-1\r\n\r\n"
         ));
 
     $mail = $smtp->send($to, $headers, $body);
