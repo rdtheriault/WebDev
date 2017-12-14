@@ -15,7 +15,9 @@
   position: relative;
 }
 
-
+.spacer {
+  height: 500px;
+}
 body 
 {
     display: table-cell;
@@ -109,9 +111,9 @@ bottom:0px;
 }
 
 #footer_s { 
-padding-top: .5em;
-height: 100%;
-user-drag: none;
+  padding-top: .5em;
+  height: 100%;
+  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -123,7 +125,7 @@ user-drag: none;
 
 img{
 
-user-drag: none;
+  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;

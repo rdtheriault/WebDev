@@ -1,7 +1,7 @@
 //home
 var home1 = document.getElementById("home");
 function ifClickHome() {
-window.location.assign("home.php");
+window.location.assign("index.html");
 }
  home1.addEventListener("click", ifClickHome);
 
@@ -9,27 +9,27 @@ window.location.assign("home.php");
 //about
 var about1 = document.getElementById("about");
 function ifClickAbout() {
-window.location.assign("about.php");
+window.location.assign("about.html");
 }
  about1.addEventListener("click", ifClickAbout); 
 
 //location
 var location1 = document.getElementById("location");
 function ifClickLocation() {
-window.location.assign("location.php");
+window.location.assign("location.html");
 }
  location1.addEventListener("click", ifClickLocation);  
 
 //event
 var events1 = document.getElementById("events");
 function ifClickEvents() {
-window.location.assign("events.php");
+window.location.assign("events.html");
 }
 events1.addEventListener("click", ifClickEvents);  
 
 //staff
 var staff1 = document.getElementById("staff");
 function ifClickStaff() {
-window.location.assign("staff.php");
+window.location.assign("staff.html");
 }
 staff1.addEventListener("click", ifClickStaff); 

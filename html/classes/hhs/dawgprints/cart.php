@@ -13,6 +13,7 @@
       .itemstyle {
         margin: 10px;
       }
+      
     </style>
   </head>
   <body>
@@ -35,7 +36,9 @@
           Promotions
           </div>
       </div>
+      
       <div id='cartlist'></div>
+      <div class='spacer'></div>
 <div id="footer">
   <img id="footer_s" src="pics/footer_statement.png">
       </div>
@@ -45,31 +48,58 @@
 
     
     <script>
-      var masterArray = localStorage.cart;
-      var fill = "";
-      var count = 0;
-      var masterSplit = masterArray.split(',');
-      for(var i = 0; i < masterSplit.length; i++) {
-        //fill += "<div class='cartstyle'>";
-        if (count===4) { count = 0;}//reset
-        
-        if (count===0) {
-         fill += "<div class='itemstyle'>Quantity: " + masterSplit[i];//quantity 
+      
+      
+      
+      function loadCart() {
+          var masterArray = localStorage.cart;
+          var fill = "";
+          var count = 0;
+          var masterSplit = masterArray.split(',');
+          var totalPrice = 0;
+        if(masterSplit.length > 1) {
+
+          for(var i = 0; i < masterSplit.length; i++) {
+            //fill += "<div class='cartstyle'>";
+            if (count===4) { 
+              count = 0;
+              //fill += " | <button id='remove' onClick='remove("+ i +")'>Remove Item</button></div>";
+            }//reset
+
+            if (count===0) {
+             fill += "<div class='itemstyle'><button id='remove' onClick='remove("+ i +")'>Remove Item</button> | Quantity: " + masterSplit[i];//quantity 
+            }
+            if (count===1) {
+              fill += " - Size: " + masterSplit[i];//size
+            }
+            if (count===2) {
+              fill += " - Name: " +masterSplit[i];//proudctname
+            }
+            if (count===3) {
+              fill += " - Price: $" + masterSplit[i]+"</div>";//price
+              //getTotal();
+            }
+
+            //fill += "</div>";
+            count++;
+          }
+          fill += "<a href='checkout.php'><img src='checkoutbutton.png' width='200px'></a>";
         }
-        if (count===1) {
-          fill += " - Size: " + masterSplit[i];//size
+        else {
+         fill = "You have nothing in your cart. Please buy our products to proceed to checkout."; 
         }
-        if (count===2) {
-          fill += " - Name: " +masterSplit[i];//proudctname
-        }
-        if (count===3) {
-          fill += " - Price: $" + masterSplit[i]+"</div>";//price
-        }
-        
-        //fill += "</div>";
-        count++;
+        document.getElementById('cartlist').innerHTML = fill;
       }
-      document.getElementById('cartlist').innerHTML = fill;
+      //document.getElementById('cartlist').innerHTML = fill;
+      function remove(index) {
+       var masterArray = localStorage.cart;
+        var masterSplit = masterArray.split(',');
+       masterSplit.splice(index, 4); 
+          localStorage.setItem("cart", masterSplit); 
+        loadCart();
+      }
+      loadCart();
+      
     </script>
     
         

@@ -31,15 +31,21 @@
     
     
     <script>
+      
       var masterArray = [];
       var itemEl = document.getElementById('items');
       var fill = "";
       var count = 0;
-      if (localStorage.getItem("cart") != null) {
-      	masterArray.push(localStorage.getItem("cart"));
+      if (localStorage.getItem("cart") == null ){
+        
+        
 	  }
-      
-      
+      else if(localStorage.getItem("cart") == "") {
+        
+      }
+      else {
+        masterArray.push(localStorage.getItem("cart"));
+      }
       
       
       
