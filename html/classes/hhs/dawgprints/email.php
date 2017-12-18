@@ -6,17 +6,44 @@
   $cart = $_POST['cart'];
   //echo $cart;
 	$items = explode(",", $cart);
-  	echo 'Thanks '.$fn.' for your order of '.$items[2].'<br>';
-	$fill = 'Thanks '.$fn.' for your order of:\n\r ';
+  	$fill2 = "Thanks ".$fn." ". $ln ."for your order of <br>";
+	$fill = "Thanks ".$fn." ". $ln ." for your order of: \n\r " ;
 
 	
 	$arrlength = count($items);
 
-    for($x = 0; $x < $arrlength; $x++) {
-        echo $items[$x];
-        echo "<br>";
+	$count = 0;
+
+    for($i = 0; $i < $arrlength; $i++) {
+        
+      	if ($count == 4) {
+         $count = 0;
+        }
+      if ($count == 0) {
+         $fill = $fill."Quantity: ".$items[$i]." - "; 
+        $fill2 = $fill2."Quantity: ".$items[$i]." - ";
+        }
+      if ($count == 1) {
+         $fill  = $fill."Size: ".$items[$i]." - "; 
+        $fill2  = $fill2."Size: ".$items[$i]." - "; 
+      }
+      if ($count == 2) {
+        $fill = $fill."Product Name: ".$items[$i]." - "; 
+        $fill2 = $fill2."Product Name: ".$items[$i]." - "; 
+        }
+      if ($count == 3) {
+         $fill = $fill."Price: ".$items[$i]." \n\r "; 
+        $fill2 = $fill2."Price: ".$items[$i]." <br>"; 
+        }
+      
+      	$count++;
     }
 
+
+	$fill = $fill."Contact Info - Email: ". $em ." - Phone: ". $pn. " \n\r ";
+	$fill2 = $fill2."Contact Info - Email: ". $em ." - Phone: ". $pn. " <br> ";
+	$fill = $fill."If you did not purchase this order, please contact dawg.prints@hermiston.k12.or.us";
+	echo $fill2;
 
 	// Pear Mail Library
     require_once "/usr/share/php/Mail.php";
