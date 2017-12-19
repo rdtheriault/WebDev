@@ -13,7 +13,9 @@
       .itemstyle {
         margin: 10px;
       }
-      
+      #main {
+        background-color: #e3bfff;
+      }
     </style>
   </head>
   <body>
@@ -43,8 +45,8 @@
             First Name: <input type="text" id="firstname"><br>
             Last Name: <input type="text" id="lastname"><br>
             Email: <input type="text" id="email"><br>
-            Phone Number: <input type="text" id="phone"><br>
-            <button id='checkout'>Checkout</button>
+            Phone Number: <input type="text" id="phone"><br><br>
+            <img src='pics/complete.svg' id='checkout'>
 
         </div>
       </div>

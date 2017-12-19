@@ -61,7 +61,23 @@ html
   background-color: #56009e;
   color: #ffd700;
 }
+#checkout {
 
+  cursor: pointer;
+  transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+     width:200px;
+
+}
+
+
+#checkout:hover {
+
+opacity: 0.4;
+
+
+}
 
 
 

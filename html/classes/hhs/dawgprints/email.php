@@ -6,7 +6,7 @@
   $cart = $_POST['cart'];
   //echo $cart;
 	$items = explode(",", $cart);
-  	$fill2 = "Thanks ".$fn." ". $ln ."for your order of <br>";
+  	$fill2 = "Thanks ".$fn." ". $ln ." for your order of: <br>";
 	$fill = "Thanks ".$fn." ". $ln ." for your order of: \n\r " ;
 
 	
@@ -71,7 +71,7 @@
     $mail = $smtp->send($to, $headers, $body);
 
     if (PEAR::isError($mail)) {
-        echo('<p>' . $mail->getMessage() . ' Please check your email to ensure it is correct.</p>');
+        echo('<p>' . $mail->getMessage() . ' <strong>Please check your email to ensure it is correct and please place your order again.</strong></p>');
     } else {
         echo('<p>Order was successfully sent!</p>');
     }
