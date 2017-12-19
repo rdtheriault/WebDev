@@ -15,11 +15,11 @@ var turn = 0;
 
       // @pjs preload must be used to preload the image 
 
-    /* @pjs preload="https://upload.wikimedia.org/wikipedia/commons/d/d4/Scratchcat.svg"; */
+    /* @pjs preload="Spongegar.png"; */
 
     PImage b;
 
-    b = loadImage("https://upload.wikimedia.org/wikipedia/commons/d/d4/Scratchcat.svg");
+   b = loadImage("Spongegar.png");
 
     image(b, 0, 225, 75, 75);
 xPos = 0;

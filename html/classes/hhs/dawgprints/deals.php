@@ -42,12 +42,15 @@
       <h1 id='none'>NONE AT THIS TIME</h1>
       </div>
           <script src="scripts.js"></script>
+      <div class='spacer'></div>
       <div id="footer">
         <img id="footer_s" src="pics/footer_statement.png">
       </div>
       <script>
         document.getElementById("none").addEventListener("click", function click(){
-          document.getElementById("none").innerHTML = "we said none at this time....";
+          document.getElementById("none").innerHTML = "We said none at this time....<br><img src='https://i.imgur.com/kEpJ5aS.gif'>";
+          document.getElementById("bam").style.height = '500px';
+          
         });
         click();
       </script>
