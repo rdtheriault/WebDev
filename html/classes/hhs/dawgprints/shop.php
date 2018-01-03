@@ -39,7 +39,7 @@
       if (localStorage.getItem("cart") == null ){
         
         
-	  }
+    }
       else if(localStorage.getItem("cart") == "") {
         
       }
@@ -83,9 +83,9 @@
         for (var i = 0; i < 10; i++) {
           fill += "<option value='" + i + "'>" + i + "</option>"; 
         }
-        fill += "</select></div><br>";
- 		
-        fill += "<button id='addtocart"+ count +"' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")'>Add To Cart</button>";
+        fill += "</select></div>";
+    
+        fill += "<img style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
         //var pn = product.number;
         //fill += "<input id='btn" + count + "' type='submit' value='Add To Cart' onClick='cart(" + pn + ")'>";
         
@@ -138,7 +138,10 @@
         itemArray.push(price*quant);
         masterArray.push(itemArray);
         localStorage.setItem("cart", masterArray);
-      	alert("You added "+ quant +" of " + productname + " in size " + size + ". Your total is $" +(quant*price)+".");
+        alert("You added "+ quant +" of " + productname + " in size " + size + ". Your total is $" +(quant*price)+".");
+      }
+      function changepic(count) { 
+       	 document.getElementById('addtocart' + count).src="pics/addcart.gif";
       }
       </script>
           <script src="scripts.js"></script>

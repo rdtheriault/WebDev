@@ -22,8 +22,8 @@ body
 {
     display: table-cell;
     vertical-align: middle;
-	height: 100%; 
-	background:white;
+  height: 100%; 
+  background:white;
 
 }
 
@@ -114,8 +114,8 @@ opacity: 0.4;
 
 
 #banner {
-  	width: 100%;
-  	background-color: black;
+    width: 100%;
+    background-color: black;
 }
 
 #footer {
