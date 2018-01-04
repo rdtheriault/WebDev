@@ -85,7 +85,7 @@
         }
         fill += "</select></div>";
     
-        fill += "<img style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
+        fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
         //var pn = product.number;
         //fill += "<input id='btn" + count + "' type='submit' value='Add To Cart' onClick='cart(" + pn + ")'>";
         
@@ -142,6 +142,9 @@
       }
       function changepic(count) { 
        	 document.getElementById('addtocart' + count).src="pics/addcart.gif";
+      }
+      function changepicback(count) { 
+       	 document.getElementById('addtocart' + count).src="pics/addcart.png";
       }
       </script>
           <script src="scripts.js"></script>

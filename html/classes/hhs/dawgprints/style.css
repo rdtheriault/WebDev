@@ -149,3 +149,7 @@ img{
   -ms-user-select: none;
   
 }
+.button-round{
+border:3px;
+border-radius:10px;
+}
