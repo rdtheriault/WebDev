@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Cart</title>
     <link rel="stylesheet" href="style.css">
     
     <style>

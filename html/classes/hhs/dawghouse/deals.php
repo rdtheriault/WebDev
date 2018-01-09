@@ -1,6 +1,5 @@
 <html>
   <head>
-    <title>Promotions</title>
     <link rel="stylesheet" href="style.css">
     <style>
       #none {

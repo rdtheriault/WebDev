@@ -1,6 +1,5 @@
 <html>
   <head>
-	<title>Shop</title>
     <link rel="stylesheet" href="style.css">
     <script src='items.js'></script>
     <link rel="stylesheet" type="text/css" href="item.css">

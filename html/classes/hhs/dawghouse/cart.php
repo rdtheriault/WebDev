@@ -1,6 +1,5 @@
 <html>
   <head>
-    <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -14,9 +13,7 @@
       .itemstyle {
         margin: 10px;
       }
-      #main {
-        background-color: #e3bfff;
-      }
+      
     </style>
   </head>
   <body>
@@ -39,18 +36,8 @@
           Promotions
           </div>
       </div>
-      <div id="infoC">
-        <div id='cartlist'></div>
-        <div id='personal'>
-
-            First Name: <input type="text" id="firstname"><br>
-            Last Name: <input type="text" id="lastname"><br>
-            Email: <input type="text" id="email"><br>
-            Phone Number: <input type="text" id="phone"><br><br>
-            <img src='pics/complete.svg' id='checkout'>
-
-        </div>
-      </div>
+      
+      <div id='cartlist'></div>
       <div class='spacer'></div>
 <div id="footer">
   <img id="footer_s" src="pics/footer_statement.png">
@@ -96,13 +83,13 @@
             //fill += "</div>";
             count++;
           }
+          fill += "<a href='checkout.php'><img src='checkoutbutton.png' width='200px'></a>";
         }
         else {
-          window.location.replace('shop.php');
+         fill = "You have nothing in your cart. Please buy our products to proceed to checkout."; 
         }
         document.getElementById('cartlist').innerHTML = fill;
       }
-      
       //document.getElementById('cartlist').innerHTML = fill;
       function remove(index) {
        var masterArray = localStorage.cart;
@@ -113,27 +100,6 @@
       }
       loadCart();
       
-      document.getElementById('checkout').addEventListener ("click", checkout);
-      function checkout() {
-        var FN = document.getElementById('firstname').value;
-        var LN = document.getElementById('lastname').value;
-        var EM = document.getElementById('email').value;
-        var PN = document.getElementById('phone').value;
-        var cart = localStorage.cart;
-        
-        var params = 'fn='+FN+'&ln='+LN+'&em='+EM+'&pn='+PN+'&cart='+cart;
-        var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function()  {
-				  if (this.readyState == 4 && this.status == 200) {
-				    document.getElementById('infoC').innerHTML = xmlhttp.responseText;
-				  }
-				};
-				//xmlhttp.open("GET", "http://10.80.46.40/sense.json?nocache=" + (new Date()).getTime(), true);
-				//xmlhttp.open("GET", json + (new Date()).getTime(), true);
-				xmlhttp.open("POST", "email.php", true);
-        		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-				xmlhttp.send(params);
-      }
     </script>
     
         

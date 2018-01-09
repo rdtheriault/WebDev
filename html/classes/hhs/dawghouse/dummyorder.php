@@ -1,56 +1,45 @@
 <html>
   <head>
-	<title>Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+      color: lime;
+      background-color: purple;
+      }
+      #spit {
+      color: purple;
+      background-color: lime;
+      }
+    </style>
     <script src='items.js'></script>
     <link rel="stylesheet" type="text/css" href="item.css">
   </head>
   <body>
-    <div id='main'>
-      <img  id="banner" src='pics/dawg-banner.png'>
-      <div id='nav'>
-        <div id='home' class='btn'>
-          Main
-          </div>
-        <div id='shop' class='btn'>
-          Shop
-          </div>
-        <div id='cart' class='btn'>
-          Cart
-          </div>
-        <div id='contact' class='btn'>
-          Contact Us
-          </div>
-        <div id='deals' class='btn'>
-          Promotions
-          </div>
-      </div>
-       <div id='items'>
+    
+    <div id='spit'>
     </div>
-    <div id="footer"><img id="footer_s" src="pics/footer_statement.png"></div>
+    <form>
+      Quantity:
+      <input type="text" id='quantity'><br>
+      Type:
+      <input type="text" id='type'><br>
+      <select id='size'>
+        <option value='small'>Small</option>
+        <option value='medium'>Medium</option>
+        <option value='small'>Large</option>
+      </select>
+      <input id='btn' type="submit" value='Add To Cart'>
+    </form>
+    <div id='items'>
+    </div>
+    
     
     
     
     <script>
       
-      var masterArray = [];
       var itemEl = document.getElementById('items');
       var fill = "";
       var count = 0;
-      if (localStorage.getItem("cart") == null ){
-        
-        
-    }
-      else if(localStorage.getItem("cart") == "") {
-        
-      }
-      else {
-        masterArray.push(localStorage.getItem("cart"));
-      }
-      
-      
-      
-      
       function createItem(product) {
         fill += "<div class='outeri'>";
         fill += "<div class='pici'>";
@@ -65,7 +54,7 @@
         fill += "<div class='datai'><br>" + product.productname + "<br>Total: $" + product.price + "</div><br>";
         fill += "<div class='styled-selecti blacki roundedi'>";
         
-         fill += "<select class='sizei' id='size"+ count +"'>";
+          fill += "<select class='sizei' id='size"+ count +"'>";
         for (var i = 0; i < product.size.length; i++) {
           fill += "<option value='" + product.size[i] + "'>" + product.size[i] + "</option>"; 
         }
@@ -84,9 +73,9 @@
         for (var i = 0; i < 10; i++) {
           fill += "<option value='" + i + "'>" + i + "</option>"; 
         }
-        fill += "</select></div>";
-    
-        fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
+        fill += "</select></div><br>";
+ 		fill += "<br>";
+        fill += "<button id='addtocart"+ count +"' onClick='cart(" + count + ", " + product.number + ")'>Add To Cart</button>";
         //var pn = product.number;
         //fill += "<input id='btn" + count + "' type='submit' value='Add To Cart' onClick='cart(" + pn + ")'>";
         
@@ -129,26 +118,25 @@
         price:""
       };
       
-      function cart(count, productname, price, itemNum) {
-        var itemArray = [];
-        var quant = document.getElementById('quant' + count).value;
-        var size = document.getElementById('size' + count).value;
-        itemArray.push(quant);
-        itemArray.push(size);
-        itemArray.push(productname);
-        itemArray.push(price*quant);
-        masterArray.push(itemArray);
-        localStorage.setItem("cart", masterArray);
-        alert("You added "+ quant +" of " + productname + " in size " + size + ". Your total is $" +(quant*price)+".");
-      }
-      function changepic(count) { 
-       	 document.getElementById('addtocart' + count).src="pics/addcart.gif";
-      }
-      function changepicback(count) { 
-       	 document.getElementById('addtocart' + count).src="pics/addcart.png";
-      }
-      </script>
-          <script src="scripts.js"></script>
-    </div>
-  </body>
+      //for (var i=0; i < count; i++) {
+       //var btnholder = "btn" + i; 
+       //document.getElementById(btnholder).addEventListener('click', cart(e,));
+      //}
+      
+      
+      
+      
+      
+      document.getElementById("btn").addEventListener('click', cart);
+      function cart(purchase) {
+        //purchase is item being added to cart, didn't want to over use the words item, product etc.
+        //e.preventDefault();
+        var product = item;
+        product.quantity = document.getElementById("quantity").value;
+        items.push(product);
+        document.getElementById("spit").innerHTML = product.quantity;
+  	} 
+      
+    </script>
+   </body>
 </html>

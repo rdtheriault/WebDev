@@ -112,14 +112,14 @@
     
     
     // Cheat Codes
-neededkeys = [38,38,40,40,37,39,37,39,66,65], started = false, count = 0;
-$(document).keydown(function(e) {
-    key = e.keyCode;
-    if (!started) {
+    neededkeys = [38,38,40,40,37,39,37,39,66,65], started = false, count = 0;
+    $(document).keydown(function(e) {
+      key = e.keyCode;
+      if (!started) {
         if (key == 38) {
-            started = true;
+          started = true;
         }
-    }
+      }
     if (started) {
         if (neededkeys[count] == key) {
             count++;
@@ -135,15 +135,15 @@ $(document).keydown(function(e) {
             var s=document.createElement('script');
             s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');
             document.body.appendChild(s);
+          }
+            } else {
+                doover();
+            }
+        });
+        function doover() {
+            started = false;
+            count = 0;
         }
-    } else {
-        doover();
-    }
-});
-function doover() {
-    started = false;
-    count = 0;
-}
   </script>
   </body>
 </html>  
