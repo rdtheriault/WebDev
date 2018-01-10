@@ -1,9 +1,8 @@
 <html>
   <head>
-	<title>Shop</title>
     <link rel="stylesheet" href="style.css">
     <script src='items.js'></script>
-    <link rel="stylesheet" type="text/css" href="item.css">
+    <link rel="stylesheet" type="text/css" href="item2.css">
   </head>
   <body>
     <div id='main'>
@@ -40,7 +39,7 @@
       if (localStorage.getItem("cart") == null ){
         
         
-    }
+      }
       else if(localStorage.getItem("cart") == "") {
         
       }
@@ -63,7 +62,7 @@
         fill += "</div>";
         fill += "<div class='dropdowni'>";
         fill += "<div class='datai'><br>" + product.productname + "<br>Total: $" + product.price + "</div><br>";
-        fill += "<div class='styled-selecti blacki roundedi'>";
+        fill += "<div class='selecti'>";
         
          fill += "<select class='sizei' id='size"+ count +"'>";
         for (var i = 0; i < product.size.length; i++) {
@@ -71,7 +70,7 @@
         }
         fill += "</select></div><br>";
         
-        fill += "<div class='styled-selecti blacki roundedi'>";
+        fill += "<div class='selecti'>";
         
         //fill += "Quantity:<input type='text' id='quant" + product.number + "'><br>";
         //fill += product.productname;
@@ -84,7 +83,7 @@
         for (var i = 0; i < 10; i++) {
           fill += "<option value='" + i + "'>" + i + "</option>"; 
         }
-        fill += "</select></div>";
+        fill += "</select></div><br>";
     
         fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
         //var pn = product.number;

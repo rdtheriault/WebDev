@@ -1,94 +1,105 @@
-    (function() {
-      "use strict";
-      // Some key codes that are used
-      var up = 38,
-          down = 40,
-          left = 37,
-          right = 39,
-          A = 65,
-          B = 66;
-      // Full Konami Code obtained from: http://en.wikipedia.org/wiki/Konami_Code
-      var	konamiCode = [up,up,down,down,left,right,left,right,B,A];
-      // Deteted sequence. Empty by default
-      var konamiDetected = [];
+/*
+ * Konami-JS ~ 
+ * :: Now with support for touch events and multiple instances for 
+ * :: those situations that call for multiple easter eggs!
+ * Code: http://konami-js.googlecode.com/
+ * Examples: http://www.snaptortoise.com/konami-js
+ * Copyright (c) 2009 George Mandis (georgemandis.com, snaptortoise.com)
+ * Version: 1.4.2 (9/2/2013)
+ * Licensed under the MIT License (http://opensource.org/licenses/MIT)
+ * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1 and Dolphin Browser
+ */
 
-      // Attachs the function on an element (for a certain event)
-      function attachCustomEvent(el, eventName, desiredFunction) {
-          if (el.addEventListener) {
-              el.addEventListener(eventName,desiredFunction,false);
-          // Old IE
-          } else {
-              el.attachEvent('on' + eventName,desiredFunction);
-          }
-      }
+var Konami = function (callback) {
+	var konami = {
+		addEvent: function (obj, type, fn, ref_obj) {
+			if (obj.addEventListener)
+				obj.addEventListener(type, fn, false);
+			else if (obj.attachEvent) {
+				// IE
+				obj["e" + type + fn] = fn;
+				obj[type + fn] = function () {
+					obj["e" + type + fn](window.event, ref_obj);
+				}
+				obj.attachEvent("on" + type, obj[type + fn]);
+			}
+		},
+		input: "",
+		pattern: "38384040373937396665",
+		load: function (link) {
+			this.addEvent(document, "keydown", function (e, ref_obj) {
+				if (ref_obj) konami = ref_obj; // IE
+				konami.input += e ? e.keyCode : event.keyCode;
+				if (konami.input.length > konami.pattern.length)
+					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
+				if (konami.input == konami.pattern) {
+					konami.code(link);
+					konami.input = "";
+					e.preventDefault();
+					return false;
+				}
+			}, this);
+			this.iphone.load(link);
+		},
+		code: function (link) {
+			window.location = link
+		},
+		iphone: {
+			start_x: 0,
+			start_y: 0,
+			stop_x: 0,
+			stop_y: 0,
+			tap: false,
+			capture: false,
+			orig_keys: "",
+			keys: ["UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "TAP", "TAP"],
+			code: function (link) {
+				konami.code(link);
+			},
+			load: function (link) {
+				this.orig_keys = this.keys;
+				konami.addEvent(document, "touchmove", function (e) {
+					if (e.touches.length == 1 && konami.iphone.capture == true) {
+						var touch = e.touches[0];
+						konami.iphone.stop_x = touch.pageX;
+						konami.iphone.stop_y = touch.pageY;
+						konami.iphone.tap = false;
+						konami.iphone.capture = false;
+						konami.iphone.check_direction();
+					}
+				});
+				konami.addEvent(document, "touchend", function (evt) {
+					if (konami.iphone.tap == true) konami.iphone.check_direction(link);
+				}, false);
+				konami.addEvent(document, "touchstart", function (evt) {
+					konami.iphone.start_x = evt.changedTouches[0].pageX;
+					konami.iphone.start_y = evt.changedTouches[0].pageY;
+					konami.iphone.tap = true;
+					konami.iphone.capture = true;
+				});
+			},
+			check_direction: function (link) {
+				x_magnitude = Math.abs(this.start_x - this.stop_x);
+				y_magnitude = Math.abs(this.start_y - this.stop_y);
+				x = ((this.start_x - this.stop_x) < 0) ? "RIGHT" : "LEFT";
+				y = ((this.start_y - this.stop_y) < 0) ? "DOWN" : "UP";
+				result = (x_magnitude > y_magnitude) ? x : y;
+				result = (this.tap == true) ? "TAP" : result;
 
-      // Detachs the function on an element (for a certain event)
-      function detachCustomEvent(el, eventName, desiredFunction) {
-          if (el.removeEventListener) {
-              el.removeEventListener(eventName,desiredFunction,false);
-          // Old IE
-          } else {
-              el.detachEvent('on' + eventName,desiredFunction);
-          }
-      }
+				if (result == this.keys[0]) this.keys = this.keys.slice(1, this.keys.length);
+				if (this.keys.length == 0) {
+					this.keys = this.orig_keys;
+					this.code(link);
+				}
+			}
+		}
+	}
 
-      // Function that is invoked after detecting the Konami Code
-      function startUpKonami() {
-          // Prevent further detection (When removing this line the Konami code can be entered multiple times)
-          detachCustomEvent(document,"keydown",isKonamiKey);
-          konamiIsDetected();
-      }
+	typeof callback === "string" && konami.load(callback);
+	if (typeof callback === "function") {
+		konami.code = callback;
+		konami.load();
+	}
 
-      // Function to detect whether the pressed key is part of the Konami Code
-      function isKonamiKey(e) {
-          var evt = e || window.event;
-          var key = evt.keyCode ? evt.keyCode : evt.which;
-          // Set to true before checking everything    
-          var codeOk = true;
-          // Push the key
-          konamiDetected.push(key);
-          // Check if the key is valid or not
-          if (konamiDetected.length < konamiCode.length) {
-              // Check that the values are Ok so far. If not clear the array
-              for (var i = 0, max = konamiDetected.length; i < max ; i++) {
-                  if(konamiDetected[i] !== konamiCode[i]) {
-                      codeOk = false;
-                  }
-              }
-              if (!codeOk) {
-                  // Clean the array
-                  konamiDetected = [];
-                  // Push the just detected value inside the array
-                  konamiDetected.push(key);
-              }
-          } else if (konamiDetected.length === konamiCode.length) {
-              for (var j = 0, max = konamiDetected.length; j < max ; j++) {
-                  if(konamiDetected[j] !== konamiCode[j]) {
-                      codeOk = false;
-                  }
-              }
-              // Clean the array
-              konamiDetected = [];
-              if (codeOk) {
-                  startUpKonami();
-              }
-          // This should never happen, but if it happens we clean the array
-          } else {
-              konamiDetected = [];
-          }
-          // After everything has been checked show the resulting array after pressing such key
-          // console.log(konamiDetected);
-      }
-
-      // Attach the event detection to the whole document
-      attachCustomEvent(document,"keydown",isKonamiKey);
-  })();
-
-  // Function that is invoked after the konami code has been entered
-  function konamiIsDetected() {
-      document.getElementById("konami").style.display="none";
-      var video = document.createElement("iframe");
-      video.src="https://www.youtube.com/embed/eh7lp9umG2I";
-      document.body.appendChild(video);
-      
-  }
+	return konami;
+};
