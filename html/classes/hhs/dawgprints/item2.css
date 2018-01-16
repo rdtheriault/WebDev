@@ -84,7 +84,6 @@ select::-ms-expand {
         display: flex;
         border: 5px solid black;
         border-radius: 5px;
-        width: 750px;
       }
       .conti {
         display: flex;

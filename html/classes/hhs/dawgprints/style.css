@@ -3,9 +3,14 @@
 
 @font-face{
   font-family:dawgs;
-  src:url(packofwolves.ttf);
+  src:url(Something Strange.ttf);
   }
 
+
+#flex {
+  
+  display: flex;
+}
 
 #main {
   max-width: 1000px;
@@ -20,8 +25,8 @@
 }
 body 
 {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
   height: 100%; 
   background:white;
 
@@ -82,7 +87,6 @@ opacity: 0.4;
 
 
 #middle {
-  display: flex;
   width: 100%;
 }
 
@@ -94,7 +98,6 @@ opacity: 0.4;
 
 
 #left {
-  width: 60%;
   text-align: center;
 }
 
@@ -149,7 +152,19 @@ img{
   -ms-user-select: none;
   
 }
-.button-round{
-border:3px;
+.clothes-divs{
+height:80px;
+width:240px;
+background:#56009e;
 border-radius:10px;
+margin-top:10px;
+color:#c5b358;
+border: solid 2px #c5b358;
+text-align:center;
+}
+#left-right{
+display: flex;
+}
+#{
+font-family:dawgs;
 }

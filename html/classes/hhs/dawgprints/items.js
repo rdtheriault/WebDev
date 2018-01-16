@@ -4,7 +4,7 @@ var hat= {
   quantity:"",
   number:"0",
   color:['Gray', 'White', 'Purple'],
-  type:"acccerory",
+  type:"hat",
   imgsrc:"pics/hat1.jpg",
   price:"5"
 };
@@ -14,7 +14,7 @@ var shirt = {
   quantity:"",
   number:"1",
   color:['Gray', 'White', 'Purple'],
-  type:"clothing",
+  type:"shirt",
   imgsrc:"pics/shirt1.jpg",
   price:"10"
 };
@@ -24,7 +24,7 @@ var sweatshirt1 = {
   quantity:"",
   number:"1",
   color:['Gray', 'White', 'Purple'],
-  type:"clothing",
+  type:"sweater",
   imgsrc:"pics/sweatshirt1.jpg",
   price:"22"
 };
@@ -34,7 +34,7 @@ var sweatshirt2 = {
   quantity:"",
   number:"1",
   color:['Gray', 'White', 'Purple'],
-  type:"clothing",
+  type:"sweater",
   imgsrc:"pics/sweatshirt2.jpg",
   price:"22"
 };
