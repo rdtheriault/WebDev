@@ -26,7 +26,7 @@
       </div>
        <div id="items_wrapper">
 
-        <div id="buttons">
+        <div id="buttons_shop">
                <div class="side_button_outer" id="sort-hats"><h1 class="side_button">Hats</h1></div>
                <div class="side_button_outer" id="sort-shirts"><h1 class="side_button">Shirts</h1></div>
                <div class="side_button_outer" id="sort-sweaters"><h1 class="side_button">Sweaters</h1></div>
