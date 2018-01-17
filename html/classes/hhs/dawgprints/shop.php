@@ -14,17 +14,35 @@
         <div id='shop' class='btn'>
           Shop
           </div>
-        <div id='cart' class='btn'>
-          Cart
+        <div id='custom' class='btn'>
+          Custom
           </div>
         <div id='contact' class='btn'>
           Contact Us
           </div>
-        <div id='deals' class='btn'>
-          Promotions
+        <div id='cart' class='btn'>
+          Cart
           </div>
       </div>
-       <div id='items'>
+       <div id="items_wrapper">
+
+        <div id="buttons">
+               <div class="side_button_outer" id="sort-hats"><h1 class="side_button">Hats</h1></div>
+               <div class="side_button_outer" id="sort-shirts"><h1 class="side_button">Shirts</h1></div>
+               <div class="side_button_outer" id="sort-sweaters"><h1 class="side_button">Sweaters</h1></div>
+               <div class="side_button_outer" id="sort-mugs"><h1 class="side_button">Mugs</h1></div>
+               
+        </div>
+
+
+
+        <div id='items'></div>
+
+       
+
+
+
+       
     </div>
     <div id="footer"><img id="footer_s" src="pics/footer_statement.png"></div>
     
