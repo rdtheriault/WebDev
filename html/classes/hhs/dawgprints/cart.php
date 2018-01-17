@@ -20,23 +20,23 @@
   <body>
     <div id='main'>
       <img  id="banner" src='pics/dawg-banner.png'>
-      <div id='nav'>
-        <div id='home' class='btn'>
-          Main
-          </div>
-        <div id='shop' class='btn'>
-          Shop
-          </div>
-        <div id='cart' class='btn'>
-          Cart
-          </div>
-        <div id='contact' class='btn'>
-          Contact Us
-          </div>
-        <div id='deals' class='btn'>
-          Promotions
-          </div>
-      </div>
+       <div id='nav'>
+          <div id='home' class='btn'>
+            Main
+            </div>
+          <div id='shop' class='btn'>
+            Shop
+            </div>
+          <div id='custom' class='btn'>
+            Custom    
+            </div>
+          <div id='contact' class='btn'>
+            Contact Us
+            </div>
+          <div id='cart' class='btn'>
+            Cart
+            </div>
+        </div>
       
       <div id='cartlist'></div>
       <div class='spacer'></div>

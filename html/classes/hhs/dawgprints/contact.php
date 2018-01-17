@@ -13,14 +13,14 @@
           <div id='shop' class='btn'>
             Shop
             </div>
-          <div id='cart' class='btn'>
-            Cart
+          <div id='custom' class='btn'>
+            Custom    
             </div>
           <div id='contact' class='btn'>
             Contact Us
             </div>
-          <div id='deals' class='btn'>
-            Promotions
+          <div id='cart' class='btn'>
+            Cart
             </div>
         </div>
         <div id="about-us">

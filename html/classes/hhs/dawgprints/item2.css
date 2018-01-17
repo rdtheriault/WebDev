@@ -81,6 +81,7 @@ select::-ms-expand {
 }
 
 .outeri {
+        width: 700px;
         display: flex;
         border: 5px solid black;
         border-radius: 5px;
@@ -110,8 +111,7 @@ select::-ms-expand {
       .dropdowni {
         text-align: center;
         padding-left: 20px;
-        padding-top: 20px;
-        font-size: 45px;
+        padding-top: 8px;
         font-family: 'Ubuntu', sans-serif;
         color: #fc4e71;
         
@@ -137,4 +137,12 @@ transition: opacity .25s ease-in-out;
 opacity: 0.4;
 
 
+}
+
+
+.datai {
+
+
+
+          font-size: 28px;
 }

@@ -84,12 +84,20 @@
           //fill += "<div class='colouri' class='color1i'></div><div class='colour' class='color2i'></div><div class='colour'class='color3i'></div><div class='colour'class='color4i'></div>";
           fill += "</div>";
           fill += "<div class='dropdowni'>";
-          fill += "<div class='datai'><br>" + product.productname + "<br>Total: $" + product.price + "</div><br>";
+          fill += "<div class='datai'>" + product.productname + "<br>Total: $" + product.price + "</div><br>";
           fill += "<div class='selecti'>";
 
            fill += "<select class='sizei' id='size"+ count +"'>";
           for (var i = 0; i < product.size.length; i++) {
             fill += "<option value='" + product.size[i] + "'>" + product.size[i] + "</option>"; 
+          }
+          fill += "</select></div><br>";
+
+          fill += "<div class='selecti'>";
+
+           fill += "<select class='sizei' id='colorz"+ count +"'>";
+          for (var i = 0; i < product.color.length; i++) {
+            fill += "<option value='" + product.color[i] + "'>" + product.color[i] + "</option>"; 
           }
           fill += "</select></div><br>";
 
@@ -108,7 +116,7 @@
           }
           fill += "</select></div><br>";
 
-          fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ")' src='pics/addcart.png' width='150px'>";
+          fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ", \"" + product.color +"\")' src='pics/addcart.png' width='150px'>";
           //var pn = product.number;
           //fill += "<input id='btn" + count + "' type='submit' value='Add To Cart' onClick='cart(" + pn + ")'>";
 
@@ -159,17 +167,19 @@
         price:""
       };
       
-      function cart(count, productname, price, itemNum) {
+      function cart(count, productname, price, itemNum, color) {
         var itemArray = [];
         var quant = document.getElementById('quant' + count).value;
         var size = document.getElementById('size' + count).value;
+        var colorz = document.getElementById('colorz' + count).value;
         itemArray.push(quant);
         itemArray.push(size);
         itemArray.push(productname);
         itemArray.push(price*quant);
+        itemArray.push(colorz);
         masterArray.push(itemArray);
         localStorage.setItem("cart", masterArray);
-        alert("You added "+ quant +" of " + productname + " in size " + size + ". Your total is $" +(quant*price)+".");
+        alert("You added "+ quant +" of " + productname + " in size " + size + " color of "+ colorz +". Your total is $" +(quant*price)+".");
       }
       function changepic(count) { 
        	 document.getElementById('addtocart' + count).src="pics/addcart.gif";
