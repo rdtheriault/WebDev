@@ -62,7 +62,7 @@
 
           for(var i = 0; i < masterSplit.length; i++) {
             //fill += "<div class='cartstyle'>";
-            if (count===4) { 
+            if (count===5) { 
               count = 0;
               //fill += " | <button id='remove' onClick='remove("+ i +")'>Remove Item</button></div>";
             }//reset
@@ -77,7 +77,11 @@
               fill += " - Name: " +masterSplit[i];//proudctname
             }
             if (count===3) {
-              fill += " - Price: $" + masterSplit[i]+"</div>";//price
+              fill += " - Price: $" + masterSplit[i]+" ";//price
+              //getTotal();
+            }
+            if (count===4) {
+              fill += " - Color: " + masterSplit[i]+"</div>";//color
               //getTotal();
             }
 
@@ -95,7 +99,7 @@
       function remove(index) {
        var masterArray = localStorage.cart;
         var masterSplit = masterArray.split(',');
-       masterSplit.splice(index, 4); 
+       masterSplit.splice(index, 5); 
           localStorage.setItem("cart", masterSplit); 
         loadCart();
       }

@@ -16,7 +16,7 @@
 
     for($i = 0; $i < $arrlength; $i++) {
         
-      	if ($count == 4) {
+      	if ($count == 5) {
          $count = 0;
         }
       if ($count == 0) {
@@ -32,8 +32,13 @@
         $fill2 = $fill2."Product Name: ".$items[$i]." - "; 
         }
       if ($count == 3) {
-         $fill = $fill."Price: ".$items[$i]." \n\r "; 
-        $fill2 = $fill2."Price: ".$items[$i]." <br>"; 
+         $fill = $fill."Price: ".$items[$i]." - "; 
+        $fill2 = $fill2."Price: ".$items[$i]." - "; 
+        }
+      
+           if ($count == 4) {
+         $fill = $fill."Color: ".$items[$i]." \n\r "; 
+        $fill2 = $fill2."Color: ".$items[$i]." <br>"; 
         }
       
       	$count++;
@@ -50,7 +55,7 @@
 
     $from = '<student-webmaster@hermistonsd.org>';
     $to = '<'.$em.'>';
-    $subject = 'Thank you for your order from Dawg Prints';
+    $subject = 'Thank you for ordering from Dawg the Hawse!';
     $body = $fill;
 
     $headers = array(
