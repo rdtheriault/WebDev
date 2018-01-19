@@ -29,6 +29,7 @@ body
   vertical-align: middle;
   height: 100%; 
   background:white;
+  margin-bottom: 15vh;
 
 }
 
@@ -123,11 +124,9 @@ opacity: 0.4;
 
 #footer {
 background-color: #292c30;
-width: 100%;
-min-height: 800px;
-margin-top: 80px;
 position:absolute;
-bottom:0px;
+width: 100%;
+bottom: 0px;
 }
 
 #footer_s { 

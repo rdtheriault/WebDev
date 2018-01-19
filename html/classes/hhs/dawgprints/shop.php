@@ -188,7 +188,8 @@
        	 document.getElementById('addtocart' + count).src="pics/addcart.png";
       }
       </script>
-          <script src="scripts.js"></script>
+		<script src="scripts.js"></script>
+		<script src="scripts2.js"></script>
     </div>
   </body>
 </html>

@@ -43,7 +43,6 @@
       <h1 id='none'>NONE AT THIS TIME</h1>
       </div>
           <script src="scripts.js"></script>
-      <div class='spacer'></div>
       <div id="footer">
         <img id="footer_s" src="pics/footer_statement.png">
       </div>
@@ -53,7 +52,6 @@
           document.getElementById("bam").style.height = '500px';
           
         });
-        click();
       </script>
     </div>
   </body>
