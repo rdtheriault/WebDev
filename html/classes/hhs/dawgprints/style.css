@@ -15,9 +15,12 @@
 #main {
   max-width: 1000px;
   width: 100%;
-  height:100%;
   text-align: center;
   position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .spacer {
@@ -27,8 +30,6 @@ body
 {
   display: table-cell;
   vertical-align: middle;
-  height: 100%; 
-  background:white;
   margin-bottom: 15vh;
 
 }
@@ -124,14 +125,23 @@ opacity: 0.4;
 
 #footer {
 background-color: #292c30;
-position:absolute;
+position: relative;
 width: 100%;
 bottom: 0px;
 }
 
+
+#f_holder {
+ display: flex; 
+ align-items: flex-end;
+ align-self: stretch;
+  
+}
+
+
 #footer_s { 
   padding-top: .5em;
-  height: 100%;
+  height: 120px;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;

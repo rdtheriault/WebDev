@@ -39,10 +39,9 @@
         </div>
       
       <div id='cartlist'></div>
-      <div class='spacer'></div>
-<div id="footer">
+<div id="f_holder"><div id="footer">
   <img id="footer_s" src="pics/footer_statement.png">
-      </div>
+  </div></div>
     </div>
           <script src="scripts.js"></script>
      
@@ -53,23 +52,26 @@
       
       
       function loadCart() {
-          var masterArray = localStorage.cart;
-          var fill = "";
-          var count = 0;
+          var masterArray = localStorage.cart;//loads cart
+          var fill = "";//holds html
+          var count = 0; //used to itreate through each item
           var masterSplit = masterArray.split(',');
           var totalPrice = 0;
         if(masterSplit.length > 1) {
 
           for(var i = 0; i < masterSplit.length; i++) {
             //fill += "<div class='cartstyle'>";
+            
+            //reset count to start next item, 5 because 5 attr of each item, starts at 0
             if (count===5) { 
               count = 0;
               //fill += " | <button id='remove' onClick='remove("+ i +")'>Remove Item</button></div>";
             }//reset
 
+            //if statements grab each attribute
             if (count===0) {
              fill += "<div class='itemstyle'><button id='remove' onClick='remove("+ i +")'>Remove Item</button> | Quantity: " + masterSplit[i];//quantity 
-            }
+            }//adds remove function listener to grab first index of the item
             if (count===1) {
               fill += " - Size: " + masterSplit[i];//size
             }
@@ -96,12 +98,13 @@
         document.getElementById('cartlist').innerHTML = fill;
       }
       //document.getElementById('cartlist').innerHTML = fill;
+      //retrieves index of current item, removes the 5 attr.
       function remove(index) {
        var masterArray = localStorage.cart;
         var masterSplit = masterArray.split(',');
-       masterSplit.splice(index, 5); 
+       masterSplit.splice(index, 5); //removal
           localStorage.setItem("cart", masterSplit); 
-        loadCart();
+        loadCart();//rebuild cart
       }
       loadCart();
       

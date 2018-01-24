@@ -43,9 +43,9 @@
       <h1 id='none'>NONE AT THIS TIME</h1>
       </div>
           <script src="scripts.js"></script>
-      <div id="footer">
+      <div id="f_holder"><div id="footer">
         <img id="footer_s" src="pics/footer_statement.png">
-      </div>
+        </div></div>
       <script>
         document.getElementById("none").addEventListener("click", function click(){
           document.getElementById("none").innerHTML = "We said none at this time....<br><img src='https://i.imgur.com/kEpJ5aS.gif'>";

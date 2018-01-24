@@ -1,5 +1,12 @@
 <html>
   <head>
+    <style> 
+      #items_wrapper {
+       background-color: #202121; 
+      }
+      
+    </style>
+      
     <link rel="stylesheet" href="style.css">
     <script src='items.js'></script>
     <link rel="stylesheet" type="text/css" href="item2.css">
@@ -49,16 +56,19 @@
     
     
     <script>
-      
+      //This gets the URL of the webpage to filter items by category.
       var url = window.location.href;
       var res = url.split("="); //array  res[1];
       
       
       
-      var masterArray = [];
+      var masterArray = []; //Holds the cart items in browser.
       var itemEl = document.getElementById('items');
-      var fill = "";
-      var count = 0;
+      var fill = ""; //Holds the HTML that is created for the items.
+      var count = 0; //Counts the amount of items added into the cart and different categories. Allows for elements to be given this ID for different things that need counters/cycling.
+      
+      
+      //This set of code is for retrieving items for the current browser session. If empty, it will create a new one. 
       if (localStorage.getItem("cart") == null ){
         
         
@@ -72,7 +82,7 @@
       
       
       
-      
+      //This literally creates the full elements for the items. DONT TOUCH IT!
       function createItem(product) {
           fill += "<div class='outeri'>";
           fill += "<div class='pici'>";
@@ -109,13 +119,14 @@
 
           //fill += "<br>";
 
-
+			//This loop goes through any object that has more than one and fills the select statement with it. 
           fill += "<select class='quanti' id='quant"+ count +"'>";
           for (var i = 0; i < 10; i++) {
             fill += "<option value='" + i + "'>" + i + "</option>"; 
           }
           fill += "</select></div><br>";
-
+			
+        //Calls the correct functions when the button is clicked for the specific item.
           fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ", \"" + product.color +"\")' src='pics/addcart.png' width='150px'>";
           //var pn = product.number;
           //fill += "<input id='btn" + count + "' type='submit' value='Add To Cart' onClick='cart(" + pn + ")'>";
@@ -132,6 +143,8 @@
           //document.getElementById(btnholder).addEventListener('click', cart(e,product.number));
       }
       
+      //First this checks if there is no a filter; else apply nothing. 
+      //Also, any new item that is added is applying to both sides of the "IF" statement. 
       if (res[1] == null) {
         createItem(hat);fill += "<br>";
         createItem(shirt);fill += "<br>";
@@ -150,7 +163,7 @@
         
         fill += "<br><br><br><br><br><br><br><br><br><br>";
       }
-      itemEl.innerHTML = fill;
+      itemEl.innerHTML = fill;//The fill gets implemented and rendered into the webpage.
       
       
       
@@ -166,7 +179,10 @@
         imgsrc:"",
         price:""
       };
+     
       
+      
+      //Stores the clicked items and their information into local storage. aka cart.
       function cart(count, productname, price, itemNum, color) {
         var itemArray = [];
         var quant = document.getElementById('quant' + count).value;
@@ -181,6 +197,8 @@
         localStorage.setItem("cart", masterArray);
         alert("You added "+ quant +" of " + productname + " in size " + size + " color of "+ colorz +". Your total is $" +(quant*price)+".");
       }
+      
+      //On hover make addToCart gif spin
       function changepic(count) { 
        	 document.getElementById('addtocart' + count).src="pics/addcart.gif";
       }
