@@ -7,7 +7,6 @@ text-align:center;
     width:75%;
     height:100%;
     position:absolute;
-    background:black;
     left:12.5%;
     display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
@@ -89,4 +88,7 @@ width:25%;
 #google-map{
 width:95%;
 height:80%;
+}
+#mission{
+background:red;
 }
