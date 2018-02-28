@@ -45,8 +45,8 @@
     }
 
 	$d = new DateTime();
-	$fill = $fill."Orders over $100 must be payed for before the order is made. \n\r Pick up within one week of your order at the HHS Student Store.\n\r";
-	$fill2 = $fill2."Orders over $100 must be payed for before the order is made. <br> Pick up within one week of your order at the HHS Student Store. <br>";
+	$fill = $fill."Orders over $100 must be paid for before the order is made. \n\r Pick up within one week of your order at the HHS Student Store.\n\r";
+	$fill2 = $fill2."Orders over $100 must be paid for before the order is made. <br> Pick up within one week of your order at the HHS Student Store. <br>";
 	$fill = $fill."Order Number: ". date('YmdHis')."\n\r";
 	$fill2 = $fill2."Order Number: ". date('Ymd-His')."<br>";
 	$fill = $fill."Contact Info - Email: ". $em ." - Phone: ". $pn. " \n\r ";
