@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link href="favicon.ico" rel="icon">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
   </head>

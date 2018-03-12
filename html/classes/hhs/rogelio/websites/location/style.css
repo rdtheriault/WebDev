@@ -1,0 +1,26 @@
+body{
+margin:0px;
+background:white;
+}
+#topbar{
+display:flex;
+}
+.button{
+width:190px;
+border:5px maroon solid;
+}
+#main{
+max-width: 1000px;
+margin: auto;
+}
+#img-div{
+background:maroon;
+}
+#logo{
+width:500px;
+position:relative;
+left:250px;
+}
+.mySlides {
+display:none;
+}

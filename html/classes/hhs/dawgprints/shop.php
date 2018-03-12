@@ -1,5 +1,7 @@
 <html>
   <head>
+    <link href="favicon.ico" rel="icon">
+    <title>Shop</title>
     <style> 
       #items_wrapper {
        background-color: #202121; 
@@ -126,6 +128,10 @@
           }
           fill += "</select></div><br>";
 			
+        
+       	  fill += product.notes;
+        
+        
         //Calls the correct functions when the button is clicked for the specific item.
           fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ", \"" + product.color +"\")' src='pics/addcart.png' width='150px'>";
           //var pn = product.number;
@@ -150,6 +156,10 @@
         createItem(shirt);fill += "<br>";
         createItem(sweatshirt1);fill += "<br>";
         createItem(sweatshirt2);fill += "<br>";
+        createItem(hat2);fill += "<br>";
+        createItem(beanie1);fill += "<br>";
+        createItem(beanie2);fill += "<br>";
+        
         
         
         fill += "<br><br><br><br><br><br><br><br><br><br>";
@@ -159,6 +169,9 @@
         if (shirt.type == res[1]){createItem(shirt);fill += "<br>";}
         if (sweatshirt1.type == res[1]){createItem(sweatshirt1);fill += "<br>";}
         if (sweatshirt2.type == res[1]){createItem(sweatshirt2);fill += "<br>";}
+        if (hat2.type == res[1]){createItem(hat2);fill += "<br>";}
+        if (beanie1.type == res[1]){createItem(beanie1);fill += "<br>";}
+        if (beanie2.type == res[1]){createItem(beanie2);fill += "<br>";}
         
         
         fill += "<br><br><br><br><br><br><br><br><br><br>";

@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Promotions</title>
+    <link href="favicon.ico" rel="icon">
+    <title>Custom</title>
     <link rel="stylesheet" href="style.css">
     <style>
       #none {

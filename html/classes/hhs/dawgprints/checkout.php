@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link href="favicon.ico" rel="icon">
     <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
     
@@ -47,6 +48,7 @@
             Last Name: <input type="text" id="lastname"><br>
             Email: <input type="text" id="email"><br>
             Phone Number: <input type="text" id="phone"><br><br>
+          	Customization: <input type="text" id="customizer"><br><br>
             <img src='pics/complete.svg' id='checkout'>
 
         </div>

@@ -9,19 +9,20 @@
   color: white;
 }
 #up {
-  background-color: yellow;
+
 }
 #down {
-  background-color: purple;
+ 
 }
 #left {
-  background-color: #663300;
+ 
 }
 #right {
-  background-color: black;
+ 
 }
 #master {
-  color: yellow;
+  color: black;
+  text-align: center;
 }
 #middle {
   display: flex;

@@ -58,7 +58,7 @@
     require_once "/usr/share/php/Mail.php";
 
     $from = '<student-webmaster@hermistonsd.org>';
-    $to = '<'.$em.'>, <dawghouse249@gmail.com>';
+    $to = '<'.$em.'>, <dawg.house@hermistonsd.org>';
     $subject = 'Thank you for ordering from Dawg the Hawse!';
     $body = $fill;
 

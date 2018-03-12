@@ -1,4 +1,4 @@
-var hat= {
+var hat = {
   productname:"Dawg Hat",
   size:['Universal'],
   quantity:"",
@@ -6,7 +6,41 @@ var hat= {
   color:['Gray', 'White', 'Purple'],
   type:"hat",
   imgsrc:"pics/hat1.jpg",
-  price:"5"
+  price:"5",
+  notes:""
+};
+var hat2 = {
+  productname:"Hermiston H Hat",
+  size:['Universal'],
+  quantity:"",
+  number:"0",
+  color:['White'],
+  type:"hat",
+  imgsrc:"pics/Hat_white.jpg",
+  price:"10",
+  notes:""
+};
+var beanie1 = {
+  productname:"Beanie Folded with H",
+  size:['Universal'],
+  quantity:"",
+  number:"0",
+  color:['Black'],
+  type:"hat",
+  imgsrc:"pics/Beanie_black.jpg",
+  price:"10",
+  notes:""
+};
+var beanie2 = {
+  productname:"Beanie with H",
+  size:['Universal'],
+  quantity:"",
+  number:"0",
+  color:['Gray'],
+  type:"hat",
+  imgsrc:"pics/Beanie_grey.jpg",
+  price:"10",
+  notes:""
 };
 var shirt = {
   productname:"Grey Tee Shirt",
@@ -16,7 +50,8 @@ var shirt = {
   color:['Gray', 'White', 'Purple'],
   type:"shirt",
   imgsrc:"pics/shirt1.jpg",
-  price:"10"
+  price:"10",
+  notes:""
 };
 var sweatshirt1 = {
   productname:"Black Sweater",
@@ -26,7 +61,9 @@ var sweatshirt1 = {
   color:['Gray', 'White', 'Purple'],
   type:"sweater",
   imgsrc:"pics/sweatshirt1.jpg",
-  price:"22"
+  price:"22",
+  notes:"*Add Customization on Back at Checkout."
+  
 };
 var sweatshirt2 = {
   productname:"Grey Sweater",
@@ -36,5 +73,6 @@ var sweatshirt2 = {
   color:['Gray', 'White', 'Purple'],
   type:"sweater",
   imgsrc:"pics/sweatshirt2.jpg",
-  price:"22"
+  price:"22",
+  notes:"*Add Customization on Back at Checkout."
 };
