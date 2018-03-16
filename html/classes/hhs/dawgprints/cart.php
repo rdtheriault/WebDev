@@ -63,8 +63,8 @@
           for(var i = 0; i < masterSplit.length; i++) {
             //fill += "<div class='cartstyle'>";
             
-            //reset count to start next item, 5 because 5 attr of each item, starts at 0
-            if (count===5) { 
+            //reset count to start next item, 6 because 6 attr of each item, starts at 0
+            if (count===6) { 
               count = 0;
               //fill += " | <button id='remove' onClick='remove("+ i +")'>Remove Item</button></div>";
             }//reset
@@ -84,9 +84,14 @@
               //getTotal();
             }
             if (count===4) {
-              fill += " - Color: " + masterSplit[i]+"</div>";//color
+              fill += " - Color: " + masterSplit[i]+" ";//color
               //getTotal();
             }
+            if (count===5) {
+              fill += " - Customization: " + masterSplit[i]+"</div>";//custom
+              //getTotal();
+            }
+            
 
             //fill += "</div>";
             count++;
@@ -99,11 +104,11 @@
         document.getElementById('cartlist').innerHTML = fill;
       }
       //document.getElementById('cartlist').innerHTML = fill;
-      //retrieves index of current item, removes the 5 attr.
+      //retrieves index of current item, removes the 6 attr.
       function remove(index) {
        var masterArray = localStorage.cart;
         var masterSplit = masterArray.split(',');
-       masterSplit.splice(index, 5); //removal
+       masterSplit.splice(index, 6); //removal
           localStorage.setItem("cart", masterSplit); 
         loadCart();//rebuild cart
       }

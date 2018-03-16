@@ -128,9 +128,10 @@
           }
           fill += "</select></div><br>";
 			
-        
-       	  fill += product.notes;
-        
+        if (product.customizable==="yes") {
+       	  fill += product.notes + '<br><input id="cb'+ count +'" type="checkbox"><input maxlength="20" id="cust'+ count +'" type="text"><br>';
+          
+        } 
         
         //Calls the correct functions when the button is clicked for the specific item.
           fill += "<img class='button-round' style='padding-top: 15px' id='addtocart"+ count +"' onmouseover='changepic("+count+")' onmouseout='changepicback("+count+")' onClick='cart(" + count + ",\""+ product.productname +"\","+ product.price +" ," + product.number + ", \"" + product.color +"\")' src='pics/addcart.png' width='150px'>";
@@ -201,14 +202,26 @@
         var quant = document.getElementById('quant' + count).value;
         var size = document.getElementById('size' + count).value;
         var colorz = document.getElementById('colorz' + count).value;
+        var total  = price*quant;
+        if (document.getElementById("cb" + count) ){
+          if (document.getElementById("cb" + count).checked == true) {
+            var cust = document.getElementById('cust' + count).value;
+            total = (quant*5) + total;
+          } else {
+             var cust = 'none'; 
+            }
+        } else {
+          var cust = 'none'; 
+        }
         itemArray.push(quant);
         itemArray.push(size);
         itemArray.push(productname);
-        itemArray.push(price*quant);
+        itemArray.push(total);
         itemArray.push(colorz);
+        itemArray.push(cust);
         masterArray.push(itemArray);
         localStorage.setItem("cart", masterArray);
-        alert("You added "+ quant +" of " + productname + " in size " + size + " color of "+ colorz +". Your total is $" +(quant*price)+".");
+        alert("You added "+ quant +" of " + productname + " in size " + size + " color of "+ colorz +". Your total is $" +(total)+". Customization = " + cust);
       }
       
       //On hover make addToCart gif spin

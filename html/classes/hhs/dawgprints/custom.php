@@ -18,6 +18,11 @@
         margin-left: 10px;
         margin-right: 10px;
       }
+      #cust { 
+        padding: 10px;
+        font-family: serif;
+        color: purple;
+      }
     </style>
   </head>
   <body>
@@ -40,20 +45,13 @@
             Cart
             </div>
         </div>
-      <div id='bam'>
-      <h1 id='none'>NONE AT THIS TIME</h1>
-      </div>
-          <script src="scripts.js"></script>
-      <div id="f_holder"><div id="footer">
-        <img id="footer_s" src="pics/footer_statement.png">
-        </div></div>
-      <script>
-        document.getElementById("none").addEventListener("click", function click(){
-          document.getElementById("none").innerHTML = "We said none at this time....<br><img src='https://i.imgur.com/kEpJ5aS.gif'>";
-          document.getElementById("bam").style.height = '500px';
+		<h1 id='cust'>Current customization is found in the shop page now exclusive for shirts and sweatshirts. To customize your item, type in the name you would like to see on 
+          the back of your shirt or sweatshirt in the box and click the checkbox.</h1>
           
-        });
-      </script>
+    
+   
+
+
     </div>
   </body>
 </html>

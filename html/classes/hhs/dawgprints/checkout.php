@@ -30,14 +30,14 @@
         <div id='shop' class='btn'>
           Shop
           </div>
-        <div id='cart' class='btn'>
-          Cart
+        <div id='custom' class='btn'>
+          Custom
           </div>
         <div id='contact' class='btn'>
           Contact Us
           </div>
-        <div id='deals' class='btn'>
-          Promotions
+        <div id='cart' class='btn'>
+          Cart
           </div>
       </div>
       <div id="infoC">
@@ -48,7 +48,6 @@
             Last Name: <input type="text" id="lastname"><br>
             Email: <input type="text" id="email"><br>
             Phone Number: <input type="text" id="phone"><br><br>
-          	Customization: <input type="text" id="customizer"><br><br>
             <img src='pics/complete.svg' id='checkout'>
 
         </div>
@@ -76,7 +75,7 @@
 
           for(var i = 0; i < masterSplit.length; i++) {
             //fill += "<div class='cartstyle'>";
-            if (count===5) { 
+            if (count===6) { 
               count = 0;
               //fill += " | <button id='remove' onClick='remove("+ i +")'>Remove Item</button></div>";
             }//reset
@@ -96,7 +95,11 @@
             }
 
              if (count===4) {
-              fill += " - Color: " + masterSplit[i]+"</div>";//color
+              fill += " - Color: " + masterSplit[i]+" ";//color
+              //getTotal();
+            }
+            if (count===5) {
+              fill += " - Customization: " + masterSplit[i]+"</div>";//custom
               //getTotal();
             }
             
@@ -114,7 +117,7 @@
       function remove(index) {
        var masterArray = localStorage.cart;
         var masterSplit = masterArray.split(',');
-       masterSplit.splice(index, 5); 
+       masterSplit.splice(index, 6); 
           localStorage.setItem("cart", masterSplit); 
         loadCart();
       }

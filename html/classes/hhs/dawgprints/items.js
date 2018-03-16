@@ -7,7 +7,8 @@ var hat = {
   type:"hat",
   imgsrc:"pics/hat1.jpg",
   price:"5",
-  notes:""
+  notes:"",
+  customizable:"no"
 };
 var hat2 = {
   productname:"Hermiston H Hat",
@@ -18,7 +19,8 @@ var hat2 = {
   type:"hat",
   imgsrc:"pics/Hat_white.jpg",
   price:"10",
-  notes:""
+  notes:"",
+  customizable:"no"
 };
 var beanie1 = {
   productname:"Beanie Folded with H",
@@ -29,7 +31,8 @@ var beanie1 = {
   type:"hat",
   imgsrc:"pics/Beanie_black.jpg",
   price:"10",
-  notes:""
+  notes:"",
+  customizable:"no"
 };
 var beanie2 = {
   productname:"Beanie with H",
@@ -40,7 +43,8 @@ var beanie2 = {
   type:"hat",
   imgsrc:"pics/Beanie_grey.jpg",
   price:"10",
-  notes:""
+  notes:"",
+  customizable:"no"
 };
 var shirt = {
   productname:"Grey Tee Shirt",
@@ -51,7 +55,8 @@ var shirt = {
   type:"shirt",
   imgsrc:"pics/shirt1.jpg",
   price:"10",
-  notes:""
+  notes:"*Add customization by checking below.",
+  customizable:"yes"
 };
 var sweatshirt1 = {
   productname:"Black Sweater",
@@ -62,8 +67,8 @@ var sweatshirt1 = {
   type:"sweater",
   imgsrc:"pics/sweatshirt1.jpg",
   price:"22",
-  notes:"*Add Customization on Back at Checkout."
-  
+  notes:"*Add customization by checking below.",
+  customizable:"yes"
 };
 var sweatshirt2 = {
   productname:"Grey Sweater",
@@ -74,5 +79,6 @@ var sweatshirt2 = {
   type:"sweater",
   imgsrc:"pics/sweatshirt2.jpg",
   price:"22",
-  notes:"*Add Customization on Back at Checkout."
+  notes:"*Add customization by checking below.",
+  customizable:"yes"
 };
