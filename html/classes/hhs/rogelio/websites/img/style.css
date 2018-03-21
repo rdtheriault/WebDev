@@ -3,7 +3,6 @@ margin:0px;
 background:white;
 }
 #topbar{
-max-width: 1000px;
 display:flex;
 position: -webkit-sticky;
 position: sticky;
@@ -19,7 +18,6 @@ margin: auto;
 }
 #img-div{
 background:maroon;
-max-width: 1000px;
 }
 #logo{
 width:500px;
@@ -28,6 +26,4 @@ left:250px;
 }
 .mySlides {
 display:none;
-max-width:1000px;
-height:500px;
 }
